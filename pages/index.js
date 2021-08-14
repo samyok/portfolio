@@ -7,9 +7,8 @@ import {
     chakra,
     Collapse,
     Flex,
-    HStack,
     Link,
-    SlideFade, Stack,
+    SlideFade,
     Tag,
     TagCloseButton,
     TagLabel,
@@ -39,18 +38,26 @@ export default function Home() {
             </Head>
 
             <main>
-                <Flex p={5} position={'absolute'} right={0} top={0} wrap={'wrap'} justifyContent={'center'} alignItems={'center'}>
-                    <Link mx={3} href={'#projects'}>Projects</Link>
-                    <Link mx={3} href={'/press'}>Articles</Link>
-                    <Link mx={3} href={'#resume'}>Resume</Link>
-                    <Link mx={3} href={'/contact'}>Contact</Link>
-                    <Link mx={3} href={'https://github.com/samyok'} target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
-                    <Link mx={3} href={'https://linkedin.com/in/samyok'} target={'_blank'}><AiFillLinkedin
+                <Flex p={5} position={'absolute'} right={0} top={0} wrap={'wrap'} justifyContent={'center'}
+                      alignItems={'center'}>
+                    <Flex width={'100%'} justifyContent={'center'}>
+                        <Avatar display={['block', 'none']} mx={3} size="md" name="Samyok Nepal"
+                                src="https://cdn.samyok.us/img/senior_picture_circle_small.png"/>
+                    </Flex>
+                    <Link my={2} mx={3} href={'#projects'}>Projects</Link>
+                    <Link my={2} mx={3} href={'/press'}>Articles</Link>
+                    <Link my={2} mx={3} href={'#resume'}>Resume</Link>
+                    <Link my={2} mx={3} href={'/contact'}>Contact</Link>
+                    <Link display={['none', 'block']} mx={3} href={'https://github.com/samyok'}
+                          target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
+                    <Link display={['none', 'block']} mx={3} href={'https://linkedin.com/in/samyok'}
+                          target={'_blank'}><AiFillLinkedin
                         size={'2em'}/></Link>
-                    <Link mx={3} href={'mailto:samyok@samyok.us'} target={'_blank'}><AiFillMail
+                    <Link display={['none', 'block']} mx={3} href={'mailto:samyok@samyok.us'}
+                          target={'_blank'}><AiFillMail
                         size={'2em'}/></Link>
-                    <Avatar mx={3} size="md" name="Samyok Nepal"
-                            src="https://cdn.samyok.us/img/senior_picture_circle_small.png?a"/>
+                    <Avatar display={['none', 'block']} mx={3} size="md" name="Samyok Nepal"
+                            src="https://cdn.samyok.us/img/senior_picture_circle_small.png"/>
                 </Flex>
                 <Flex justifyContent={'center'}
                       alignItems={'center'}
@@ -67,9 +74,11 @@ export default function Home() {
                         px={[2, 5]}
                         textAlign={'center'}
                         size={'4xl'}>
-                        <chakra.span class={styles.wiggle}>👋</chakra.span> Hi, I&apos;m Samyok Nepal
+                        <chakra.span class={styles.wiggle}>👋</chakra.span>
+                        Hi, I&apos;m Samyok Nepal
                     </MyHeading>
-                    <MyHeading size={'lg'} color={'gray.400'} m={0} mb={-16} p={0} fontWeight={400}>What do I do?</MyHeading>
+                    <MyHeading size={'lg'} color={'gray.400'} m={0} mb={-16} p={0} fontWeight={400}>What do I
+                        do?</MyHeading>
                     <AnimatedText wordChangedCallback={wordChanged}/>
                 </Flex>
                 {projects.map(proj => <Project projSection={proj} key={JSON.stringify(proj)}/>)}
@@ -96,7 +105,7 @@ function Project({projSection}) {
                        px={3}
                        py={2}
                        borderRadius={10}
-                       // bg={'white'}
+                // bg={'white'}
                        size={'2xl'}>{projSection.title}</MyHeading>
         </Flex>
         <chakra.p px={[2, 5, 20]} textAlign={'center'} py={2} color={'gray.700'}>{projSection.details}</chakra.p>
@@ -133,7 +142,8 @@ function Project({projSection}) {
             </Flex>
         </SlideFade>
         <Flex justifyContent={'center'} mt={-6} mb={6}>
-            {projSection.collapsible && <Button variant={'outline'} colorScheme={'blackAlpha'} onClick={onToggle}>{isOpen ? 'Hide' : 'View'} Projects</Button>}
+            {projSection.collapsible && <Button variant={'outline'} colorScheme={'blackAlpha'}
+                                                onClick={onToggle}>{isOpen ? 'Hide' : 'View'} Projects</Button>}
         </Flex>
         <Collapse in={isOpen} animateOpacity>
             <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>

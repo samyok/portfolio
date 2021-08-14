@@ -7,6 +7,16 @@
         opacity: 0;
     }
 }
+.blinkBorder {
+    /*animation: borderBlink 1260ms steps(1) infinite;*/
+    border: 1px solid black;
+}
+
+@keyframes borderBlink {
+    50% {
+        border-right-width: 1px;
+    }
+}
 
 .wiggle {
     display: inline-block;
