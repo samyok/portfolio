@@ -36,12 +36,7 @@ const projectSections = [
                         text: "dakotadebate.org",
                     },
                     {
-                        href: "https://classroom.dakotadebate.org",
-                        type: "link",
-                        text: "Classroom",
-                    },
-                    {
-                        href: "https://github.com/samyok/dakotadebate",
+                        href: "https://github.com/samyok/dakotadebate-classroom",
                         type: "github",
                     },
                 ]

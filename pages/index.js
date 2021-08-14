@@ -240,7 +240,7 @@ function Card({project, collapsible, filterTags}) {
                 <Flex alignItems={'center'} justifyContent={'space-between'}>
                     <MyHeading size={'xl'} color={'white'} pb={0}>{project.title}</MyHeading>
 
-                    <chakra.p color={'gray.100'} fontSize={'sm'} textAlign={'right'}>{project.subtext}</chakra.p>
+                    <chakra.p color={'gray.100'} fontSize={'sm'} textAlign={'right'} alignSelf={'flex-end'}>{project.subtext}</chakra.p>
                 </Flex>
             </Flex>
         </Box>}
