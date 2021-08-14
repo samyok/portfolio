@@ -3,12 +3,13 @@ const projectSections = [
         title: "Current Projects",
         data: [
             {
-                tags: ['php', 'mysql', 'phpbb', 'express'],
+                tags: ['php', 'mysql', 'phpbb', 'express', 'less'],
                 bgImage: 'https://cdn.samyok.us/img/gallery.png',
-                description: `I've been volunteer staff on Scioly.org since fall of 2020. Scioly.org is the largest student center for Science Olympiad students. In its 22 year history, the website has provided guidance for the more than 54k registered users. 
+                description: `I'm currently working on a custom phpBB3 gallery to be deployed on scioly.org/gallery. Currently, the gallery hosts 4k images and videos on a nodejs bucket server that generates thumbnails and low-res images for slow networks. 
                 
-                I'm currently working on a custom phpBB3 gallery to be deployed on scioly.org/gallery. Currently, the gallery hosts 4k images and videos on a nodejs bucket server that generates thumbnails and low-res images for slow networks. Try the actively-developed beta below!`,
+                Try the actively-developed beta below!`,
                 title: "Scioly.org",
+                subtext: "Sept 2019 - Present",
                 buttons: [
                     {
                         href: "https://scioly.gallery",
@@ -20,14 +21,14 @@ const projectSections = [
                         type: "github",
                     },
                 ]
-            },{
-                tags: ['nextjs', 'typescript', 'mongodb', 'chakra-ui'],
+            }, {
+                tags: ['nextjs', 'typescript', 'mongodb', 'chakra-ui', 'sass'],
                 bgImage: 'https://cdn.samyok.us/img/DDI.png',
-                description: `Dakota Debate Institute is South Dakota's first free debate camp, designed to be as accessible as possible. In 2021, we had more than 60 students, 14 staff, and a week of online content.  
-                I was the sole develeper for most of the camp, having coded the custom landing page, classroom, and tournament/judging platform for 2021. I also managed advertising and analytics using Umami and set up Zoho Mail. 
+                description: `I was the sole develeper for most of the camp, having coded the custom landing page, classroom, and tournament/judging platform for 2021. I also managed advertising and analytics using Umami and set up Zoho Mail. 
                 
                 I'm excited to be the camp director for the (hopefully) in-person DDI 2022!`,
                 title: "Dakota Debate Institute",
+                subtext: "Jul 2021 - Present",
                 buttons: [
                     {
                         href: "https://dakotadebate.org",
@@ -53,12 +54,11 @@ const projectSections = [
         data: [{
             tags: ['css', 'socket.io', 'react', 'express', 'hackathon'],
             bgImage: 'https://raw.githubusercontent.com/samyok/cine.stream/main/gallery.jpg',
-            description: `watch together. in 3D. online.
-            
-            For a hackathon, my sister and I created a 3D movie watch together space without three.js or the like -- just pure CSS transforms. This was intentional; we wanted to give ourselves the challenge of creating a pure-css 3D environment.  
+            description: `For a hackathon, my sister and I created a 3D movie watch together space without three.js or the like -- just pure CSS transforms. This was intentional; we wanted to give ourselves the challenge of creating a pure-css 3D environment.  
             
             We ended up winning first place and $600 at SonomaHacks. Lots of info is on our DevPost; check it out!`,
             title: "cine.stream",
+            subtext: "Apr 2021",
             buttons: [
                 {
                     href: "https://cine.stream",
@@ -81,6 +81,7 @@ const projectSections = [
                 
                 Coded in React Native with Node/Express/MongoDB/Firestore backend.`,
             title: "Bobcat Notify",
+            subtext: "Nov 2019 - Jan 2021",
             buttons: [
                 {
                     href: "https://notify.samyok.us",
@@ -92,27 +93,147 @@ const projectSections = [
                     type: "github",
                 },
             ]
+        }, {
+            tags: ['tensorflow', 'react', 'socket.io', 'express', 'three.js', 'hackathon'],
+            title: "SongSmash",
+            subtext: "Apr 2021",
+            bgImage: "https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/493/648/datas/gallery.jpg",
+            description: `Use your webcam to smash your favorite songs! Play any beat saber map with a webcam, powered by Tensorflow and ThreeJS!
+                
+                All of the 3D animations in-game were done with three.js. The UI was built with React and node.js. Models of the boxes and hands were made in Blender. ParticlesJS was used to make the particle effects in the background, and PoseNet was used to track the player's pose on the webcam.
+                
+                We made this for a Los Altos Hacks 2021 and didn't win anything, although it was a super fun project :)`,
+            buttons: [
+                {
+                    href: "https://devpost.com/software/songsma-sh-tagline",
+                    type: "devpost",
+                },
+                {
+                    href: "https://github.com/samyok/dakotadebate",
+                    type: "github",
+                },
+            ]
+        }, {
+            tags: ["hackathon", "react-native", "nodejs"],
+            title: "devJS",
+            subtext: "Jul 2021",
+            bgImage: "https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/610/222/datas/gallery.jpg",
+            description: `devJS provides a internet-free code editor and interpreter to developers with a bundled NodeJS binary.
+
+devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on Android. We used React Native to build the "front-end" of our application, which includes defining transitions between screens using the StackNavigator.`,
+            buttons: [{
+                type: "devpost",
+                href: "https://devpost.com/software/devjs-4v5okm"
+            }, {
+                type: "github",
+                href: "https://github.com/samyok/devjs"
+            }]
         }]
     },
     {
         title: "Archived Projects",
         collapsible: true,
+        details: "These are projects that aren't very cool, but are here for my own records",
         data: [
             {
-                tags: ['tensorflow', 'react', 'socket.io', 'express', 'three.js', 'hackathon'],
-                bgImage: 'https://placekitten.com/300/300',
-                title: "SongSmash",
-                description: `Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. 1800+ downloads over the last year (BHS has ~800 students). The Brookings School District was in talks to purchase the app for every school in the district, but those talks got cancelled due to COVID. 
+                tags: ['chakra-ui', 'nextjs'],
+                title: "Superfight",
+                subtext: "Aug 2021",
+                description: `I made this as a small playtest for NextJS and Chakra UI. 
                 
-                Coded in React Native with Node/Express/MongoDB/Firestore backend.`,
+                It was used as an activity for Dakota Debate Institute. The rules are simple: the players pick a card each and then argue over who would win in a battle to the death.`,
                 buttons: [
                     {
-                        href: "https://devpost.com/software/songsma-sh-tagline",
-                        type: "devpost",
+                        href: "https://superfight.samyok.us",
+                        text: "superfight.samyok.us",
+                        type: "link"
                     },
                     {
                         href: "https://github.com/samyok/dakotadebate",
                         type: "github",
+                    },
+                ]
+            },
+            {
+                tags: ['firebase', 'nodejs', 'hackathon'],
+                title: "slideforthe.world",
+                subtext: "Feb 2019",
+                description: `I made most of this in a 12 hour sprint to win first place at SDSU's Programming Design Contest!
+                
+                It was a competitive multiplayer version of the picture puzzle gadget from Windows 7, but most of the files corrupted and the source is no longer available 😔`,
+                buttons: [
+                    {
+                        type: "github",
+                        href: "https://github.com/samyok/slideforthe.world",
+                    }
+                ]
+            },
+            {
+                tags: ['open-source', 'nodejs'],
+                title: "typpo/textbelt",
+                subtext: "Mar 2019",
+                description: `Contributing to this was one of my first forays into open source, I refactored the transporter from mutt to nodemailer.`,
+                buttons: [
+                    {
+                        href: "https://github.com/typpo/textbelt",
+                        type: "github",
+                    },
+                ]
+            },
+            {
+                tags: ["react", "material-ui"],
+                title: "BHS Science Olympiad",
+                subtext: "2019-2020",
+                description: `Simple create-react-app with Material UI to create a 'dashboard' for the BHS SciOly team I captained for 3 years.`,
+                buttons: [
+                    {
+                        href: "https://www.scienceolympiad.club",
+                        type: "link",
+                        text: "www.scienceolympiad.club"
+                    },
+                    {
+                        href: "https://github.com/samyok/sci-oly-2020",
+                        type: "github"
+                    }
+                ]
+            },
+            {
+                tags: ["react", "sass", "mongodb", "express"],
+                title: "BHS Prom Tickets",
+                subtext: "Mar - Apr 2021",
+                description: `A MERN-stack application that was the sole ticket and meal management platform for Brookings High School's 2021 Prom.
+                
+                Used to great success managing tickets, meals, and seating. Managed authenticatication so students could verify their eligibility to purchase tickets.`,
+                buttons: []
+            },
+            {
+                tags: ["js", "webrtc"],
+                title: "Webshare",
+                subtext: "Apr 2020",
+                description: `A bare-bones screensharing application that I made to test out WebRTC during our first two week quarentine.`,
+                buttons: [
+                    {
+                        href: "https://github.com/samyok/webshare",
+                        type: "github"
+                    }
+                ]
+            },
+            {
+                tags: ["js", "express"],
+                title: "SnowMap",
+                subtext: "Feb 2020",
+                description: `During a snowstorm, many people look at this website to "figure out" the chances that school closes the next day. It scrapes KSFY News for current cancellations and plots them on the website using the Google Maps API, so it only works for the eastern South Dakota region.
+
+                The demo only works during inclement weather, as it is just a Google Map if no schools have cancelled school for tomorrow.`,
+                buttons: [
+                    {
+                        href: 'https://map.samyok.us/',
+                        type: "link",
+                        text: "map.samyok.us"
+                    },
+                    {
+                        href: "https://github.com/samyok/snowmap",
+                        type: "github"
                     },
                 ]
             }

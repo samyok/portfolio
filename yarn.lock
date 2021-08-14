@@ -739,6 +739,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.5.0.tgz#b69a8a70fe54f6e7ef79a65cc5b15c66c7391794"
   integrity sha512-fxRV3qt0eJaIXZvICXZMhXVR0lSyxZTC0cnM+1Ma/1JShGrIjCQ3yJ0W05rwaEoF3cAbpU2lKMrXfE7Of/zpIA==
 
+"@fontsource/inter@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.0.tgz#b99e49fa178e4086250fb3df2ed6a7366c9a0cb5"
+  integrity sha512-2efK8Ru0LkuOYrEpiHPlV02YkTdIKGbezlxVNeA8/3c+tNt7P2aQPuiYYkVy7N4GA5LWSUVcLL/91MpCIjinOw==
+
 "@fontsource/poppins@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.0.tgz#a419697b85864afbf8363f5c247b1e9d1f117564"

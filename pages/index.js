@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import MyHeading from "../components/MyHeading";
 import {
+    Avatar,
     Box,
     Button,
     chakra,
@@ -12,8 +13,7 @@ import {
     Tag,
     TagCloseButton,
     TagLabel,
-    useDisclosure,
-    VStack
+    useDisclosure
 } from "@chakra-ui/react";
 import {useState} from "react";
 import {AiFillLinkedin, AiOutlineGithub, AiOutlineLink} from "react-icons/ai";
@@ -39,17 +39,33 @@ export default function Home() {
 
             <main>
                 <HStack spacing={8} p={5}>
-                    <Link href={'#resume'}>Resume</Link>
+                    <Avatar size="md" name="Samyok Nepal"
+                            src="https://cdn.samyok.us/img/senior_picture_circle_small.png?a"/>
                     <Link href={'#projects'}>Projects</Link>
                     <Link href={'#press'}>Articles</Link>
+                    <Link href={'#resume'}>Resume</Link>
+                    <Link href={'/contact'}>Contact</Link>
                     <Link href={'https://github.com/samyok'} target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
                     <Link href={'https://linkedin.com/in/samyok'} target={'_blank'}><AiFillLinkedin
                         size={'2em'}/></Link>
                 </HStack>
-                <Flex justifyContent={'center'} alignItems={'center'} flexDirection={'column'} pt={[12, 32, 40]} minHeight={'55vh'}>
-                    <MyHeading display={'inline'} py={5} borderRadius={10} bg={'white'} as={'h1'} px={[2, 5]}
-                               textAlign={'center'} size={'4xl'}>I&apos;m Samyok
-                        Nepal</MyHeading>
+                <Flex justifyContent={'center'}
+                      alignItems={'center'}
+                      flexDirection={'column'}
+                      pt={[12, 32, 40]}
+                      minHeight={'65vh'}>
+                    <MyHeading
+                        display={'inline'}
+                        py={5}
+                        mb={20}
+                        borderRadius={10}
+                        bg={'white'}
+                        as={'h1'}
+                        px={[2, 5]}
+                        textAlign={'center'}
+                        size={'4xl'}>
+                        👋 Hi, I&apos;m Samyok Nepal
+                    </MyHeading>
                     <AnimatedText wordChangedCallback={wordChanged}/>
                 </Flex>
                 {projects.map(proj => <Project projSection={proj} key={JSON.stringify(proj)}/>)}
@@ -105,8 +121,9 @@ function Project({projSection}) {
                 }
             </Flex>
         </SlideFade>
-        <Flex flexWrap={'wrap'} justifyContent={'space-evenly'}>
-            {projSection.data.map(project => <Card filterTags={selectedTags} collapsible={projSection.collapsible ?? false} project={project}
+        <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>
+            {projSection.data.map(project => <Card filterTags={selectedTags}
+                                                   collapsible={projSection.collapsible ?? false} project={project}
                                                    key={JSON.stringify(project)}/>)}
         </Flex>
     </Box>
@@ -155,20 +172,28 @@ function Card({project, collapsible, filterTags}) {
             <TagLabel fontWeight={filterTags.includes(a) ? 'bold' : 'normal'}>{a}</TagLabel>
         </Tag>)
 
-    const {isOpen, onToggle} = useDisclosure({defaultIsOpen: !collapsible})
+    const {isOpen, onToggle} = useDisclosure({defaultIsOpen: !collapsible || true})
 
     // no overlap
     if ([...new Set([...filterTags, ...project.tags])].length === project.tags.length + filterTags.length && filterTags.length !== 0)
         return null;
-    return <Box onClick={e => {
-        if (e.target.tagName !== "BUTTON" && !!collapsible)
-            onToggle();
-    }} mx={[2, 5]} mb={16} shadow={'2xl'} pb={[5, 10]} borderRadius={10} borderWidth={1} borderColor={'gray.200'}
-                maxWidth={'700px'}
-                _hover={!!collapsible ? {
-                    bg: 'rgba(0,0,0,0.02)',
-                    cursor: 'pointer'
-                } : undefined}
+    return <Box
+        onClick={e => {
+            if (e.target.tagName !== "BUTTON" && !!collapsible)
+                onToggle();
+        }}
+        mx={[2, 5]}
+        mb={16}
+        shadow={'2xl'}
+        pb={[5, 10]}
+        borderRadius={10}
+        borderWidth={1}
+        borderColor={'gray.200'}
+        maxWidth={!collapsible ? '700px' : '700px'}
+        _hover={!!collapsible ? {
+            bg: 'rgba(0,0,0,0.02)',
+            cursor: 'pointer'
+        } : undefined}
     >
         {!collapsible &&
         <Box borderTopRadius={10} mb={[5, 10]} p={0} bgImage={project.bgImage} backgroundPosition={'center'}
@@ -181,8 +206,12 @@ function Card({project, collapsible, filterTags}) {
                 <Flex mb={2} flexWrap={'wrap'}>
                     {tags}
                 </Flex>
-                <MyHeading color={'white'} size={'xl'} pb={0}>{project.title}</MyHeading>
 
+                <Flex alignItems={'center'} justifyContent={'space-between'}>
+                    <MyHeading size={'xl'} color={'white'} pb={0}>{project.title}</MyHeading>
+
+                    <chakra.p color={'gray.100'} fontSize={'sm'} textAlign={'right'}>{project.subtext}</chakra.p>
+                </Flex>
             </Flex>
         </Box>}
         {!!collapsible && <Box borderTopRadius={10} mb={0} p={0}
@@ -191,8 +220,11 @@ function Card({project, collapsible, filterTags}) {
                 flexDirection={'column'} px={cardPadding} borderTopRadius={10} alignItems={'space-between'}
                 justifyContent={'space-between'} pt={10}>
 
-                <MyHeading size={'xl'} pb={0}>{project.title}</MyHeading>
+                <Flex alignItems={'center'} justifyContent={'space-between'}>
+                    <MyHeading size={'xl'} pb={0}>{project.title}</MyHeading>
 
+                    <chakra.p color={'gray.600'} fontSize={'xs'}>{project.subtext}</chakra.p>
+                </Flex>
                 <Flex mb={2} flexWrap={'wrap'}>
                     {tags}
                 </Flex>
