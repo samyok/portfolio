@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Head from 'next/head'
 import MyHeading from "../components/MyHeading";
 import {
@@ -21,6 +22,9 @@ import projects from "../components/projects";
 import {AnimatedText} from "../components/animatedText";
 import styles from '../styles/animatedBlink.module.css';
 
+function imgSrc(url){
+    return `/_next/image?url=${url}&w=3840&q=1`
+}
 
 export default function Home() {
 
@@ -42,7 +46,7 @@ export default function Home() {
                       alignItems={'center'}>
                     <Flex width={'100%'} justifyContent={'center'}>
                         <Avatar display={['block', 'none']} mx={3} size="md" name="Samyok Nepal"
-                                src="https://cdn.samyok.us/img/senior_picture_circle_small.png"/>
+                                src={imgSrc("https://cdn.samyok.us/img/senior_picture_circle_small.png")}/>
                     </Flex>
                     <Link my={2} mx={3} href={'#projects'}>Projects</Link>
                     <Link my={2} mx={3} href={'/press'}>Articles</Link>
@@ -57,7 +61,7 @@ export default function Home() {
                           target={'_blank'}><AiFillMail
                         size={'2em'}/></Link>
                     <Avatar display={['none', 'block']} mx={3} size="md" name="Samyok Nepal"
-                            src="https://cdn.samyok.us/img/senior_picture_circle_small.png"/>
+                            src={imgSrc("https://cdn.samyok.us/img/senior_picture_circle_small.png")}/>
                 </Flex>
                 <Flex justifyContent={'center'}
                       alignItems={'center'}
@@ -141,21 +145,16 @@ function Project({projSection}) {
                 }
             </Flex>
         </SlideFade>
-        <Flex justifyContent={'center'} mt={-6} mb={6}>
-            {projSection.collapsible && <Button variant={'outline'} colorScheme={'blackAlpha'}
-                                                onClick={onToggle}>{isOpen ? 'Hide' : 'View'} Projects</Button>}
+        <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>
+            {projSection.data.map(project =>
+                <Card
+                    filterTags={selectedTags}
+                    collapsible={projSection.collapsible ?? false}
+                    project={project}
+                    key={JSON.stringify(project)}
+                />)}
         </Flex>
-        <Collapse in={isOpen} animateOpacity>
-            <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>
-                {projSection.data.map(project =>
-                    <Card
-                        filterTags={selectedTags}
-                        collapsible={projSection.collapsible ?? false}
-                        project={project}
-                        key={JSON.stringify(project)}
-                    />)}
-            </Flex>
-        </Collapse>
+
     </Box>
 }
 
@@ -226,8 +225,9 @@ function Card({project, collapsible, filterTags}) {
         } : undefined}
     >
         {!collapsible &&
-        <Box borderTopRadius={10} mb={[5, 10]} p={0} bgImage={project.bgImage} backgroundPosition={'center'}
-             bgSize={'cover'}>
+        <Box borderTopRadius={10} mb={[5, 10]} p={0} bgImage={imgSrc(project.bgImage)} backgroundPosition={'center'}
+             bgSize={'cover'} position={'relative'}>
+
             <Flex
                 flexDirection={'column'} bgColor={'rgba(0,0,0,0.8)'} px={cardPadding} pb={6} pt={[20, 40, 60]}
                 height={'100%'} borderTopRadius={10} alignItems={'space-between'}

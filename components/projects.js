@@ -17,7 +17,7 @@ const projectSections = [
                         text: "scioly.gallery (beta)",
                     },
                     {
-                        href: "https://github.com/samyok/dakotadebate",
+                        href: "https://github.com/samyok/scioly-gallery-docker",
                         type: "github",
                     },
                 ]
@@ -45,7 +45,7 @@ const projectSections = [
     },
     {
         title: "Cool Projects",
-        details: "Projects that would otherwise be archived but are here because they're cool 😎",
+        details: "My favorite projects that are here because they're cool 😎",
         data: [{
             tags: ['css', 'socket.io', 'react', 'express', 'hackathon'],
             bgImage: 'https://raw.githubusercontent.com/samyok/cine.stream/main/gallery.jpg',
@@ -126,23 +126,26 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
         }]
     },
     {
-        title: "Archived Projects",
+        title: "Projects",
         collapsible: true,
-        details: "These are projects that aren't very cool, but are here for my own records",
         data: [
+
+
             {
-                tags: ['firebase', 'nodejs', 'hackathon'],
-                title: "slideforthe.world",
-                subtext: "Feb 2019",
-                description: `I made most of this in a 12 hour sprint to win first place at SDSU's Programming Design Contest!
+                tags: ['open-source'],
+                title: "Google Code In",
+                subtext: "Winter 2019-2020",
+                description: `
+                Google Code In is an initiative that allowed students to complete tasks for open source organizations. I participated with SugarLabs, an organization that maintains the Sugar OS on the >3 million One Laptop Per Child laptops in underdeveloped areas. 
+
+                First year: worked on MusicBlocks and SugarLabs website, fixing bugs.
                 
-                It was a competitive multiplayer version of the picture puzzle gadget from Windows 7, but most of the files corrupted and the source is no longer available 😔`,
-                buttons: [
-                    {
-                        type: "github",
-                        href: "https://github.com/samyok/slideforthe.world",
-                    }
-                ]
+                Second year: worked on MusicBlocks; expanded export and import functionality to more file types; proposed and created a Git-based version history system for blocky-code; tested and experimented with the viability of refactoring entire codebase into a Model-View-Controller design. 
+`,
+                buttons: [{
+                    href: "https://github.com/sugarlabs/musicblocks",
+                    type: "github"
+                }]
             },
             {
                 tags: ["js", "express"],
@@ -165,6 +168,19 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
             },
 
             {
+                tags: ['open-source', 'nodejs'],
+                title: "typpo/textbelt",
+                subtext: "Mar 2019",
+                description: `Contributing to this was one of my first forays into open source, I refactored the transporter from mutt to nodemailer.`,
+                buttons: [
+                    {
+                        href: "https://github.com/typpo/textbelt",
+                        type: "github",
+                    },
+                ]
+            },
+
+            {
                 tags: ["react", "material-ui"],
                 title: "BHS Science Olympiad",
                 subtext: "2019-2020",
@@ -179,6 +195,41 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
                         href: "https://github.com/samyok/sci-oly-2020",
                         type: "github"
                     }
+                ]
+            },
+
+            {
+                tags: ['firebase', 'nodejs', 'hackathon'],
+                title: "slideforthe.world",
+                subtext: "Feb 2019",
+                description: `I made most of this in a 12 hour sprint to win first place at SDSU's Programming Design Contest!
+                
+                It was a competitive multiplayer version of the picture puzzle gadget from Windows 7, but most of the files corrupted and the source is no longer available 😔`,
+                buttons: [
+                    {
+                        type: "github",
+                        href: "https://github.com/samyok/slideforthe.world",
+                    }
+                ]
+            },
+
+            {
+                tags: ["js", "express"],
+                title: "Scioly Chrome Extension",
+                subtext: "Sept 2019",
+                description: `My first chrome extension and my first project for Scioly.org. 
+                
+                I've since added (or helped add) all of the features, except for infinite scrolling, to the main scioly.org website.`,
+                buttons: [
+                    {
+                        href: 'https://chrome.google.com/webstore/detail/better-scioly-forums/imlehajmaemolcpgbkjcenmphfbljiei?hl=en',
+                        type: "link",
+                        text: "Chrome Extension"
+                    },
+                    {
+                        href: "https://github.com/samyok/scioly-chrome",
+                        type: "github"
+                    },
                 ]
             },
             {
@@ -213,25 +264,6 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
                 ]
             },
 
-            {
-                tags: ["js", "express"],
-                title: "Scioly Chrome Extension",
-                subtext: "Sept 2019",
-                description: `My first chrome extension and my first project for Scioly.org. 
-                
-                I've since added (or helped add) all of the features, except for infinite scrolling, to the main scioly.org website.`,
-                buttons: [
-                    {
-                        href: 'https://chrome.google.com/webstore/detail/better-scioly-forums/imlehajmaemolcpgbkjcenmphfbljiei?hl=en',
-                        type: "link",
-                        text: "Chrome Extension"
-                    },
-                    {
-                        href: "https://github.com/samyok/scioly-chrome",
-                        type: "github"
-                    },
-                ]
-            },
 
             {
                 tags: ["react", "sass", "mongodb", "express"],
@@ -241,18 +273,6 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
                 
                 Used to great success managing tickets, meals, and seating. Managed authenticatication so students could verify their eligibility to purchase tickets.`,
                 buttons: []
-            },
-            {
-                tags: ['open-source', 'nodejs'],
-                title: "typpo/textbelt",
-                subtext: "Mar 2019",
-                description: `Contributing to this was one of my first forays into open source, I refactored the transporter from mutt to nodemailer.`,
-                buttons: [
-                    {
-                        href: "https://github.com/typpo/textbelt",
-                        type: "github",
-                    },
-                ]
             },
         ]
     }
