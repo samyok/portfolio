@@ -9,7 +9,7 @@ import {
     Flex,
     HStack,
     Link,
-    SlideFade,
+    SlideFade, Stack,
     Tag,
     TagCloseButton,
     TagLabel,
@@ -20,6 +20,7 @@ import {AiFillLinkedin, AiFillMail, AiOutlineGithub, AiOutlineLink} from "react-
 import DevPostIcon from "../components/DevPost";
 import projects from "../components/projects";
 import {AnimatedText} from "../components/animatedText";
+import styles from '../styles/animatedBlink.module.css';
 
 
 export default function Home() {
@@ -38,36 +39,37 @@ export default function Home() {
             </Head>
 
             <main>
-                <HStack spacing={8} p={5}>
-                    <Avatar size="md" name="Samyok Nepal"
+                <Flex p={5} position={'absolute'} right={0} top={0} wrap={'wrap'} justifyContent={'center'} alignItems={'center'}>
+                    <Link mx={3} href={'#projects'}>Projects</Link>
+                    <Link mx={3} href={'/press'}>Articles</Link>
+                    <Link mx={3} href={'#resume'}>Resume</Link>
+                    <Link mx={3} href={'/contact'}>Contact</Link>
+                    <Link mx={3} href={'https://github.com/samyok'} target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
+                    <Link mx={3} href={'https://linkedin.com/in/samyok'} target={'_blank'}><AiFillLinkedin
+                        size={'2em'}/></Link>
+                    <Link mx={3} href={'mailto:samyok@samyok.us'} target={'_blank'}><AiFillMail
+                        size={'2em'}/></Link>
+                    <Avatar mx={3} size="md" name="Samyok Nepal"
                             src="https://cdn.samyok.us/img/senior_picture_circle_small.png?a"/>
-                    <Link href={'#projects'}>Projects</Link>
-                    <Link href={'#press'}>Articles</Link>
-                    <Link href={'#resume'}>Resume</Link>
-                    <Link href={'/contact'}>Contact</Link>
-                    <Link href={'https://github.com/samyok'} target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
-                    <Link href={'https://linkedin.com/in/samyok'} target={'_blank'}><AiFillLinkedin
-                        size={'2em'}/></Link>
-                    <Link href={'mailto:samyok@samyok.us'} target={'_blank'}><AiFillMail
-                        size={'2em'}/></Link>
-                </HStack>
+                </Flex>
                 <Flex justifyContent={'center'}
                       alignItems={'center'}
                       flexDirection={'column'}
-                      pt={[12, 32, 40]}
-                      minHeight={'65vh'}>
+                      pt={[60, 32, 40]}
+                      minHeight={'75vh'}>
                     <MyHeading
                         display={'inline'}
                         py={5}
                         mb={20}
                         borderRadius={10}
-                        bg={'white'}
+                        // bg={'white'}
                         as={'h1'}
                         px={[2, 5]}
                         textAlign={'center'}
                         size={'4xl'}>
-                        👋 Hi, I&apos;m Samyok Nepal
+                        <chakra.span class={styles.wiggle}>👋</chakra.span> Hi, I&apos;m Samyok Nepal
                     </MyHeading>
+                    <MyHeading size={'lg'} color={'gray.400'} m={0} mb={-16} p={0} fontWeight={400}>What do I do?</MyHeading>
                     <AnimatedText wordChangedCallback={wordChanged}/>
                 </Flex>
                 {projects.map(proj => <Project projSection={proj} key={JSON.stringify(proj)}/>)}
@@ -90,7 +92,11 @@ function Project({projSection}) {
     return <Box>
         <Flex alignItems={'center'} justifyContent={'center'} mx={[2, 5, 20]} pt={20}
               pb={2}>
-            <MyHeading display={'inline'} px={3} py={2} borderRadius={10} bg={'white'}
+            <MyHeading display={'inline'}
+                       px={3}
+                       py={2}
+                       borderRadius={10}
+                       // bg={'white'}
                        size={'2xl'}>{projSection.title}</MyHeading>
         </Flex>
         <chakra.p px={[2, 5, 20]} textAlign={'center'} py={2} color={'gray.700'}>{projSection.details}</chakra.p>

@@ -7,3 +7,23 @@
         opacity: 0;
     }
 }
+
+.wiggle {
+    display: inline-block;
+    animation: wiggler 500ms alternate linear infinite;
+    margin-right: 20px;
+}
+@keyframes wiggler {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(20deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
