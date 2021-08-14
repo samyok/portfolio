@@ -136,25 +136,6 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
         details: "These are projects that aren't very cool, but are here for my own records",
         data: [
             {
-                tags: ['chakra-ui', 'nextjs'],
-                title: "Superfight",
-                subtext: "Aug 2021",
-                description: `I made this as a small playtest for NextJS and Chakra UI. 
-                
-                It was used as an activity for Dakota Debate Institute. The rules are simple: the players pick a card each and then argue over who would win in a battle to the death.`,
-                buttons: [
-                    {
-                        href: "https://superfight.samyok.us",
-                        text: "superfight.samyok.us",
-                        type: "link"
-                    },
-                    {
-                        href: "https://github.com/samyok/dakotadebate",
-                        type: "github",
-                    },
-                ]
-            },
-            {
                 tags: ['firebase', 'nodejs', 'hackathon'],
                 title: "slideforthe.world",
                 subtext: "Feb 2019",
@@ -165,56 +146,6 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
                     {
                         type: "github",
                         href: "https://github.com/samyok/slideforthe.world",
-                    }
-                ]
-            },
-            {
-                tags: ['open-source', 'nodejs'],
-                title: "typpo/textbelt",
-                subtext: "Mar 2019",
-                description: `Contributing to this was one of my first forays into open source, I refactored the transporter from mutt to nodemailer.`,
-                buttons: [
-                    {
-                        href: "https://github.com/typpo/textbelt",
-                        type: "github",
-                    },
-                ]
-            },
-            {
-                tags: ["react", "material-ui"],
-                title: "BHS Science Olympiad",
-                subtext: "2019-2020",
-                description: `Simple create-react-app with Material UI to create a 'dashboard' for the BHS SciOly team I captained for 3 years.`,
-                buttons: [
-                    {
-                        href: "https://www.scienceolympiad.club",
-                        type: "link",
-                        text: "www.scienceolympiad.club"
-                    },
-                    {
-                        href: "https://github.com/samyok/sci-oly-2020",
-                        type: "github"
-                    }
-                ]
-            },
-            {
-                tags: ["react", "sass", "mongodb", "express"],
-                title: "BHS Prom Tickets",
-                subtext: "Mar - Apr 2021",
-                description: `A MERN-stack application that was the sole ticket and meal management platform for Brookings High School's 2021 Prom.
-                
-                Used to great success managing tickets, meals, and seating. Managed authenticatication so students could verify their eligibility to purchase tickets.`,
-                buttons: []
-            },
-            {
-                tags: ["js", "webrtc"],
-                title: "Webshare",
-                subtext: "Apr 2020",
-                description: `A bare-bones screensharing application that I made to test out WebRTC during our first two week quarentine.`,
-                buttons: [
-                    {
-                        href: "https://github.com/samyok/webshare",
-                        type: "github"
                     }
                 ]
             },
@@ -236,7 +167,98 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
                         type: "github"
                     },
                 ]
-            }
+            },
+
+            {
+                tags: ["react", "material-ui"],
+                title: "BHS Science Olympiad",
+                subtext: "2019-2020",
+                description: `Simple create-react-app with Material UI to create a 'dashboard' for the BHS SciOly team I captained for 3 years.`,
+                buttons: [
+                    {
+                        href: "https://www.scienceolympiad.club",
+                        type: "link",
+                        text: "www.scienceolympiad.club"
+                    },
+                    {
+                        href: "https://github.com/samyok/sci-oly-2020",
+                        type: "github"
+                    }
+                ]
+            },
+            {
+                tags: ['chakra-ui', 'nextjs'],
+                title: "Superfight",
+                subtext: "Aug 2021",
+                description: `I made this as a small playtest for NextJS and Chakra UI. 
+                
+                It was used as an activity for Dakota Debate Institute. The rules are simple: the players pick a card each and then argue over who would win in a battle to the death.`,
+                buttons: [
+                    {
+                        href: "https://superfight.samyok.us",
+                        text: "superfight.samyok.us",
+                        type: "link"
+                    },
+                    {
+                        href: "https://github.com/samyok/dakotadebate",
+                        type: "github",
+                    },
+                ]
+            },
+            {
+                tags: ["js", "webrtc"],
+                title: "Webshare",
+                subtext: "Apr 2020",
+                description: `A bare-bones screensharing application that I made to test out WebRTC during our first two week quarentine.`,
+                buttons: [
+                    {
+                        href: "https://github.com/samyok/webshare",
+                        type: "github"
+                    }
+                ]
+            },
+
+            {
+                tags: ["js", "express"],
+                title: "Scioly Chrome Extension",
+                subtext: "Sept 2019",
+                description: `My first chrome extension and my first project for Scioly.org. 
+                
+                I've since added (or helped add) all of the features, except for infinite scrolling, to the main scioly.org website.`,
+                buttons: [
+                    {
+                        href: 'https://chrome.google.com/webstore/detail/better-scioly-forums/imlehajmaemolcpgbkjcenmphfbljiei?hl=en',
+                        type: "link",
+                        text: "Chrome Extension"
+                    },
+                    {
+                        href: "https://github.com/samyok/scioly-chrome",
+                        type: "github"
+                    },
+                ]
+            },
+
+            {
+                tags: ["react", "sass", "mongodb", "express"],
+                title: "BHS Prom Tickets",
+                subtext: "Mar - Apr 2021",
+                description: `A MERN-stack application that was the sole ticket and meal management platform for Brookings High School's 2021 Prom.
+                
+                Used to great success managing tickets, meals, and seating. Managed authenticatication so students could verify their eligibility to purchase tickets.`,
+                buttons: []
+            },
+            {
+                tags: ['open-source', 'nodejs'],
+                title: "typpo/textbelt",
+                subtext: "Mar 2019",
+                description: `Contributing to this was one of my first forays into open source, I refactored the transporter from mutt to nodemailer.`,
+                buttons: [
+                    {
+                        href: "https://github.com/typpo/textbelt",
+                        type: "github",
+                    },
+                ]
+            },
         ]
     }
 ]

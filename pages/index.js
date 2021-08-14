@@ -16,7 +16,7 @@ import {
     useDisclosure
 } from "@chakra-ui/react";
 import {useState} from "react";
-import {AiFillLinkedin, AiOutlineGithub, AiOutlineLink} from "react-icons/ai";
+import {AiFillLinkedin, AiFillMail, AiOutlineGithub, AiOutlineLink} from "react-icons/ai";
 import DevPostIcon from "../components/DevPost";
 import projects from "../components/projects";
 import {AnimatedText} from "../components/animatedText";
@@ -47,6 +47,8 @@ export default function Home() {
                     <Link href={'/contact'}>Contact</Link>
                     <Link href={'https://github.com/samyok'} target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
                     <Link href={'https://linkedin.com/in/samyok'} target={'_blank'}><AiFillLinkedin
+                        size={'2em'}/></Link>
+                    <Link href={'mailto:samyok@samyok.us'} target={'_blank'}><AiFillMail
                         size={'2em'}/></Link>
                 </HStack>
                 <Flex justifyContent={'center'}
@@ -80,6 +82,9 @@ function Project({projSection}) {
     const tagControl = useDisclosure({defaultIsOpen: true});
 
     console.log({selectedTags});
+    const {isOpen, onToggle} = useDisclosure({
+        defaultIsOpen: !projSection.collapsible
+    })
 
     let tags = [...new Set(projSection.data.map(b => b.tags).flat())]
     return <Box>
@@ -121,11 +126,20 @@ function Project({projSection}) {
                 }
             </Flex>
         </SlideFade>
-        <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>
-            {projSection.data.map(project => <Card filterTags={selectedTags}
-                                                   collapsible={projSection.collapsible ?? false} project={project}
-                                                   key={JSON.stringify(project)}/>)}
+        <Flex justifyContent={'center'} mt={-6} mb={6}>
+            {projSection.collapsible && <Button variant={'outline'} colorScheme={'blackAlpha'} onClick={onToggle}>{isOpen ? 'Hide' : 'View'} Projects</Button>}
         </Flex>
+        <Collapse in={isOpen} animateOpacity>
+            <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>
+                {projSection.data.map(project =>
+                    <Card
+                        filterTags={selectedTags}
+                        collapsible={projSection.collapsible ?? false}
+                        project={project}
+                        key={JSON.stringify(project)}
+                    />)}
+            </Flex>
+        </Collapse>
     </Box>
 }
 
