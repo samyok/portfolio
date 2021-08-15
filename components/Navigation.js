@@ -4,7 +4,8 @@ import {HiMail} from "react-icons/hi";
 import {imgSrc} from "../pages/index";
 
 export default function Navigation() {
-    return <Flex p={5} position={'absolute'} right={0} top={0} wrap={'wrap'} justifyContent={'center'}
+    return <Flex p={5} position={'absolute'} left={0} top={0} wrap={'wrap'} justifyContent={'center'}
+                 flexDir={'row-reverse'}
                  alignItems={'center'}>
         <Flex width={'100%'} justifyContent={'center'}>
             <Avatar display={['block', 'block', 'none']}
@@ -15,10 +16,10 @@ export default function Navigation() {
                     name="Samyok Nepal"
                     src={imgSrc("https://cdn.samyok.us/img/senior_picture_circle_small.png")}/>
         </Flex>
-        <Link my={2} mx={3} href={'/#projects'}>Projects</Link>
-        <Link my={2} mx={3} href={'/press'}>In the News</Link>
-        <Link my={2} mx={3} href={'/resume'}>Resume</Link>
         <Link my={2} mx={3} href={'#contact'}>Contact</Link>
+        <Link my={2} mx={3} href={'/resume'}>Resume</Link>
+        <Link my={2} mx={3} href={'/press'}>Media Appearances</Link>
+        <Link my={2} mx={3} href={'/#projects'}>Projects</Link>
         <Link display={['none', 'block']} mx={3} href={'https://github.com/samyok'}
               target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
         <Link display={['none', 'block']} mx={3} href={'https://linkedin.com/in/samyok'}
