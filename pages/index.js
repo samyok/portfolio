@@ -22,7 +22,7 @@ import {Project} from "../components/project";
 import {Contactform} from "../components/contactform";
 
 export function imgSrc(url) {
-    return `/_next/image?url=${url}&w=3840&q=1`
+    return `https://bcdn.samyok.us/_next/image?url=${url}&w=3840&q=1`
 }
 
 export default function Home() {
