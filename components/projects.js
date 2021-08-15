@@ -49,7 +49,7 @@ const projectSections = [
         data: [{
             tags: ['css', 'socket.io', 'react', 'express', 'hackathon'],
             bgImage: 'https://raw.githubusercontent.com/samyok/cine.stream/main/gallery.jpg',
-            description: `For a hackathon, my sister and I created a 3D movie watch together space without three.js or the like -- just pure CSS transforms. This was intentional; we wanted to give ourselves the challenge of creating a pure-css 3D environment.  
+            description: `For a hackathon, my sister and I created a 3D watch together space without three.js or the like -- just pure CSS transforms. This was intentional; we wanted to give ourselves the challenge of creating a pure-css 3D environment.  
             
             We ended up winning first place and $600 at SonomaHacks. Lots of info is on our DevPost; check it out!`,
             title: "cine.stream",
