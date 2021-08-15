@@ -1,8 +1,4 @@
 import {ChakraProvider, extendTheme} from "@chakra-ui/react"
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/fira-code/700.css";
-import "@fontsource/inter";
 
 const theme = extendTheme({
     fonts: {
