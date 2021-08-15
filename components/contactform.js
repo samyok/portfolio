@@ -8,6 +8,7 @@ export function Contactform(params) {
     const [name, setName] = useState('');
     const [contact, setContact] = useState('');
     const [msg, setMsg] = useState('');
+    const [loading, setLoading] = useState(false);
     return <Box bg={'rgba(0,0,0,0.1)'} width={'100%'} p={5} m={0}>
         <Flex alignItems={'center'}
               justifyContent={'center'}
@@ -22,19 +23,20 @@ export function Contactform(params) {
             <chakra.p pt={4}>I&apos;ll get back to you back as soon as I can!</chakra.p>
         </Flex>
 
-        <Flex px={[2, 5, 10]} justifyContent={'center'} flexDir={'column'} py={10}>
-            <VStack spacing={5} flexGrow={1}>
-                <Input variant="filled" placeholder="Name" value={name} onChange={(e) => {
+        <Flex px={[2, 5, 10]} justifyContent={'center'} flexDir={'column'} py={10} alignItems={'center'}>
+            <VStack spacing={5} flexGrow={1} w={'100%'} maxW={'700px'}>
+                <Input isDisabled={loading} variant="filled" placeholder="Name" value={name} onChange={(e) => {
                     setName(e.target.value)
                 }}/>
-                <Input variant="filled" placeholder="Email/Phone" value={contact} onChange={e => {
+                <Input isDisabled={loading} variant="filled" placeholder="Email/Phone" value={contact} onChange={e => {
                     setContact(e.target.value);
                 }}/>
-                <Textarea variant="filled" placeholder="Message" value={msg} onChange={e => {
+                <Textarea isDisabled={loading} variant="filled" placeholder="Message" value={msg} onChange={e => {
                     setMsg(e.target.value);
                 }}/>
-                <Button leftIcon={<AiOutlineSend size={'1.5em'}/>} onClick={() => {
+                <Button isDisabled={loading} leftIcon={<AiOutlineSend size={'1.5em'}/>} onClick={() => {
                     window?.umami?.trackEvent('Contact Form.submit', "contact_form")
+                    setLoading(true);
                     fetch('/api/contactForm', {
                         headers: {
                             'Content-Type': 'application/json',
@@ -44,11 +46,14 @@ export function Contactform(params) {
                     }).then(r => r.json()).then(r => {
                         toast({
                             title: "Message recieved.",
-                            description: "We've sent a confirmation email to you too!",
+                            description: "I'll get back to you ASAP.",
                             status: "success",
                             duration: 9000,
                             isClosable: true,
                         })
+                        setContact('');
+                        setName('');
+                        setMsg('');
                     }).catch(e => {
                         toast({
                             title: "Something went wrong.",
@@ -57,6 +62,8 @@ export function Contactform(params) {
                             duration: 9000,
                             isClosable: true,
                         })
+                    }).finally(() => {
+                        setLoading(false);
                     })
                 }}>Send Message</Button>
             </VStack>

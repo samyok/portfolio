@@ -51,6 +51,9 @@ export function AnimatedText({wordChangedCallback}) {
         <MyHeading display={['none', 'block']}>
             <chakra.span color={word.color} mt={-9} display={'block'} className={styles.blink}>_</chakra.span>
         </MyHeading>
+        <MyHeading display={['block', 'none']}>
+            <chakra.span color={word.color} mt={-9} display={'block'} className={styles.blink} mb={-30} fontWeight={400}>|</chakra.span>
+        </MyHeading>
     </Flex>
 }
 

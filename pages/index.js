@@ -27,7 +27,7 @@ export function imgSrc(url) {
 
 export default function Home() {
     const wordChanged = (newIndex) => {
-        console.log({newIndex});
+        // console.log({newIndex});
     }
     return (
         <chakra.div bg={'#F0F0F0'} minHeight={"100vh"}>

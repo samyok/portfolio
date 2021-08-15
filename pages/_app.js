@@ -2,8 +2,8 @@ import {ChakraProvider, extendTheme} from "@chakra-ui/react"
 
 const theme = extendTheme({
     fonts: {
-        heading: "Poppins",
-        body: "Inter"
+        heading: "Poppins, Arial Black, Arial, Helvetica, Verdana, Tahoma, sans-serif",
+        body: "Inter, Arial Black, Arial, Helvetica, Verdana, Tahoma, sans-serif"
     }
 })
 

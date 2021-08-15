@@ -8,7 +8,6 @@ export function Project({projSection}) {
 
     const tagControl = useDisclosure({defaultIsOpen: true});
 
-    console.log({selectedTags});
     const {isOpen, onToggle} = useDisclosure({
         defaultIsOpen: !projSection.collapsible
     })

@@ -7,7 +7,7 @@ const projectSections = [
                 bgImage: 'https://cdn.samyok.us/img/gallery.png',
                 description: `I'm currently working on a custom phpBB3 gallery to be deployed on scioly.org/gallery. Currently, the gallery hosts 4k images and videos on a nodejs bucket server that generates thumbnails and low-res images for slow networks. 
                 
-                Try the actively-developed beta below!`,
+                Scioly.org is the largest student center for Science Olympiad students. Having been around for 22 years, the website provides guidance for the more than 54,000 registered users. Try the actively-developed gallery beta below!`,
                 title: "Scioly.org",
                 subtext: "Sept 2019 - Present",
                 buttons: [
