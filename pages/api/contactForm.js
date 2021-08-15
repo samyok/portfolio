@@ -10,18 +10,16 @@ export default async function handler(req, res) {
         name: key.toUpperCase(),
         value: req.body[key]
     }))
-    await user.send({embeds: [
-            {
-                "description": "We have a new message!",
-                "color": 4310753,
-                "timestamp": new Date().toISOString(),
-                "footer": {
-                    "icon_url": "https://samyok.us/favicon.ico",
-                    "text": "samyok.us"
-                },
-                "fields": fields
-            }
-        ]})
+    await user.send({embed: {
+            "description": "We have a new message!",
+            "color": 4310753,
+            "timestamp": new Date().toISOString(),
+            "footer": {
+                "icon_url": "https://samyok.us/favicon.ico",
+                "text": "samyok.us"
+            },
+            "fields": fields
+        }})
     res.json({success: true, body: req.body});
 }
 function forReady(){
