@@ -2,6 +2,7 @@ import Head from 'next/head'
 import MyHeading from "../components/MyHeading";
 import {Avatar, chakra, Flex, Link, Text} from "@chakra-ui/react";
 import {AiFillLinkedin, AiOutlineGithub, AiOutlineMail} from "react-icons/ai";
+import {HiMail} from "react-icons/hi";
 import projects from "../components/projects";
 import {AnimatedText} from "../components/animatedText";
 import styles from '../styles/animatedBlink.module.css';
@@ -52,7 +53,7 @@ export default function Home() {
                           target={'_blank'}><AiFillLinkedin
                         size={'2em'}/></Link>
                     <Link display={['none', 'block']} mx={3} href={'mailto:samyok@samyok.us'}
-                          target={'_blank'}><AiOutlineMail
+                          target={'_blank'}><HiMail
                         size={'2em'}/></Link>
                     <Link href={'/'}>
                         <Avatar display={['none', 'block']} mx={3} size="md" name="Samyok Nepal"
@@ -100,7 +101,7 @@ export default function Home() {
                     </Link>
                     <Link m={2} href={"mailto:samyok@samyok.us"} target={'_blank'}>
                         <Flex m={2} alignItems={'center'}>
-                            <AiOutlineMail size={'2em'}/>
+                            <HiMail size={'2em'}/>
                             <chakra.p ml={2} fontFamily={'Fira Code'}>samyok@samyok.us</chakra.p>
                         </Flex>
                     </Link>
