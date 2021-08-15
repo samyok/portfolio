@@ -147,25 +147,25 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
                     type: "github"
                 }]
             },
-            {
-                tags: ["js", "express"],
-                title: "SnowMap",
-                subtext: "Feb 2020",
-                description: `During a snowstorm, many people look at this website to "figure out" the chances that school closes the next day. It scrapes KSFY News for current cancellations and plots them on the website using the Google Maps API, so it only works for the eastern South Dakota region.
-
-                The demo only works during inclement weather, as it is just a Google Map if no schools have cancelled school for tomorrow.`,
-                buttons: [
-                    {
-                        href: 'https://map.samyok.us/',
-                        type: "link",
-                        text: "map.samyok.us"
-                    },
-                    {
-                        href: "https://github.com/samyok/snowmap",
-                        type: "github"
-                    },
-                ]
-            },
+            // {
+            //     tags: ["js", "express"],
+            //     title: "SnowMap",
+            //     subtext: "Feb 2020",
+            //     description: `During a snowstorm, many people look at this website to "figure out" the chances that school closes the next day. It scrapes KSFY News for current cancellations and plots them on the website using the Google Maps API, so it only works for the eastern South Dakota region.
+            //
+            //     The demo only works during inclement weather, as it is just a Google Map if no schools have cancelled school for tomorrow.`,
+            //     buttons: [
+            //         {
+            //             href: 'https://map.samyok.us/',
+            //             type: "link",
+            //             text: "map.samyok.us"
+            //         },
+            //         {
+            //             href: "https://github.com/samyok/snowmap",
+            //             type: "github"
+            //         },
+            //     ]
+            // },
 
             {
                 tags: ['open-source', 'nodejs'],
