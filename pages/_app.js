@@ -2,8 +2,8 @@ import {ChakraProvider, extendTheme} from "@chakra-ui/react"
 
 const theme = extendTheme({
     fonts: {
-        heading: "Poppins, Arial Black, Arial, Helvetica, Verdana, Tahoma, sans-serif",
-        body: "Inter, Arial Black, Arial, Helvetica, Verdana, Tahoma, sans-serif"
+        heading: "Poppins, Inter,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\"",
+        body: "Inter,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
     }
 })
 
