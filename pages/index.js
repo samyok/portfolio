@@ -1,20 +1,7 @@
 import Head from 'next/head'
 import MyHeading from "../components/MyHeading";
-import {
-    Avatar,
-    Box,
-    Button,
-    chakra,
-    Flex,
-    HStack,
-    Input,
-    Link,
-    Text,
-    Textarea,
-    useToast,
-    VStack
-} from "@chakra-ui/react";
-import {AiFillLinkedin, AiFillMail, AiOutlineGithub, AiOutlineMail, AiOutlineSend} from "react-icons/ai";
+import {Avatar, chakra, Flex, Link, Text} from "@chakra-ui/react";
+import {AiFillLinkedin, AiOutlineGithub, AiOutlineMail} from "react-icons/ai";
 import projects from "../components/projects";
 import {AnimatedText} from "../components/animatedText";
 import styles from '../styles/animatedBlink.module.css';
@@ -33,8 +20,19 @@ export default function Home() {
         <chakra.div bg={'#F0F0F0'} minHeight={"100vh"}>
             <Head>
                 <title>Samyok Nepal</title>
-                <meta name="description" content="Hey! I'm Samyok Nepal, a coder in the midwest."/>
-                <link rel="icon" href="/favicon.ico"/>
+                <meta name="description"
+                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's a list of all my projects!"/>
+                <meta property="og:url" content="https://samyok.us/"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="Samyok Nepal"/>
+                <meta property="og:description" content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's a list of all my projects!"/>
+                <meta property="og:image" content="/og_image_index.png"/>
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:domain" content="samyok.us"/>
+                <meta property="twitter:url" content="https://samyok.us/"/>
+                <meta name="twitter:title" content="Samyok Nepal"/>
+                <meta name="twitter:description" content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's a list of all my projects!"/>
+                <meta name="twitter:image" content="/og_image_index.png"/>
             </Head>
 
             <main>
@@ -107,7 +105,8 @@ export default function Home() {
                         </Flex>
                     </Link>
                 </Flex>
-                <Text textAlign={'center'} color={'gray.900'} fontSize={'sm'}>Portfolio made by Samyok Nepal | <Link href={'https://github.com/samyok/portfolio'}>Github</Link></Text>
+                <Text textAlign={'center'} color={'gray.900'} fontSize={'sm'}>Portfolio made by Samyok Nepal | <Link
+                    href={'https://github.com/samyok/portfolio'}>Github</Link></Text>
             </Flex>
         </chakra.div>
     )

@@ -9,8 +9,8 @@ export default class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'true'}/>
                     <link rel="preload"
                           as="style"
-                          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap" />
-                    <link
+                          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap"/>
+                    <link66
                         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap"
                         rel="stylesheet"/>
 
@@ -21,6 +21,13 @@ export default class MyDocument extends Document {
                         data-host-url="https://a.samyok.us"
                         src="/a.js"
                     />
+                    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+                    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+                    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+                    <link rel="manifest" href="/site.webmanifest"/>
+                    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+                    <meta name="msapplication-TileColor" content="#da532c"/>
+                    <meta name="theme-color" content="#ffffff"/>
                 </Head>
                 <body>
                 <Main/>
