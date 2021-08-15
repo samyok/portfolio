@@ -22,7 +22,7 @@ export function Footer(params) {
                            size={'2xl'}>
                     Contact Me
                 </MyHeading>
-                <chakra.p pt={4}>I&apos;ll get back to you back as soon as I can!</chakra.p>
+                <chakra.p pt={4}>I&apos;ll get back to you as soon as I can!</chakra.p>
             </Flex>
 
             <Flex px={[2, 5, 10]} justifyContent={'center'} flexDir={'column'} py={10} alignItems={'center'}>
