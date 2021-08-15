@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'true'}/>
                     <link rel="preload"
                           as="style"
+                          crossOrigin={'true'}
                           href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap"/>
                     <link
                         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap"
