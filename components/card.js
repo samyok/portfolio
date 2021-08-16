@@ -100,7 +100,10 @@ export function Card({project, collapsible, filterTags}) {
                     cursor: 'pointer'
                 }}
                 onClick={() => {
-                    if (project.buttons.length) window.open(project.buttons[0].href, "_blank")
+                    if (project.buttons.length) {
+                        window?.umami?.trackEvent(`proj.${project.title.replace(/ /g, "_")}.img.click`, "project_button")
+                        window.open(project.buttons[0].href, "_blank")
+                    }
                 }}
             >
 
