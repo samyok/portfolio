@@ -74,13 +74,35 @@ export function Card({project, collapsible, filterTags}) {
         } : undefined}
     >
         {!collapsible &&
-        <Box borderTopRadius={10} mb={[5, 10]} p={0} bgImage={imgSrc(project.bgImage)} backgroundPosition={'center'}
-             bgSize={'cover'} position={'relative'}>
+        <Box borderTopRadius={10}
+             mb={[5, 10]}
+             p={0}
+             bgImage={imgSrc(project.bgImage)}
+             backgroundPosition={'center'}
+             bgSize={'cover'}
+             overflow={'hidden'}
+             position={'relative'}>
 
             <Flex
-                flexDirection={'column'} bgColor={'rgba(0,0,0,0.8)'} px={cardPadding} pb={6} pt={[20, 40, 60]}
-                height={'100%'} borderTopRadius={10} alignItems={'space-between'}
-                justifyContent={'space-between'}>
+                flexDirection={'column'}
+                bgColor={'rgba(0,0,0,0.8)'}
+                px={cardPadding}
+                pb={6}
+                pt={[20, 40, 60]}
+                height={'100%'}
+                borderTopRadius={10}
+                alignItems={'space-between'}
+                justifyContent={'space-between'}
+                transitionDuration={'250ms'}
+                _hover={{
+                    transform: 'scale(1.5)',
+                    opacity: 0,
+                    cursor: 'pointer'
+                }}
+                onClick={() => {
+                    if (project.buttons.length) window.open(project.buttons[0].href, "_blank")
+                }}
+            >
 
                 <Flex mb={2} flexWrap={'wrap'}>
                     {tags}
@@ -88,7 +110,6 @@ export function Card({project, collapsible, filterTags}) {
 
                 <Flex alignItems={'center'} justifyContent={'space-between'}>
                     <MyHeading size={'xl'} color={'white'} pb={0}>{project.title}</MyHeading>
-
                     <chakra.p color={'gray.100'} fontSize={'sm'} textAlign={'right'}
                               alignSelf={'flex-end'}>{project.subtext}</chakra.p>
                 </Flex>

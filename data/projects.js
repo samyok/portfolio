@@ -72,7 +72,7 @@ const projectSections = [
         }, {
             tags: ['react-native', 'express', 'firebase'],
             bgImage: 'https://notify.samyok.us/img/phone1.png',
-            description: `Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. 1800+ downloads over the last year (BHS has ~800 students). The Brookings School District was in talks to purchase the app for every school in the district, but those talks got cancelled due to COVID. 
+            description: `Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. 2000+ downloads over the last year (BHS has ~800 students). The Brookings School District was in talks to purchase the app for every school in the district, but those talks got cancelled due to COVID. 
                 
                 Coded in React Native with Node/Express/MongoDB/Firestore backend.`,
             title: "Bobcat Notify",
