@@ -45,9 +45,8 @@ export function Card({project, collapsible, filterTags}) {
         <Tag key={"tag:" + a}
              size="md"
              colorScheme={!!collapsible ? 'blackAlpha' : 'whiteAlpha'}
-             borderRadius="full"
              mr={2} mt={2}>
-            <TagLabel fontWeight={filterTags.includes(a) ? 'bold' : 'normal'}>{a}</TagLabel>
+            <TagLabel fontWeight={filterTags.includes(a) ? 'extrabold' : 'extrabold'}>{a}</TagLabel>
         </Tag>)
 
     const {isOpen, onToggle} = useDisclosure({defaultIsOpen: !collapsible || true})
@@ -57,8 +56,10 @@ export function Card({project, collapsible, filterTags}) {
         return null;
     return <Box
         onClick={e => {
-            if (e.target.tagName !== "BUTTON" && !!collapsible)
-                onToggle();
+            if (e.target.tagName !== "BUTTON" && !!collapsible) {
+                // onToggle();
+                if(project.buttons[0]) window.open(project.buttons[0].href, "_blank");
+            }
         }}
         mx={[2, 5]}
         mb={16}
@@ -68,7 +69,7 @@ export function Card({project, collapsible, filterTags}) {
         borderWidth={1}
         borderColor={'gray.200'}
         maxWidth={!collapsible ? '700px' : '700px'}
-        _hover={!!collapsible ? {
+        _hover={!!collapsible && project.buttons[0] ? {
             bg: 'rgba(0,0,0,0.02)',
             cursor: 'pointer'
         } : undefined}

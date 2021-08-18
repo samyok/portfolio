@@ -33,7 +33,6 @@ export function Project({projSection}) {
                              colorScheme="blackAlpha"
                              bg={selectedTags.includes(a) ? 'rgba(0,0,0,0.3)' : undefined}
                              color={selectedTags.includes(a) ? 'white' : undefined}
-                             borderRadius="full"
                              _hover={{
                                  cursor: "pointer",
                                  bg: "rgba(0,0,0,0.1)"
@@ -51,13 +50,13 @@ export function Project({projSection}) {
                                  })
                              }}
                              mr={2} mt={2}>
-                            <TagLabel>{a}</TagLabel>
+                            <TagLabel fontWeight={'extrabold'}>{a}</TagLabel>
                             {selectedTags.includes(a) && <TagCloseButton/>}
                         </Tag>)
                 }
             </Flex>
         </SlideFade>
-        <Flex flexWrap={'wrap'} justifyContent={'space-evenly'} alignItems={'flex-start'}>
+        <Flex flexWrap={'wrap'} justifyContent={'center'}>
             {projSection.data.map(project =>
                 <Card
                     filterTags={selectedTags}
