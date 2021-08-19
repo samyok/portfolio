@@ -58,14 +58,14 @@ export default function Resume() {
                       content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resume :)"/>
                 <meta property="og:url" content="https://samyok.us/"/>
                 <meta property="og:type" content="website"/>
-                <meta property="og:title" content="Samyok Nepal: In the news"/>
+                <meta property="og:title" content="Samyok Nepal: My Resume"/>
                 <meta property="og:description"
                       content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resume :)"/>
                 <meta property="og:image" content="/og_image_index.png"/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:domain" content="samyok.us"/>
                 <meta property="twitter:url" content="https://samyok.us/"/>
-                <meta name="twitter:title" content="Samyok Nepal"/>
+                <meta name="twitter:title" content="Samyok Nepal's Resume"/>
                 <meta name="twitter:description"
                       content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resume :)"/>
                 <meta name="twitter:image" content="/og_image_index.png"/>
