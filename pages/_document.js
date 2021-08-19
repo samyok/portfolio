@@ -22,6 +22,7 @@ export default class MyDocument extends Document {
                         defer
                         data-website-id="f5572f62-a934-4108-aa6c-677f32b8fcb2"
                         data-host-url="https://a.samyok.us"
+                        data-domains={"samyok.us, samyoknepal.me"}
                         src="/a.js"
                     />
                     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
