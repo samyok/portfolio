@@ -35,7 +35,7 @@ export default function Home() {
                 <Navigation/>
                 <Box px={[2, 5, 10]} pt={[200, 150]} minH={'100vh'} pb={20}>
                     <MyHeading as={'h1'}>In the News</MyHeading>
-                    <chakra.p py={5}>This page exists <s>to feed my ego</s> to document news articles that have some relevance to me 😊
+                    <chakra.p py={5}>This page exists to document news articles that have some relevance to me 😊
                     </chakra.p>
                     <VStack spacing={4} m={0}>
                         {

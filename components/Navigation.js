@@ -18,7 +18,7 @@ export default function Navigation() {
         </Flex>
         <Link my={2} mx={3} href={'#contact'}>Contact</Link>
         <Link my={2} mx={3} href={'/resume'}>Resume</Link>
-        <Link my={2} mx={3} href={'/press'}>Media Appearances</Link>
+        <Link my={2} mx={3} href={'/press'}>News Features</Link>
         <Link my={2} mx={3} href={'/#projects'}>Projects</Link>
         <Link display={['none', 'block']} mx={3} href={'https://github.com/samyok'}
               target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
