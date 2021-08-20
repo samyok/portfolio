@@ -38,7 +38,7 @@ const renderToolbar = Toolbar => (
     </Toolbar>
 )
 
-export default function Resume() {
+export default function resumé() {
     const wordChanged = (newIndex) => {
         // console.log({newIndex});
     }
@@ -55,35 +55,35 @@ export default function Resume() {
             <Head>
                 <title>Samyok Nepal</title>
                 <meta name="description"
-                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resume :)"/>
+                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resumé :)"/>
                 <meta property="og:url" content="https://samyok.us/"/>
                 <meta property="og:type" content="website"/>
-                <meta property="og:title" content="Samyok Nepal: My Resume"/>
+                <meta property="og:title" content="Samyok Nepal: My resumé"/>
                 <meta property="og:description"
-                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resume :)"/>
+                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resumé :)"/>
                 <meta property="og:image" content="/og_image_index.png"/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:domain" content="samyok.us"/>
                 <meta property="twitter:url" content="https://samyok.us/"/>
-                <meta name="twitter:title" content="Samyok Nepal's Resume"/>
+                <meta name="twitter:title" content="Samyok Nepal's resumé"/>
                 <meta name="twitter:description"
-                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resume :)"/>
+                      content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resumé :)"/>
                 <meta name="twitter:image" content="/og_image_index.png"/>
             </Head>
 
             <main>
                 <Navigation/>
                 <Box px={[2, 5, 10]} pt={[200, 150]} minH={'100vh'} pb={20}>
-                    <MyHeading as={'h1'}>Resume</MyHeading>
+                    <MyHeading as={'h1'}>Resumé</MyHeading>
                     <chakra.p>Click <chakra.a _hover={{
                         textDecoration: 'underline'
-                    }} href="https://cdn.samyok.us/SamyokNepalResume.pdf">here</chakra.a> to download my
-                        resume.
+                    }} href="https://cdn.samyok.us/SamyokNepalresumé.pdf">here</chakra.a> to download my
+                        resumé.
                     </chakra.p>
                     <Box pt={4}>
                         <Worker workerUrl="/pdf.worker.min.js">
                             <Viewer
-                                fileUrl="https://cdn.samyok.us/SamyokNepalResume.pdf"
+                                fileUrl="https://cdn.samyok.us/SamyokNepalresumé.pdf"
                                 plugins={[defaultLayoutPluginInstance]}
                             />
                         </Worker>
