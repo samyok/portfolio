@@ -83,7 +83,7 @@ export default function resumé() {
                     <Box pt={4}>
                         <Worker workerUrl="/pdf.worker.min.js">
                             <Viewer
-                                fileUrl="https://cdn.samyok.us/SamyokNepalresumé.pdf"
+                                fileUrl="https://cdn.samyok.us/SamyokNepalResume.pdf"
                                 plugins={[defaultLayoutPluginInstance]}
                             />
                         </Worker>
