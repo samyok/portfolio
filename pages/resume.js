@@ -61,14 +61,14 @@ export default function resumé() {
                 <meta property="og:title" content="Samyok Nepal: My resumé"/>
                 <meta property="og:description"
                       content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resumé :)"/>
-                <meta property="og:image" content="/og_image_index.png"/>
+                <meta property="og:image" content="https://bcdn.samyok.us/api/ogimage?url=/resume&wait=1500"/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:domain" content="samyok.us"/>
                 <meta property="twitter:url" content="https://samyok.us/"/>
                 <meta name="twitter:title" content="Samyok Nepal's resumé"/>
                 <meta name="twitter:description"
                       content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's my resumé :)"/>
-                <meta name="twitter:image" content="/og_image_index.png"/>
+                <meta name="twitter:image" content="https://bcdn.samyok.us/api/ogimage?url=/resume&wait=1500"/>
             </Head>
 
             <main>
