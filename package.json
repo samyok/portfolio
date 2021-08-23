@@ -18,12 +18,14 @@
     "framer-motion": "^4.1.17",
     "next": "11.1.0",
     "pdfjs-dist": "^2.9.359",
+    "playwright-aws-lambda": "^0.7.0",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0"
+    "eslint-config-next": "11.1.0",
+    "playwright": "^1.14.0"
   }
 }

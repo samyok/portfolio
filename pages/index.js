@@ -59,7 +59,7 @@ export default function Home() {
                         px={[2, 5]}
                         textAlign={'center'}
                         size={'4xl'}>
-                        <chakra.span class={styles.wiggle}>👋</chakra.span>
+                        <chakra.span className={styles.wiggle}>👋</chakra.span>
                         Hi, I&apos;m Samyok Nepal
                     </MyHeading>
                     <MyHeading size={'lg'} color={'gray.400'} m={0} mb={-16} p={0} fontWeight={400}>What do I
