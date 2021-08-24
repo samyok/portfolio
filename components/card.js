@@ -94,11 +94,11 @@ export function Card({project, collapsible, filterTags}) {
                 borderTopRadius={10}
                 alignItems={'space-between'}
                 justifyContent={'space-between'}
-                transitionDuration={'250ms'}
+                transitionDuration={'500ms'}
                 _hover={{
-                    transform: 'scale(1.5)',
+                    transform: 'scale(2)',
                     opacity: 0,
-                    cursor: 'pointer'
+                    cursor: 'pointer',
                 }}
                 onClick={() => {
                     if (project.buttons.length) {

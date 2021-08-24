@@ -27,6 +27,7 @@ export default function Home() {
                 <title>Samyok Nepal</title>
                 <meta name="description"
                       content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's a list of all my projects!"/>
+                <link rel="canonical" href="https://samyok.us/" />
                 <meta property="og:url" content="https://samyok.us/"/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="Samyok Nepal"/>

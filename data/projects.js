@@ -3,6 +3,31 @@ const projectSections = [
         title: "Current Projects",
         data: [
             {
+                tags: ['nextjs', 'typescript', 'mongodb', 'chakra-ui', 'sass'],
+                bgImage: 'https://cdn.samyok.us/img/DDI.png',
+                description: `I was the sole develeper for most of the camp, having coded the custom landing page, classroom, and tournament/judging platform for 2021. I also managed advertising and analytics using Umami and set up Zoho Mail. 
+                
+                I'm excited to be the camp director for the (hopefully) in-person DDI 2022!`,
+                title: "Dakota Debate Institute",
+                subtext: "Jul 2021 - Present",
+                buttons: [
+                    {
+                        href: "https://dakotadebate.org",
+                        type: "link",
+                        text: "dakotadebate.org",
+                    },
+                    {
+                        href: "https://github.com/samyok/dakotadebate",
+                        type: "github",
+                    },
+                    {
+                        href: "https://github.com/samyok/dakotadebate-classroom",
+                        type: "github",
+                        text: "Classroom Github"
+                    },
+                ]
+            },
+            {
                 tags: ['php', 'mysql', 'phpbb', 'express', 'less'],
                 bgImage: 'https://cdn.samyok.us/img/gallery.png',
                 description: `I'm currently working on a custom phpBB3 gallery to be deployed on scioly.org/gallery. Currently, the gallery hosts 4k images and videos on a nodejs bucket server that generates thumbnails and low-res images for slow networks. 
@@ -21,22 +46,18 @@ const projectSections = [
                         type: "github",
                     },
                 ]
-            }, {
-                tags: ['nextjs', 'typescript', 'mongodb', 'chakra-ui', 'sass'],
-                bgImage: 'https://cdn.samyok.us/img/DDI.png',
-                description: `I was the sole develeper for most of the camp, having coded the custom landing page, classroom, and tournament/judging platform for 2021. I also managed advertising and analytics using Umami and set up Zoho Mail. 
+            },
+            {
+                tags: ['nextjs', 'chakra-ui', 'LaTeX'],
+                bgImage: '/og_image_index.png',
+                description: `I designed and developed this webiste over the past couple months as a general index to all the various projects I work on. My resume is written in LaTeX using a template I wrote. 
                 
-                I'm excited to be the camp director for the (hopefully) in-person DDI 2022!`,
-                title: "Dakota Debate Institute",
+                Recently, I've added automatic open graph image generation and caching so that the preview is always the most updated version of the website! Feel free to check out the portfolio, though.`,
+                title: "Portfolio",
                 subtext: "Jul 2021 - Present",
                 buttons: [
                     {
-                        href: "https://dakotadebate.org",
-                        type: "link",
-                        text: "dakotadebate.org",
-                    },
-                    {
-                        href: "https://github.com/samyok/dakotadebate-classroom",
+                        href: "https://github.com/samyok/portfolio",
                         type: "github",
                     },
                 ]
@@ -83,10 +104,6 @@ const projectSections = [
                     type: "link",
                     text: "notify.samyok.us",
                 },
-                {
-                    href: "https://github.com/samyok/dakotadebate",
-                    type: "github",
-                },
             ]
         }, {
             tags: ['tensorflow', 'react', 'socket.io', 'express', 'three.js', 'hackathon'],
@@ -104,7 +121,7 @@ const projectSections = [
                     type: "devpost",
                 },
                 {
-                    href: "https://github.com/samyok/dakotadebate",
+                    href: "https://github.com/samyok/songsma.sh",
                     type: "github",
                 },
             ]
