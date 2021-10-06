@@ -77,7 +77,7 @@ export default function resumé() {
                     <MyHeading as={'h1'}>Resumé</MyHeading>
                     <chakra.p>Click <chakra.a _hover={{
                         textDecoration: 'underline'
-                    }} href="https://cdn.samyok.us/SamyokNepalresumé.pdf">here</chakra.a> to download my
+                    }} href="https://cdn.samyok.us/SamyokNepalResume.pdf">here</chakra.a> to download my
                         resumé.
                     </chakra.p>
                     <Box pt={4}>
