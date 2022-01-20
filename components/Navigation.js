@@ -12,14 +12,14 @@ export default function Navigation() {
                     mx={3}
                     bg={'transparent'}
                     icon={<AiOutlineUser size={'2em'}/>}
-                    size="md"
+                    size="xl"
                     name="Samyok Nepal"
-                    src={imgSrc("https://cdn.samyok.us/img/senior_picture_circle_small.png")}/>
+                    src={imgSrc("https://cdn.samyok.us/img/sunglasses.jpeg")}/>
         </Flex>
-        <Link my={2} mx={3} href={'#contact'}>Contact</Link>
-        <Link my={2} mx={3} href={'/resume'}>Resume</Link>
-        <Link my={2} mx={3} href={'/press'}>News Features</Link>
-        <Link my={2} mx={3} href={'/#projects'}>Projects</Link>
+        <Link fontSize={20} my={2} mx={4} href={'#contact'}>Contact</Link>
+        <Link fontSize={20} my={2} mx={4} href={'/resume'}>Resume</Link>
+        <Link fontSize={20} my={2} mx={4} href={'/press'}>News Features</Link>
+        <Link fontSize={20} my={2} mx={4} href={'/#projects'}>Projects</Link>
         <Link display={['none', 'block']} mx={3} href={'https://github.com/samyok'}
               target={'_blank'}><AiOutlineGithub size={'2em'}/></Link>
         <Link display={['none', 'block']} mx={3} href={'https://linkedin.com/in/samyok'}
@@ -33,9 +33,9 @@ export default function Navigation() {
                     mx={3}
                     bg={'transparent'}
                     icon={<AiOutlineUser size={'2em'}/>}
-                    size="md"
+                    size="xl"
                     name="Samyok Nepal"
-                    src={imgSrc("https://cdn.samyok.us/img/senior_picture_circle_small.png")}/>
+                    src={imgSrc("https://cdn.samyok.us/img/sunglasses.jpeg")}/>
         </Link>
     </Flex>
 }

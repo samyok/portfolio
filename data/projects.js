@@ -1,5 +1,18 @@
 const projectSections = [
     {
+        title: "Current Role",
+        data: [
+            {
+                tags: ["nextjs", "typescript", "mongodb", "socket.io", "material-ui"],
+                bgImage: "/img/fiveable.png",
+                description: `I started at Fiveable as a part time Junior Software Engineer at Hours, but was then promoted to a full time Software Engineer I role after a couple months. The codebase is a MongoDB, SocketIO, Express, and NextJS stack, with Material UI as a design framework. I work alongside designers, product managers, and other engineers to turn ticketed ideas into reality.`,
+                title: "Fiveable",
+                subtext: "Software Engineer I, Sep 2020 - Present",
+                buttons: [{href: "https://fiveable.me", type: "link", text: "Fiveable Homepage"}]
+            }
+        ]
+    },
+    {
         title: "Current Projects",
         data: [
             {
@@ -30,34 +43,19 @@ const projectSections = [
             {
                 tags: ['php', 'mysql', 'phpbb', 'express', 'less'],
                 bgImage: 'https://cdn.samyok.us/img/gallery.png',
-                description: `I'm currently working on a custom phpBB3 gallery to be deployed on scioly.org/gallery. Currently, the gallery hosts 4k images and videos on a nodejs bucket server that generates thumbnails and low-res images for slow networks. 
+                description: `I wrote and deployed a custom phpBB3 gallery at scioly.org/gallery. Currently, the gallery hosts more than 4k images and videos on a NodeJS bucket server that generates thumbnails and low-res images for slow networks. 
                 
-                Scioly.org is the largest student center for Science Olympiad students. Having been around for 22 years, the website provides guidance for the more than 54,000 registered users. Try the actively-developed gallery beta below!`,
+                Scioly.org is the largest student center for Science Olympiad students. Having been around for 22 years, the website provides guidance for the more than 54,000 registered users. Try the gallery below!`,
                 title: "Scioly.org",
-                subtext: "Sept 2019 - Present",
+                subtext: "Sep 2019 - Present",
                 buttons: [
                     {
-                        href: "https://scioly.gallery",
+                        href: "https://scioly.org/gallery",
                         type: "link",
-                        text: "scioly.gallery (beta)",
+                        text: "scioly.org/gallery",
                     },
                     {
                         href: "https://github.com/samyok/scioly-gallery-docker",
-                        type: "github",
-                    },
-                ]
-            },
-            {
-                tags: ['nextjs', 'chakra-ui', 'LaTeX'],
-                bgImage: '/og_image_index.png',
-                description: `I designed and developed this webiste over the past couple months as a general index to all the various projects I work on. My resume is written in LaTeX using a template I wrote. 
-                
-                Recently, I've added automatic open graph image generation and caching so that the preview is always the most updated version of the website! Feel free to check out the portfolio, though.`,
-                title: "Portfolio",
-                subtext: "Jul 2021 - Present",
-                buttons: [
-                    {
-                        href: "https://github.com/samyok/portfolio",
                         type: "github",
                     },
                 ]
@@ -147,6 +145,21 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
         collapsible: true,
         data: [
 
+            {
+                tags: ['nextjs', 'chakra-ui', 'LaTeX'],
+                bgImage: '/og_image_index.png',
+                description: `I designed and developed this website over the past couple months as a general index to all the various projects I work on. My resume is written in LaTeX using a template I wrote. 
+                
+                Recently, I've added automatic open graph image generation and caching so that the preview is always the most updated version of the website! Feel free to check out the portfolio, though.`,
+                title: "Portfolio",
+                subtext: "Jul 2021 - Present",
+                buttons: [
+                    {
+                        href: "https://github.com/samyok/portfolio",
+                        type: "github",
+                    },
+                ]
+            },
 
             {
                 tags: ['open-source'],
@@ -233,7 +246,7 @@ devJS runs a compiled version of NodeJS ChakraCore on iOS and uses Termux on And
             {
                 tags: ["js", "express"],
                 title: "Scioly Chrome Extension",
-                subtext: "Sept 2019",
+                subtext: "Sep 2019",
                 description: `My first chrome extension and my first project for Scioly.org. 
                 
                 I've since added (or helped add) all of the features, except for infinite scrolling, to the main scioly.org website.`,
