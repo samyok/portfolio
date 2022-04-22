@@ -36,7 +36,8 @@ const news = [
         author: "Brookings Rotary Club",
         date: "January 5, 2021",
         publisher: "Brookings Register",
-        img: "https://www.brookingsregister.com/uploads/images/2021/01/95ba32717dfa1fea436fa5801688fef8.jpg"
+        img: "https://www.brookingsregister.com/uploads/images/2021/01/95ba32717dfa1fea436fa5801688fef8.jpg",
+	url: "https://brookingsregister.com/article/nepal-kasu-named-rotary-students-of-the-month"
     },
     {
         title: "Brookings Quiz Bowl Club hosts annual tournament",
