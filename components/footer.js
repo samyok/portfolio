@@ -85,10 +85,10 @@ export function Footer(params) {
                         <chakra.p ml={2} fontFamily={'Fira Code'}>/in/samyok</chakra.p>
                     </Flex>
                 </Link>
-                <Link m={2} href={"mailto:samyok@samyok.us"} target={'_blank'}>
+                <Link m={2} href={"mailto:sam@yok.dev"} target={'_blank'}>
                     <Flex m={2} alignItems={'center'}>
                         <HiMail size={'2em'}/>
-                        <chakra.p ml={2} fontFamily={'Fira Code'}>samyok@samyok.us</chakra.p>
+                        <chakra.p ml={2} fontFamily={'Fira Code'}>sam@yok.dev</chakra.p>
                     </Flex>
                 </Link>
             </Flex>
