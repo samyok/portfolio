@@ -1,4 +1,16 @@
-import { Box, Button, chakra, Flex, Input, Link, Text, Textarea, useToast, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  chakra,
+  Flex,
+  Hide,
+  Input,
+  Link,
+  Text,
+  Textarea,
+  useToast,
+  VStack,
+} from "@chakra-ui/react";
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineSend } from "react-icons/ai";
 import MyHeading from "./MyHeading";
 import { useState } from "react";
@@ -11,7 +23,7 @@ export function Footer(params) {
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(false);
   return (
-    <Box>
+    <Hide breakpoint={"print"}>
       <Box bg={"rgba(0,0,0,0.1)"} width={"100%"} p={5} m={0} id={"contact"}>
         <Flex
           alignItems={"center"}
@@ -130,6 +142,6 @@ export function Footer(params) {
           Portfolio made by Samyok Nepal | <Link href={"https://github.com/samyok/portfolio"}>Github</Link>
         </Text>
       </Flex>
-    </Box>
+    </Hide>
   );
 }

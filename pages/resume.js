@@ -1,13 +1,19 @@
 import Head from "next/head";
-import MyHeading from "../components/MyHeading";
 import { Box, chakra, HStack, IconButton } from "@chakra-ui/react";
 import { Footer } from "../components/footer";
 import Navigation from "../components/Navigation";
-import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { AiOutlineZoomIn, AiOutlineZoomOut } from "react-icons/ai";
+import { ResumeHeading } from "../components/resume/ResumeHeading";
+import fs from "fs";
+import { load } from "js-yaml";
+import { join } from "path";
+import { EducationItem } from "../components/resume/EducationItem";
+import { ExperienceItem } from "../components/resume/ExperienceItem";
+import { AwardItem } from "../components/resume/AwardItem";
+import { ResumeTop } from "../components/resume/ResumeTop";
 
 const toolBarButtonProps = {
   colorScheme: "blackAlpha",
@@ -44,18 +50,7 @@ const renderToolbar = (Toolbar) => (
   </Toolbar>
 );
 
-export default function resumé() {
-  const wordChanged = (newIndex) => {
-    // console.log({newIndex});
-  };
-  const defaultLayoutPluginInstance = defaultLayoutPlugin({
-    sidebarTabs: (defaultTabs) => {
-      console.log({ defaultTabs });
-      return [defaultTabs[0]];
-    },
-    // renderToolbar
-  });
-
+export default function resume({ resumeData }) {
   return (
     <chakra.div bg={"#F0F0F0"} minHeight={"100vh"}>
       <Head>
@@ -85,37 +80,34 @@ export default function resumé() {
 
       <main>
         <Navigation />
-        <Box px={[2, 5, 10]} pt={[200, 150]} minH={"100vh"} pb={20}>
-          <MyHeading as={"h1"}>Resumé</MyHeading>
-          <chakra.p>
-            Click{" "}
-            <chakra.a
-              _hover={{
-                textDecoration: "underline",
-              }}
-              href="https://cdn.samyok.us/SamyokNepalResume.pdf">
-              here
-            </chakra.a>{" "}
-            to download my resumé.
-          </chakra.p>
-          <Box pt={4}>
-            <Worker workerUrl="/pdf.worker.min.js">
-              <Viewer
-                fileUrl="https://cdn.samyok.us/SamyokNepalResume.pdf"
-                plugins={[defaultLayoutPluginInstance]}
-              />
-            </Worker>
-            <style>
-              {" "}
-              {`
-                            .rpv-core__display--hidden.rpv-core__display--block-medium:nth-child(3) {
-                                display: none;
-                            }`}
-            </style>
-          </Box>
+        <Box px={[2, 5, 10]} pb={20}>
+          <ResumeTop />
+          <ResumeHeading as={"h2"}>Education</ResumeHeading>
+          {resumeData.education.map((item, index) => (
+            <EducationItem item={item} key={"education-" + index} />
+          ))}
+          <ResumeHeading as={"h2"}>Experience</ResumeHeading>
+          {resumeData.work.map((item, index) => (
+            <ExperienceItem item={item} key={"work-" + index} />
+          ))}
+          <ResumeHeading as={"h2"}>Awards and Recognition</ResumeHeading>
+          {resumeData.awards.map((item, index) => (
+            <AwardItem item={item} key={"award-" + index} />
+          ))}
+          <ResumeHeading as={"h2"}>Skills and Interests</ResumeHeading>
+          {JSON.stringify(resumeData.skills, null, 4)}
+          {JSON.stringify(resumeData.interests, null, 4)}
         </Box>
       </main>
       <Footer />
     </chakra.div>
   );
 }
+
+export const getStaticProps = () => {
+  const yaml = fs.readFileSync(join(process.cwd(), "./data/resume.yaml"), "utf8");
+  const resumeData = load(yaml);
+  return {
+    props: { resumeData },
+  };
+};

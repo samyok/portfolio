@@ -1,0 +1,94 @@
+
+education:
+  - name: "University of Minnesota, Twin Cities"
+    date: "Expected Graduation: May 2025"
+    info:
+      - "Bachelor of Science, Computer Science"
+  - name: "Brookings High School"
+    date: "August 2017 - May 2021"
+    info:
+      - "GPA: 4.043 - Honors Scholar"
+      - "SAT: 1570/1600 (800 math, 770 reading-writing)"
+      - "Activities: National Honor Society President, Science Olympiad Captain, Science Bowl Captain, State QuizBowl Captain, Varsity Debater + National Qualifier"
+work:
+  - location: "Fiveable"
+    title: "Software Engineer I"
+    url: "fiveable.me"
+    href: "https://fiveable.me"
+    date: "September 2021 - Present"
+    info:
+      - "Currently helping update, optimize, and maintain the core virtual studying web app"
+  - location: "Art of Problem Solving"
+    title: "Teaching Assistant (contractor)"
+    url: "aops.com"
+    href: "https://artofproblemsolving.com"
+    date: "August 2021 - Present"
+    info:
+      - "Analyzed Python and math homework with set guidelines, and wrote feedback to guide students to the solution"
+  - location: "Bobcat Notify"
+    title: "Founder"
+    url: "notify.samyok.us"
+    href: "https://notify.samyok.us"
+    date: "November 2019 - May 2021"
+    info:
+      - "Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district."
+      - "Led constant communication with school administration and IT to deliver relevant and timely in‐app alerts and updates. User satisfaction rose to 4.9 stars on both app stores with over 50 reviews."
+  - location: "Freelance Web Developer"
+    date: "2018 - 2019"
+    info:
+      - "Designed, developed, and sold websites and bots that used search engine features to successfully gather relevant information requested by clients quickly and accurately."
+      - "Managed a global network of servers to successfully synchronize website state to over 7,500 users globally in under 750ms."
+  - location: "Scioly.org"
+    title: "Volunteer Developer"
+    url: "scioly.org"
+    href: "https://scioly.org"
+    date: "2019 - 2022"
+    info:
+      - "Maintenance of critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website."
+      - "Developed custom PHP image gallery and file storage server to replace old, inefficient, and unreliable system to be used by the more than 68,000 registered users."
+  - location: "Brookings Math Circle"
+    title: "Co-Founder/Instructor"
+    url: "brookingsmath.org"
+    href: "https://brookingsmath.org"
+    date: "2016 - 2021"
+    info:
+      - "Volunteer taught three‐hour classes every week during the summer, with lessons ranging from single variable algebra to AIME‐level geometry. Achieved goal of 20+ attendees per class for the last three years."
+      - "Created curriculum by writing handouts, homework, and mock contests, resulting in over 100 pages of instructional materials over 5 years."
+      - "Ensured students’ success with a smooth transition into competitive math, contributing to the local MATHCOUNTS team growing by 60% to more than 30 members."
+
+awards:
+  - name: "US Congressional App Challenge Winner (Bobcat Notify)"
+    tags:
+      - "csci"
+  - name: "AMC 10/12 Honor Roll (2018, 2019, 2020, 2021)"
+    tags:
+      - "math"
+  - name: "Science Bowl State Champion (2021)"
+  - name: "SDSU Programming Design Contest Winner (2020)"
+    tags:
+      - "csci"
+  - name: "National Merit Semifinalist"
+  - name: "US Presidential Scholar Candidate"
+  - name: "USACO Gold Division"
+    tags:
+      - "csci"
+  - name: "USAMTS Honorable Mention (2017)"
+    tags:
+      - "math"
+
+skills:
+  - "JavaScript"
+  - "Python"
+  - "React"
+  - "LaTeX"
+  - "MongoDB"
+  - "HTML/CSS"
+  - "Git"
+  - "MySQL"
+  - "PHP"
+
+interests:
+  - "Director of nonprofit debate camp (Dakota Debate Institute)"
+  - "Political Theory"
+  - "Hiking"
+  - "Kayaking"

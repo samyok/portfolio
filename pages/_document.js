@@ -15,10 +15,10 @@ export default class MyDocument extends Document {
             rel="preload"
             as="style"
             crossOrigin={"true"}
-            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap"
             rel="stylesheet"
           />
 
