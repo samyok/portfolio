@@ -7,13 +7,17 @@ export const ExperienceItem = ({ item, selectedTags }) => {
     <Collapse in={isSelected}>
       <Box p={1}>
         <Flex justifyContent={"space-between"} alignItems={"center"}>
-          <Flex alignItems={"flex-end"}>
-            <Heading as="h3" size="md" fontWeight={500} fontSize={16} fontFamily={"Inter"} pr={1}>
-              {item.location}
-              {item.title && `, ${item.title}`}
-            </Heading>
+          <Heading
+            as="h3"
+            size="md"
+            fontWeight={500}
+            fontSize={16}
+            fontFamily={"Inter"}
+            alignItems={"center"}>
+            {item.location}
+            {item.title && `, ${item.title}`}
             {item.url && (
-              <Text fontSize={14} fontWeight={300} p={0} m={0}>
+              <Text fontSize={14} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
                 (
                 <Link href={item.href} target={"_blank"}>
                   {item.url}
@@ -21,7 +25,7 @@ export const ExperienceItem = ({ item, selectedTags }) => {
                 )
               </Text>
             )}
-          </Flex>
+          </Heading>
           <Text fontWeight={400} fontSize={14}>
             {item.date}
           </Text>
