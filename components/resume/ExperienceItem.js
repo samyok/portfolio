@@ -5,19 +5,19 @@ export const ExperienceItem = ({ item, selectedTags }) => {
 
   return (
     <Collapse in={isSelected}>
-      <Box p={1}>
+      <Box px={1} py={1}>
         <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Heading
             as="h3"
             size="md"
             fontWeight={500}
-            fontSize={16}
+            fontSize={14}
             fontFamily={"Inter"}
             alignItems={"center"}>
             {item.location}
             {item.title && `, ${item.title}`}
             {item.url && (
-              <Text fontSize={14} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
+              <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
                 (
                 <Link href={item.href} target={"_blank"}>
                   {item.url}
@@ -33,7 +33,7 @@ export const ExperienceItem = ({ item, selectedTags }) => {
         <UnorderedList pl={1}>
           {item.info.map((i) => (
             <ListItem key={i} lineHeight={1.3}>
-              <Text fontSize={14} fontWeight={300}>
+              <Text fontSize={12} fontWeight={300}>
                 {i}
               </Text>
             </ListItem>

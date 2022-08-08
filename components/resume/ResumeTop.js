@@ -54,7 +54,7 @@ export const ResumeTop = ({ children, isEditing, ...props }) => {
   };
 
   return (
-    <Box pt={6} px={2} textAlign={"center"}>
+    <Box pt={4} px={2} textAlign={"center"}>
       <Heading size={"xl"} mb={1}>
         Samyok Nepal
       </Heading>

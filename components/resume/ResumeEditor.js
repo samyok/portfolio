@@ -92,22 +92,22 @@ export const ResumeEditor = (props) => {
             math/cs/academic jobs.
           </Text>
           <HStack spacing={2} mt={4}>
-            <Button colorScheme={"green"} variant={"outline"} onClick={onPrint}>
+            <Button size={"sm"} colorScheme={"green"} variant={"outline"} onClick={onPrint}>
               Download
             </Button>
-            <Button colorScheme={"green"} variant={"solid"} onClick={onClose}>
+            <Button size={"sm"} colorScheme={"green"} variant={"solid"} onClick={onClose}>
               Save
             </Button>
           </HStack>
         </Box>
       </Collapse>
-      <Flex justifyContent={"flex-start"} mb={isEditing ? 0 : -20}>
+      <Flex justifyContent={"flex-start"} mb={isEditing ? 0 : [0, 0, -20]}>
         {!isEditing && (
           <HStack>
-            <Button colorScheme={"green"} variant={"outline"} onClick={onPrint}>
+            <Button size={"sm"} colorScheme={"green"} variant={"outline"} onClick={onPrint}>
               Download PDF
             </Button>
-            <Button colorScheme={"green"} variant={"ghost"} onClick={onOpen}>
+            <Button size={"sm"} colorScheme={"green"} variant={"ghost"} onClick={onOpen}>
               Edit
             </Button>
           </HStack>

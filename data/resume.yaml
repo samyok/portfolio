@@ -1,3 +1,7 @@
+defaultTags:
+  - ddi
+  - cs
+
 education:
   - name: University of Minnesota, Twin Cities
     date: Minneapolis, MN (May 2025)
@@ -88,6 +92,15 @@ projects:
       - Parsed user-uploaded lecture videos to create an interactive transcript, interlaced with slides from the video.
       - Python microservice leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription.
       - Designed frontend to upload video files to Google Cloud Storage and then fetch data from our MongoDB instance.
+  - location: "Dakota Debate Institute"
+    title: Summer 2021-2022
+    url: "dakotadebate.org"
+    href: "https://dakotadebate.org"
+    date: Next.js, Chakra, Express, MongoDB
+    tags: [ ddi ]
+    info:
+      - Created and directed a 501c3 nonprofit to run a week-long, in-person debate summer camp with over 45 students and 10 staff.
+      - Developed the website and a classroom management system for communication. Managed the day-to-day operations of the camp.
 
 awards:
   - name: US Congressional App Challenge Winner (Bobcat Notify)

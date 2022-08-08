@@ -23,7 +23,7 @@ const createMetadata = (resume) => {
 export default function Resume({ resumeData }) {
   const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: true });
 
-  const [selectedTags, setSelectedTags] = useState(["cs"]);
+  const [selectedTags, setSelectedTags] = useState(resumeData.defaultTags);
 
   const textItem = (item) => {
     const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
@@ -122,7 +122,7 @@ export default function Resume({ resumeData }) {
             ))}
             <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
             {MiscSection.map((s, index) => (
-              <Text fontSize={14} pt={0.5} fontWeight={300} key={s.items}>
+              <Text fontSize={12} pt={0.5} fontWeight={300} key={s.items}>
                 <Text as={"span"} fontWeight={400}>
                   {s.name}:
                 </Text>{" "}
