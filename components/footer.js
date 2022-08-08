@@ -129,7 +129,7 @@ export function Footer(params) {
               </chakra.p>
             </Flex>
           </Link>
-          <Link m={2} href={"mailto:samyok@samyok.us"} target={"_blank"}>
+          <Link m={2} href={"mailto:sam@yok.dev"} target={"_blank"}>
             <Flex m={2} alignItems={"center"}>
               <HiMail size={"2em"} />
               <chakra.p ml={2} fontFamily={"Fira Code"}>
