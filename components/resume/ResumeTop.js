@@ -6,7 +6,7 @@ import { faGlobe, faPaperPlane, faPhone } from "@fortawesome/free-solid-svg-icon
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const TextLink = (props) => (
-  <Text fontSize={14} mx={2} onClick={(e) => props.onEdit?.(e)}>
+  <Text fontSize={12} fontWeight={300} mx={2} onClick={(e) => props.onEdit?.(e)}>
     {props.icon && <FontAwesomeIcon icon={props.icon} />}
     <Link href={props.href} marginLeft={props.icon ? 2 : 0}>
       {props.children}
