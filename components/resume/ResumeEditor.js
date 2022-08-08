@@ -42,8 +42,6 @@ export const ResumeEditor = (props) => {
   const allTags = getTagsFromData(data);
   let selectedTagsArr = Array.from(selectedTags || []);
 
-  console.log(allTags);
-
   const toggleTag = (tag) => () => {
     setSelectedTags((pv) => {
       let tagSet = new Set(pv);

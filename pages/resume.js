@@ -27,7 +27,6 @@ export default function Resume({ resumeData }) {
 
   const textItem = (item) => {
     const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
-    console.log(item.name, isSelected);
     return isSelected ? item.name : null;
   };
 
@@ -90,10 +89,7 @@ export default function Resume({ resumeData }) {
               data={resumeData}
               tags={[selectedTags, setSelectedTags]}
               isEditing={isEditing}
-              onOpen={() => {
-                console.log("open", isEditing);
-                onOpen();
-              }}
+              onOpen={onOpen}
               onClose={onClose}
             />
             <ResumeTop isEditing={isEditing} />
