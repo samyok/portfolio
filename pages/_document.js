@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
           <link rel="preload" as="style" crossOrigin={"true"} href={constants.fontURI} />
           <link href={constants.fontURI} rel="stylesheet" />
+          <meta name="theme-color" content="#F0F0F0" />
 
           <script
             async
