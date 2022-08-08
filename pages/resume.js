@@ -79,7 +79,7 @@ export default function Resume({ resumeData }) {
         }
         `}</style>
         <Flex justifyContent={"center"}>
-          <Box px={5} pb={20} maxW={1000}>
+          <Box px={5} pb={20} w={1000} maxW={"100%"}>
             <ResumeEditor
               data={resumeData}
               tags={[selectedTags, setSelectedTags]}
