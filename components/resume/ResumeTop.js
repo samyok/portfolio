@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faPaperPlane, faPhone } from "@fortawesome/free-solid-svg-icons";
 
@@ -24,13 +24,12 @@ const data = {
   url: ["yok.dev", "www.yok.dev", "//yok.dev"],
 };
 
-export const ResumeTop = ({ children, isEditing, ...props }) => {
+export const ResumeTop = ({ isEditing }) => {
   const router = useRouter();
-  console.log();
 
   const [dataIndices, setDataIndices] = useState({
     email: 0,
-    phone: router.query?.print ? 0 : 1,
+    phone: 0,
     github: 0,
     linkedin: 0,
     url: 0,
@@ -40,7 +39,7 @@ export const ResumeTop = ({ children, isEditing, ...props }) => {
     return (e) => {
       // prevent default if editing
       if (isEditing) {
-        e.preventDefault();
+        if (e) e.preventDefault();
         // cycle data indices of prop
         if (data[prop]) {
           setDataIndices((prev) => {
@@ -52,6 +51,13 @@ export const ResumeTop = ({ children, isEditing, ...props }) => {
       }
     };
   };
+
+  useEffect(() => {
+    if (router.query.hasOwnProperty("print") && getValue("phone").includes("#")) {
+      cycleData("phone")();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.query]);
 
   const getValue = (prop) => {
     return data[prop][dataIndices[prop]];

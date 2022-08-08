@@ -8,10 +8,15 @@ import {
   Heading,
   Hide,
   HStack,
+  Link,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+
+const DateString = new Date().toISOString().split("T")[0];
+const RESUME_PDF_LINK =
+  "https://cdn.yok.dev/api/SamyokNepalResume.pdf?sha=" +
+  (process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA ?? DateString);
 
 function getTagsFromData(data) {
   const tags = new Set();
@@ -36,7 +41,7 @@ export const ResumeEditor = (props) => {
   // create a list of every tag in the data
 
   if (!props) return;
-  const { data, isEditing, onOpen, onClose, tab, tags } = props;
+  const { data, isEditing, onOpen, onClose, tags } = props;
   const [selectedTags, setSelectedTags] = tags || [[], () => {}];
 
   const allTags = getTagsFromData(data);
@@ -62,10 +67,16 @@ export const ResumeEditor = (props) => {
           <Heading size={"sm"} my={2}>
             Print this web page to download my resume!
           </Heading>
-
+          <Text fontSize={"sm"}>
+            Or, view{" "}
+            <Link color={"green"} isExternal href={RESUME_PDF_LINK}>
+              this auto-generated one
+            </Link>
+            .
+          </Text>
           <Text fontSize={"sm"} mt={2}>
-            My resume is built in React -- it&apos;s compiled from a yaml file and turned into something
-            easily editable.
+            My resume is built in React — it&apos;s compiled from a yaml file and rendered in an easily
+            editable format.
           </Text>
 
           <Text fontSize={"sm"} mt={2}>

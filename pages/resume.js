@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, chakra, Flex, Hide, Link, Text, useDisclosure } from "@chakra-ui/react";
+import { Box, chakra, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { Footer } from "../components/footer";
 import Navigation from "../components/Navigation";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -14,12 +14,6 @@ import { ResumeTop } from "../components/resume/ResumeTop";
 import { ResumeEditor } from "../components/resume/ResumeEditor";
 import { useState } from "react";
 import { joinStrings } from "../utils";
-import { useRouter } from "next/router";
-
-const createMetadata = (resume) => {
-  const keys = Object.keys(resume);
-  const result = resume[keys.maps((key) => `${key}: ${resume[key]}`)];
-};
 
 export default function Resume({ resumeData }) {
   const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: true });
@@ -122,7 +116,7 @@ export default function Resume({ resumeData }) {
               />
             ))}
             <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
-            {MiscSection.map((s, index) => (
+            {MiscSection.map((s) => (
               <Text fontSize={12} pt={0.5} fontWeight={300} key={s.items}>
                 <Text as={"span"} fontWeight={400}>
                   {s.name}:
