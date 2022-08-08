@@ -13,7 +13,7 @@ const SelfPortrait = () => (
     icon={<AiOutlineUser size={"2em"} />}
     size="xl"
     name="Samyok Nepal"
-    src={imgSrc("https://cdn.samyok.us/img/sunglasses.jpeg")}
+    src={imgSrc("/img/sunglasses.jpeg")}
   />
 );
 

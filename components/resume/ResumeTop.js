@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faPaperPlane, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useRouter } from "next/router";
 
 const TextLink = (props) => (
   <Text fontSize={12} fontWeight={300} mx={2} onClick={(e) => props.onEdit?.(e)}>
@@ -24,9 +25,12 @@ const data = {
 };
 
 export const ResumeTop = ({ children, isEditing, ...props }) => {
+  const router = useRouter();
+  console.log();
+
   const [dataIndices, setDataIndices] = useState({
     email: 0,
-    phone: 0,
+    phone: router.query?.print ? 0 : 1,
     github: 0,
     linkedin: 0,
     url: 0,

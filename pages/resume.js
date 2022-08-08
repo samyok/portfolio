@@ -14,6 +14,7 @@ import { ResumeTop } from "../components/resume/ResumeTop";
 import { ResumeEditor } from "../components/resume/ResumeEditor";
 import { useState } from "react";
 import { joinStrings } from "../utils";
+import { useRouter } from "next/router";
 
 const createMetadata = (resume) => {
   const keys = Object.keys(resume);
