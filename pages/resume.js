@@ -1,56 +1,51 @@
 import Head from "next/head";
-import { Box, chakra, HStack, IconButton } from "@chakra-ui/react";
+import { Box, chakra, Flex, Hide, Link, Text, useDisclosure } from "@chakra-ui/react";
 import { Footer } from "../components/footer";
 import Navigation from "../components/Navigation";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
-import { AiOutlineZoomIn, AiOutlineZoomOut } from "react-icons/ai";
 import { ResumeHeading } from "../components/resume/ResumeHeading";
 import fs from "fs";
 import { load } from "js-yaml";
 import { join } from "path";
 import { EducationItem } from "../components/resume/EducationItem";
 import { ExperienceItem } from "../components/resume/ExperienceItem";
-import { AwardItem } from "../components/resume/AwardItem";
 import { ResumeTop } from "../components/resume/ResumeTop";
+import { ResumeEditor } from "../components/resume/ResumeEditor";
+import { useState } from "react";
+import { joinStrings } from "../utils";
 
-const toolBarButtonProps = {
-  colorScheme: "blackAlpha",
-  variant: "solid",
-  "aria-label": "button",
+const createMetadata = (resume) => {
+  const keys = Object.keys(resume);
+  const result = resume[keys.maps((key) => `${key}: ${resume[key]}`)];
 };
 
-const renderToolbar = (Toolbar) => (
-  <Toolbar>
-    {(slots) => {
-      const { ZoomOut, ZoomIn } = slots;
-      return (
-        <Box>
-          <HStack spacing={2}>
-            <IconButton />
-            <ZoomIn>
-              {(props) => <IconButton onClick={props.onClick} icon={<AiOutlineZoomIn size={"1.5em"} />} />}
-            </ZoomIn>
-            <ZoomOut>
-              {(props) => (
-                <IconButton
-                  variant={"solid"}
-                  colorScheme={"blackAlpha"}
-                  onClick={props.onClick}
-                  icon={<AiOutlineZoomOut size={"1.5em"} />}
-                  aria-label={"button"}
-                />
-              )}
-            </ZoomOut>
-          </HStack>
-        </Box>
-      );
-    }}
-  </Toolbar>
-);
+export default function Resume({ resumeData }) {
+  const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: true });
 
-export default function resume({ resumeData }) {
+  const [selectedTags, setSelectedTags] = useState(["cs"]);
+
+  const textItem = (item) => {
+    const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
+    console.log(item.name, isSelected);
+    return isSelected ? item.name : null;
+  };
+
+  const itemsToText = (items) =>
+    items
+      ?.map(textItem)
+      .filter((t) => t !== null)
+      .join(", ");
+
+  const MiscSection = [
+    { name: "Awards", items: itemsToText(resumeData.awards) },
+    { name: "Interests", items: itemsToText(resumeData.interests) },
+    { name: "Languages/Libraries", items: itemsToText(resumeData.languages) },
+    { name: "Technologies", items: itemsToText(resumeData.technologies) },
+  ].filter((s) => s.items?.length > 0);
+
+  const MiscTitle = joinStrings(MiscSection.map((s) => s.name));
+
   return (
     <chakra.div bg={"#F0F0F0"} minHeight={"100vh"}>
       <Head>
@@ -80,24 +75,66 @@ export default function resume({ resumeData }) {
 
       <main>
         <Navigation />
-        <Box px={[2, 5, 10]} pb={20}>
-          <ResumeTop />
-          <ResumeHeading as={"h2"}>Education</ResumeHeading>
-          {resumeData.education.map((item, index) => (
-            <EducationItem item={item} key={"education-" + index} />
-          ))}
-          <ResumeHeading as={"h2"}>Experience</ResumeHeading>
-          {resumeData.work.map((item, index) => (
-            <ExperienceItem item={item} key={"work-" + index} />
-          ))}
-          <ResumeHeading as={"h2"}>Awards and Recognition</ResumeHeading>
-          {resumeData.awards.map((item, index) => (
-            <AwardItem item={item} key={"award-" + index} />
-          ))}
-          <ResumeHeading as={"h2"}>Skills and Interests</ResumeHeading>
-          {JSON.stringify(resumeData.skills, null, 4)}
-          {JSON.stringify(resumeData.interests, null, 4)}
-        </Box>
+        <style>{`
+        @media print {
+          html, body {
+            background-color: #fff;
+            max-height: 100vh;
+            overflow: hidden;
+          }
+        }
+        `}</style>
+        <Flex justifyContent={"center"}>
+          <Box px={5} pb={20} maxW={1000}>
+            <ResumeEditor
+              data={resumeData}
+              tags={[selectedTags, setSelectedTags]}
+              isEditing={isEditing}
+              onOpen={() => {
+                console.log("open", isEditing);
+                onOpen();
+              }}
+              onClose={onClose}
+            />
+            <ResumeTop isEditing={isEditing} />
+            <ResumeHeading as={"h2"}>Education</ResumeHeading>
+            {resumeData.education.map((item, index) => (
+              <EducationItem
+                selectedTags={selectedTags}
+                item={item}
+                key={"education-" + index}
+                isEditing={isEditing}
+              />
+            ))}
+            <ResumeHeading as={"h2"}>Experience</ResumeHeading>
+            {resumeData.work.map((item, index) => (
+              <ExperienceItem
+                selectedTags={selectedTags}
+                item={item}
+                key={"work-" + index}
+                isEditing={isEditing}
+              />
+            ))}
+            <ResumeHeading as={"h2"}>Projects</ResumeHeading>
+            {resumeData.projects.map((item, index) => (
+              <ExperienceItem
+                selectedTags={selectedTags}
+                item={item}
+                key={"work-" + index}
+                isEditing={isEditing}
+              />
+            ))}
+            <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
+            {MiscSection.map((s, index) => (
+              <Text fontSize={14} pt={0.5} fontWeight={300} key={s.items}>
+                <Text as={"span"} fontWeight={400}>
+                  {s.name}:
+                </Text>{" "}
+                {s.items}
+              </Text>
+            ))}
+          </Box>
+        </Flex>
       </main>
       <Footer />
     </chakra.div>

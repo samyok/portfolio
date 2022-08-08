@@ -1,19 +1,27 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Collapse, Flex, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
-export const EducationItem = ({ item }) => {
+export const EducationItem = ({ item, selectedTags }) => {
+  const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
+
   return (
-    <Box p={1}>
-      <Flex justifyContent={"space-between"} alignItems={"center"}>
-        <Heading as="h3" size="md" fontWeight={700}>
-          {item.name}
-        </Heading>
-        <Text>{item.date}</Text>
-      </Flex>
-      <Box pl={2}>
-        {item.info.map((i) => (
-          <Text key={i}>{i}</Text>
-        ))}
+    <Collapse in={isSelected}>
+      <Box px={1} py={1}>
+        <Flex justifyContent={"space-between"} alignItems={"center"}>
+          <Heading as="h3" size="md" fontWeight={500} fontSize={16} fontFamily={"Inter"}>
+            {item.name}
+          </Heading>
+          <Text fontWeight={300} fontSize={14}>
+            {item.date}
+          </Text>
+        </Flex>
+        <UnorderedList pl={1}>
+          {item.info.map((i) => (
+            <ListItem key={i} fontSize={14}>
+              {i}
+            </ListItem>
+          ))}
+        </UnorderedList>
       </Box>
-    </Box>
+    </Collapse>
   );
 };

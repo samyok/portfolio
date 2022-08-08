@@ -55,8 +55,8 @@ export default function Home() {
           justifyContent={"center"}
           alignItems={"center"}
           flexDirection={"column"}
-          pt={[60, 32, 40]}
-          minHeight={"75vh"}>
+          pt={20}
+          minHeight={"69vh"}>
           <MyHeading
             display={"inline"}
             py={5}
@@ -68,7 +68,7 @@ export default function Home() {
             textAlign={"center"}
             size={"4xl"}>
             <chakra.span className={styles.wiggle}>👋</chakra.span>
-            Hi, I&apos;m Samyok Nepal
+            Hey, I&apos;m Samyok!
           </MyHeading>
           <MyHeading size={"lg"} color={"gray.400"} m={0} mb={-16} p={0} fontWeight={400}>
             What do I do?

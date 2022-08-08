@@ -1,94 +1,156 @@
-
 education:
-  - name: "University of Minnesota, Twin Cities"
-    date: "Expected Graduation: May 2025"
+  - name: University of Minnesota, Twin Cities
+    date: Minneapolis, MN (May 2025)
     info:
-      - "Bachelor of Science, Computer Science"
-  - name: "Brookings High School"
-    date: "August 2017 - May 2021"
+      - "Double Major: Computer Science & Mathematics"
+  - name: Brookings High School
+    date: August 2017 - May 2021
     info:
       - "GPA: 4.043 - Honors Scholar"
       - "SAT: 1570/1600 (800 math, 770 reading-writing)"
       - "Activities: National Honor Society President, Science Olympiad Captain, Science Bowl Captain, State QuizBowl Captain, Varsity Debater + National Qualifier"
+    tags: [ high school ]
+
+
 work:
-  - location: "Fiveable"
-    title: "Software Engineer I"
-    url: "fiveable.me"
-    href: "https://fiveable.me"
-    date: "September 2021 - Present"
+  - location: Fiveable
+    title: Software Engineer I
+    url: fiveable.me
+    href: https://hi.fiveable.me
+    date: 2021 - 2022
+    tags: [ cs ]
     info:
-      - "Currently helping update, optimize, and maintain the core virtual studying web app"
-  - location: "Art of Problem Solving"
-    title: "Teaching Assistant (contractor)"
-    url: "aops.com"
-    href: "https://artofproblemsolving.com"
-    date: "August 2021 - Present"
+      - Led implementation of low-level WebRTC voice and video calling functionality hosted on Google Kubernetes Engine. Started as a weekend hackathon PoC, got company buy-in, and then became a core feature.
+      - Optimized frontend and backend performance for high-volume traffic, reducing load speeds by up to 20x.
+      - Helped add other new features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
+      - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
+  - location: Art of Problem Solving
+    title: Teaching Assistant (contractor)
+    url: aops.com
+    href: https://artofproblemsolving.com
+    date: 2021 - Present
+    tags: [ math ]
     info:
-      - "Analyzed Python and math homework with set guidelines, and wrote feedback to guide students to the solution"
-  - location: "Bobcat Notify"
-    title: "Founder"
-    url: "notify.samyok.us"
-    href: "https://notify.samyok.us"
-    date: "November 2019 - May 2021"
+      - Analyzed Python and math homework with set guidelines, and wrote feedback to guide students to the solution
+  - location: Bobcat Notify
+    title: Founder
+    url: notify.samyok.us
+    href: https://notify.samyok.us
+    date: 2019 - 2021
+    tags: [ cs ]
     info:
-      - "Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district."
-      - "Led constant communication with school administration and IT to deliver relevant and timely in‐app alerts and updates. User satisfaction rose to 4.9 stars on both app stores with over 50 reviews."
-  - location: "Freelance Web Developer"
-    date: "2018 - 2019"
+      - Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district.
+      - Led constant communication with school administration and IT to deliver relevant and timely in‐app alerts and updates. User satisfaction rose to 4.9 stars on both app stores with over 50 reviews.
+  - location: Scioly.org
+    title: Developer
+    url: scioly.org
+    href: https://scioly.org
+    date: 2019 - 2022
+    tags: [ cs ]
     info:
-      - "Designed, developed, and sold websites and bots that used search engine features to successfully gather relevant information requested by clients quickly and accurately."
-      - "Managed a global network of servers to successfully synchronize website state to over 7,500 users globally in under 750ms."
-  - location: "Scioly.org"
-    title: "Volunteer Developer"
-    url: "scioly.org"
-    href: "https://scioly.org"
-    date: "2019 - 2022"
+      - Maintenance of critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
+      - Developed custom PHP image gallery and file storage server to replace old, inefficient, and unreliable system to be used by the more than 68,000 registered users.
+  - location: Freelance Web Developer
+    date: 2018 - 2019
+    tags: [ cs ]
     info:
-      - "Maintenance of critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website."
-      - "Developed custom PHP image gallery and file storage server to replace old, inefficient, and unreliable system to be used by the more than 68,000 registered users."
-  - location: "Brookings Math Circle"
-    title: "Co-Founder/Instructor"
-    url: "brookingsmath.org"
-    href: "https://brookingsmath.org"
-    date: "2016 - 2021"
+      - Designed, developed, and sold websites and bots that used search engine features to successfully gather relevant information requested by clients quickly and accurately.
+      - Managed a global network of servers to sync website state to over 7,500 users globally in under 200ms.
+  - location: Brookings Math Circle
+    title: Co-Founder/Instructor
+    url: brookingsmath.org
+    href: https://brookingsmath.org
+    date: 2016 - 2021
+    tags: [ math ]
     info:
-      - "Volunteer taught three‐hour classes every week during the summer, with lessons ranging from single variable algebra to AIME‐level geometry. Achieved goal of 20+ attendees per class for the last three years."
-      - "Created curriculum by writing handouts, homework, and mock contests, resulting in over 100 pages of instructional materials over 5 years."
-      - "Ensured students’ success with a smooth transition into competitive math, contributing to the local MATHCOUNTS team growing by 60% to more than 30 members."
+      - Volunteer taught three‐hour classes every week during the summer, with lessons ranging from single variable algebra to AIME‐level geometry. Achieved goal of 20+ attendees per class for the last three years.
+      - Created curriculum by writing handouts, homework, and mock contests, resulting in over 100 pages of instructional materials over 5 years.
+      - Ensured students’ success with a smooth transition into competitive math, contributing to the local MATHCOUNTS team growing by 60% to more than 30 members.
+
+projects:
+  - location: Anony.news
+    title: 3rd @ Hack for Humanity 2022
+    url: github
+    href: https://github.com/MiniHacks/anonygoose
+    date: Python (OpenCV, RTMP), Next.js, MongoDB, Docker
+    tags: [ cs ]
+    info:
+      - Detected and blurred faces (other than reporters) from a real-time stream using OpenFace and OpenCV.
+      - Leveraged Docker Compose and Github Actions to automatically deploy to Digital Ocean on push.
+      - Designed and implemented the frontend to connect to our RTMP proxy server with integrated YouTube streaming (or URI for other forwarding to other services).
+  - location: Lecture.ninja
+    title: 2nd (Remote Learning) @ TAMUHack 2022
+    url: github
+    href: https://github.com/MiniHacks/LectureNinja
+    date: Python (OpenCV), Next.js, Docker
+    tags: [ cs ]
+    info:
+      - Parsed user-uploaded lecture videos to create an interactive transcript, interlaced with slides from the video.
+      - Python microservice leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription.
+      - Designed frontend to upload video files to Google Cloud Storage and then fetch data from our MongoDB instance.
 
 awards:
-  - name: "US Congressional App Challenge Winner (Bobcat Notify)"
-    tags:
-      - "csci"
-  - name: "AMC 10/12 Honor Roll (2018, 2019, 2020, 2021)"
-    tags:
-      - "math"
-  - name: "Science Bowl State Champion (2021)"
-  - name: "SDSU Programming Design Contest Winner (2020)"
-    tags:
-      - "csci"
-  - name: "National Merit Semifinalist"
-  - name: "US Presidential Scholar Candidate"
-  - name: "USACO Gold Division"
-    tags:
-      - "csci"
-  - name: "USAMTS Honorable Mention (2017)"
-    tags:
-      - "math"
+  - name: US Congressional App Challenge Winner (Bobcat Notify)
+    tags: [ cs ]
+  - name: AMC 10/12 Honor Roll (2018, 2019, 2020, 2021)
+    tags: [ math ]
+  - name: Science Bowl State Champion (2021)
+    tags: [ misc ]
+  - name: SDSU Programming Design Contest Winner (2020)
+    tags: [ high school ]
+  - name: National Merit Semifinalist
+    tags: [ academia ]
+  - name: US Presidential Scholar Candidate
+    tags: [ academia ]
+  - name: USACO Gold Division
+    tags: [ cs ]
+  - name: USAMTS Honorable Mention (2017)
+    tags: [ math ]
+  - name: Science Olympiad State Champion (2021)
+    tags: [ misc ]
 
-skills:
-  - "JavaScript"
-  - "Python"
-  - "React"
-  - "LaTeX"
-  - "MongoDB"
-  - "HTML/CSS"
-  - "Git"
-  - "MySQL"
-  - "PHP"
+languages:
+  - name: JavaScript
+    tags: [ cs ]
+  - name: Typescript
+    tags: [ cs ]
+  - name: Python
+    tags: [ cs ]
+  - name: PHP
+    tags: [ cs ]
+  - name: C++
+    tags: [ cs ]
+  - name: NodeJS
+    tags: [ cs ]
+  - name: React, React Native
+    tags: [ cs ]
+  - name: Redux
+    tags: [ cs ]
+  - name: LaTeX
+    tags: [ math ]
+  - name: HTML/CSS
+    tags: [ cs ]
+
 
 interests:
-  - "Director of nonprofit debate camp (Dakota Debate Institute)"
-  - "Political Theory"
-  - "Hiking"
-  - "Kayaking"
+  - name: Director of nonprofit debate camp (Dakota Debate Institute)
+    tags: [ academia ]
+  - name: Political Theory
+    tags: [ academia ]
+  - name: Hiking
+    tags: [ misc ]
+  - name: Kayaking
+    tags: [ misc ]
+
+technologies:
+  - name: MongoDB, MySQL, Firebase/Firestore
+    tags: [ cs ]
+  - name: Google Cloud Platform
+    tags: [ cs ]
+  - name: Kubernetes
+    tags: [ cs ]
+  - name: Docker
+    tags: [ cs ]
+  - name: Git/Github
+    tags: [ cs ]
+

@@ -133,7 +133,7 @@ export function Footer(params) {
             <Flex m={2} alignItems={"center"}>
               <HiMail size={"2em"} />
               <chakra.p ml={2} fontFamily={"Fira Code"}>
-                samyok@samyok.us
+                sam@yok.dev
               </chakra.p>
             </Flex>
           </Link>
