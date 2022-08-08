@@ -18,7 +18,7 @@ export default function Home() {
           name="description"
           content="Hey! I'm Samyok Nepal, a coder in the midwest. Here's a list of every time I have been in the news!"
         />
-        <meta property="og:url" content="https://samyok.us/" />
+        <meta property="og:url" content="https://yok.dev/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Samyok Nepal: In the news" />
         <meta
@@ -27,8 +27,8 @@ export default function Home() {
         />
         <meta property="og:image" content="https://bcdn.samyok.us/api/ogimage?url=/press&wait=1500" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="samyok.us" />
-        <meta property="twitter:url" content="https://samyok.us/" />
+        <meta property="twitter:domain" content="yok.dev" />
+        <meta property="twitter:url" content="https://yok.dev/" />
         <meta name="twitter:title" content="Samyok Nepal" />
         <meta
           name="twitter:description"

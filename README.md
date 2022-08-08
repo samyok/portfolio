@@ -1,6 +1,6 @@
 # My Portfolio!
 
-[![A portfolio preview](./portfolio.png "My Portfolio")](https://samyok.us)
+[![A portfolio preview](./public/og_image_index.png "My Portfolio")](https://yok.dev)
 
 ## The Typewriter Effect
 The typewriter effect is mostly handled by the [AnimatedText](./components/animatedText.js) component I wrote. 
