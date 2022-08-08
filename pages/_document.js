@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import { constants } from "../config";
 
 export default class MyDocument extends Document {
   render() {
@@ -11,23 +12,15 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
-          <link
-            rel="preload"
-            as="style"
-            crossOrigin={"true"}
-            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
+          <link rel="preload" as="style" crossOrigin={"true"} href={constants.fontURI} />
+          <link href={constants.fontURI} rel="stylesheet" />
 
           <script
             async
             defer
             data-website-id="f5572f62-a934-4108-aa6c-677f32b8fcb2"
             data-host-url="https://a.samyok.us"
-            data-domains={"yok.dev, samyoknepal.me"}
+            data-domains={"yok.dev"}
             src="/a.js"
           />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
