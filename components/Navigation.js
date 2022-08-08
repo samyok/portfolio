@@ -4,7 +4,7 @@ import { imgSrc } from "../pages/index";
 import { useRouter } from "next/router";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import NextLink from "next/link";
 
 const SelfPortrait = () => (
   <Avatar
@@ -32,11 +32,13 @@ const Pages = () => {
   return (
     <HStack spacing={4} alignItems={"center"}>
       {LINKS.map(({ name, href }) => (
-        <Link key={href} href={href} isActive={isActive(href)}>
-          <Text fontSize={14} fontWeight={isActive(href) ? 500 : 300}>
-            {name}
-          </Text>
-        </Link>
+        <NextLink key={href} href={href} passHref>
+          <Link isActive={isActive(href)}>
+            <Text fontSize={14} fontWeight={isActive(href) ? 500 : 300}>
+              {name}
+            </Text>
+          </Link>
+        </NextLink>
       ))}
     </HStack>
   );
