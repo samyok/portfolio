@@ -2,7 +2,6 @@ import * as playwright from "playwright-aws-lambda";
 import { constants } from "../../config";
 
 module.exports = async (req, res) => {
-  await playwright.loadFont(constants.fontURI);
   const browser = await playwright.launchChromium({ headless: true });
   const context = await browser.newContext({
     viewport: {
@@ -12,6 +11,7 @@ module.exports = async (req, res) => {
   });
   const page = await context.newPage();
   await page.goto("https://yok.dev/resume?print");
+  await sleep(1000);
   const pdf = await page.pdf();
   res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate");
   res.setHeader("Content-Type", "application/pdf");
