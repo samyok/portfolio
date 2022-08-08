@@ -1,4 +1,4 @@
-import { Avatar, Flex, Heading, Hide, HStack, Link, Text } from "@chakra-ui/react";
+import { Avatar, Box, Flex, Heading, Hide, HStack, Link, Text } from "@chakra-ui/react";
 import { AiOutlineUser } from "react-icons/ai";
 import { imgSrc } from "../pages/index";
 import { useRouter } from "next/router";
@@ -55,7 +55,11 @@ const SocialLinks = () => {
       {LINKS.map(({ name, icon, href }) => (
         <Link key={href} href={href} isExternal>
           <Text fontSize={14} fontWeight={400}>
-            {icon && <FontAwesomeIcon icon={icon} style={{ display: "inline-block", paddingRight: 4 }} />}
+            {icon && (
+              <Box width={4} pr={4} display={"inline-block"}>
+                <FontAwesomeIcon icon={icon} />
+              </Box>
+            )}
             {name}
           </Text>
         </Link>
