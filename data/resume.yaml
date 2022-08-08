@@ -81,7 +81,7 @@ projects:
     info:
       - Detected and blurred faces (other than reporters) from a real-time stream using OpenFace and OpenCV.
       - Leveraged Docker Compose and Github Actions to automatically deploy to Digital Ocean on push.
-      - Designed and implemented the frontend to connect to our RTMP proxy server with integrated YouTube streaming (or URI for other forwarding to other services).
+      - Designed and implemented the frontend to connect to our RTMP proxy server with integrated YouTube streaming (or URI for forwarding to other services).
   - location: Lecture.ninja
     title: 2nd (Remote Learning) @ TAMUHack 2022
     url: github
