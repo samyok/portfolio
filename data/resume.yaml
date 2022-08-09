@@ -21,7 +21,7 @@ work:
     title: Software Engineer I
     url: fiveable.me
     href: https://hi.fiveable.me
-    date: 2021 - 2022
+    date: Sep 2021 - Aug 2022
     tags: [ cs ]
     info:
       - Led design and implementation of low-level WebRTC voice and video calling functionality hosted on Google Kubernetes Engine. Started as a weekend hackathon PoC, got company buy-in, and then became a core feature.
@@ -32,7 +32,7 @@ work:
     title: Teaching Assistant (contractor)
     url: aops.com
     href: https://artofproblemsolving.com
-    date: 2021 - Present
+    date: Aug 2021 - Present
     tags: [ math ]
     info:
       - Analyzed Python and math homework with set guidelines, and wrote feedback to guide students to the solution
@@ -40,7 +40,7 @@ work:
     title: Founder
     url: notify.samyok.us
     href: https://notify.samyok.us
-    date: 2019 - 2021
+    date: Nov 2019 - May 2021
     tags: [ cs ]
     info:
       - Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district.
@@ -49,13 +49,13 @@ work:
     title: Developer
     url: scioly.org
     href: https://scioly.org
-    date: 2019 - 2022
+    date: Sep 2019 - Aug 2022
     tags: [ cs ]
     info:
       - Maintained critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
       - Developed custom PHP image gallery and file storage server to replace old, inefficient, and unreliable system to be used by the more than 68,000 registered users.
   - location: Freelance Web Developer
-    date: 2018 - 2019
+    date: May 2018 - Nov 2019
     tags: [ cs ]
     info:
       - Designed, developed, and sold websites and bots that used search engine features to successfully gather relevant information requested by clients quickly and accurately.

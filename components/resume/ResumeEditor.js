@@ -13,6 +13,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { isFirefox } from "react-device-detect";
+import { useEffect } from "react";
 
 const DateString = new Date().toISOString().split("T")[0];
 const RESUME_PDF_LINK =
@@ -43,6 +44,23 @@ const ResumeEditor = (props) => {
 
   const canPrint = !isFirefox;
 
+  const onPrint = () => {
+    if (canPrint) setTimeout(() => window.print(), 0);
+    else window.open(RESUME_PDF_LINK, "_blank");
+  };
+
+  useEffect(() => {
+    document.onkeydown = function (evt) {
+      evt = evt || window.event;
+      if ((evt.ctrlKey || evt.metaKey) && evt.keyCode === 80) {
+        evt.preventDefault();
+        alert(
+          "Printing this resume is not supported on Firefox. Please press the download buttons to open a PDF version!"
+        );
+      }
+    };
+  }, []);
+
   if (!props) return;
   const { data, isEditing, onOpen, onClose, tags } = props;
   const [selectedTags, setSelectedTags] = tags || [[], () => {}];
@@ -57,11 +75,6 @@ const ResumeEditor = (props) => {
       else tagSet.add(tag);
       return Array.from(tagSet);
     });
-  };
-
-  const onPrint = () => {
-    if (canPrint) setTimeout(() => window.print(), 0);
-    else window.open(RESUME_PDF_LINK, "_blank");
   };
 
   return (
