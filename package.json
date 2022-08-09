@@ -26,6 +26,7 @@
     "playwright-aws-lambda": "^0.7.0",
     "playwright-core": "^1.14.0",
     "react": "^17.0.2",
+    "react-device-detect": "^2.2.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0"
   },

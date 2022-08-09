@@ -11,9 +11,11 @@ import { join } from "path";
 import { EducationItem } from "../components/resume/EducationItem";
 import { ExperienceItem } from "../components/resume/ExperienceItem";
 import { ResumeTop } from "../components/resume/ResumeTop";
-import { ResumeEditor } from "../components/resume/ResumeEditor";
 import { useState } from "react";
 import { joinStrings } from "../utils";
+import dynamic from "next/dynamic";
+
+const ResumeEditor = dynamic(import("../components/resume/ResumeEditor"), { ssr: false });
 
 export default function Resume({ resumeData }) {
   const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: true });

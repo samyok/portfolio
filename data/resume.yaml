@@ -24,9 +24,9 @@ work:
     date: 2021 - 2022
     tags: [ cs ]
     info:
-      - Led implementation of low-level WebRTC voice and video calling functionality hosted on Google Kubernetes Engine. Started as a weekend hackathon PoC, got company buy-in, and then became a core feature.
-      - Optimized frontend and backend performance for high-volume traffic, reducing load speeds by up to 20x.
-      - Helped add other new features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
+      - Led design and implementation of low-level WebRTC voice and video calling functionality hosted on Google Kubernetes Engine. Started as a weekend hackathon PoC, got company buy-in, and then became a core feature.
+      - Optimized performance on high-traffic areas of the app, reducing load speeds by up to 20x through a combination of cutting down on database queries, network requests, and excessive re-rendering.
+      - Developed other new features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
       - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
   - location: Art of Problem Solving
     title: Teaching Assistant (contractor)
@@ -52,7 +52,7 @@ work:
     date: 2019 - 2022
     tags: [ cs ]
     info:
-      - Maintenance of critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
+      - Maintained critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
       - Developed custom PHP image gallery and file storage server to replace old, inefficient, and unreliable system to be used by the more than 68,000 registered users.
   - location: Freelance Web Developer
     date: 2018 - 2019
@@ -80,8 +80,8 @@ projects:
     tags: [ cs ]
     info:
       - Detected and blurred faces (other than reporters) from a real-time stream using OpenFace and OpenCV.
-      - Leveraged Docker Compose and Github Actions to automatically deploy to Digital Ocean on push.
-      - Designed and implemented the frontend to connect to our RTMP proxy server with integrated YouTube streaming (or URI for forwarding to other services).
+      - Utilized Docker Compose and Github Actions to automatically deploy to Digital Ocean on push.
+      - Designed and implemented the frontend to connect to a RTMP proxy server with integrated YouTube streaming (or URI for forwarding to other services).
   - location: Lecture.ninja
     title: 2nd (Remote Learning) @ TAMUHack 2022
     url: github
@@ -91,7 +91,7 @@ projects:
     info:
       - Parsed user-uploaded lecture videos to create an interactive transcript, interlaced with slides from the video.
       - Python microservice leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription.
-      - Designed frontend to upload video files to Google Cloud Storage and then fetch data from our MongoDB instance.
+      - Designed frontend to upload video files to Google Cloud Storage and then fetch data from a MongoDB instance.
   - location: "Dakota Debate Institute"
     title: Summer 2021-2022
     url: "dakotadebate.org"
@@ -143,13 +143,15 @@ languages:
     tags: [ math ]
   - name: HTML/CSS
     tags: [ cs ]
+  - name: Java
+    tags: [ cs ]
 
 
 interests:
   - name: Director of nonprofit debate camp (Dakota Debate Institute)
-    tags: [ academia ]
+    tags: [ misc ]
   - name: Political Theory
-    tags: [ academia ]
+    tags: [ misc ]
   - name: Hiking
     tags: [ misc ]
   - name: Kayaking
@@ -165,5 +167,7 @@ technologies:
   - name: Docker
     tags: [ cs ]
   - name: Git/Github
+    tags: [ cs ]
+  - name: Vim
     tags: [ cs ]
 

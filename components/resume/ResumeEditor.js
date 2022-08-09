@@ -12,6 +12,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { isFirefox } from "react-device-detect";
 
 const DateString = new Date().toISOString().split("T")[0];
 const RESUME_PDF_LINK =
@@ -37,8 +38,10 @@ function getTagsFromData(data) {
   return Array.from(tags);
 }
 
-export const ResumeEditor = (props) => {
+const ResumeEditor = (props) => {
   // create a list of every tag in the data
+
+  const canPrint = !isFirefox;
 
   if (!props) return;
   const { data, isEditing, onOpen, onClose, tags } = props;
@@ -57,38 +60,52 @@ export const ResumeEditor = (props) => {
   };
 
   const onPrint = () => {
-    setTimeout(() => window.print(), 0);
+    if (canPrint) setTimeout(() => window.print(), 0);
+    else window.open(RESUME_PDF_LINK, "_blank");
   };
 
   return (
     <Hide breakpoint={"print"}>
       <Collapse in={isEditing} animateOpacity>
         <Box p={4} mt="4" bg="yellow.50" rounded="md">
-          <Heading size={"sm"} my={2}>
-            Print this web page to download my resume!
-          </Heading>
+          <Flex alignItems={"center"} my={2}>
+            <Heading size={"sm"} textDecoration={canPrint ? "" : "line-through"}>
+              Print this web page to download my resume!
+            </Heading>
+            {!canPrint && (
+              <Text fontSize={"xs"} ml={2} textDecor={"none"}>
+                This browser does not support this feature.{" "}
+                <Link
+                  color={"blue.400"}
+                  isExternal
+                  href={"https://bugzilla.mozilla.org/show_bug.cgi?id=774398"}>
+                  More info
+                </Link>
+              </Text>
+            )}
+          </Flex>
           <Text fontSize={"sm"}>
             Or, view{" "}
-            <Link color={"green"} isExternal href={RESUME_PDF_LINK}>
-              this auto-generated one
+            <Link color={"blue.400"} isExternal href={RESUME_PDF_LINK}>
+              this already-generated one
             </Link>
             .
           </Text>
-          <Text fontSize={"sm"} mt={2}>
+          <Text fontSize={"sm"} mt={4}>
             My resume is built in React — it&apos;s compiled from a yaml file and rendered in an easily
             editable format.
           </Text>
 
-          <Text fontSize={"sm"} mt={2}>
+          <Text fontSize={"sm"} mt={1}>
             Parts of the resume (like my email, phone number, etc) can also be clicked to toggle between
             different values.
           </Text>
 
-          <HStack spacing={4} alignItems={"center"} my={4}>
+          <HStack spacing={4} alignItems={"center"} my={2}>
             <Heading size={"sm"} alignSelf={"flex-start"}>
               Tags:
             </Heading>
-            <CheckboxGroup colorScheme="orange" value={selectedTagsArr} size={"sm"}>
+            <CheckboxGroup colorScheme="blue" value={selectedTagsArr} size={"sm"}>
               <Stack spacing={[1, 5]} direction={["column", "column", "row"]}>
                 {allTags.map((tag) => (
                   <Checkbox key={tag} value={tag} onChange={toggleTag(tag)}>
@@ -103,10 +120,10 @@ export const ResumeEditor = (props) => {
             math/cs/academic jobs.
           </Text>
           <HStack spacing={2} mt={4}>
-            <Button size={"sm"} colorScheme={"green"} variant={"outline"} onClick={onPrint}>
+            <Button size={"sm"} colorScheme={"blue"} variant={"outline"} onClick={onPrint}>
               Download
             </Button>
-            <Button size={"sm"} colorScheme={"green"} variant={"solid"} onClick={onClose}>
+            <Button size={"sm"} colorScheme={"blue"} variant={"solid"} onClick={onClose}>
               Save
             </Button>
           </HStack>
@@ -115,10 +132,10 @@ export const ResumeEditor = (props) => {
       <Flex justifyContent={"flex-start"} mb={isEditing ? 0 : [0, 0, -20]}>
         {!isEditing && (
           <HStack>
-            <Button size={"sm"} colorScheme={"green"} variant={"outline"} onClick={onPrint}>
+            <Button size={"sm"} colorScheme={"blue"} variant={"outline"} onClick={onPrint}>
               Download PDF
             </Button>
-            <Button size={"sm"} colorScheme={"green"} variant={"ghost"} onClick={onOpen}>
+            <Button size={"sm"} colorScheme={"blue"} variant={"ghost"} onClick={onOpen}>
               Edit
             </Button>
           </HStack>
@@ -127,3 +144,5 @@ export const ResumeEditor = (props) => {
     </Hide>
   );
 };
+
+export default ResumeEditor;
