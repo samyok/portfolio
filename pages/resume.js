@@ -18,7 +18,7 @@ import dynamic from "next/dynamic";
 const ResumeEditor = dynamic(import("../components/resume/ResumeEditor"), { ssr: false });
 
 export default function Resume({ resumeData }) {
-  const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: true });
+  const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: false });
 
   const [selectedTags, setSelectedTags] = useState(resumeData.defaultTags);
 
