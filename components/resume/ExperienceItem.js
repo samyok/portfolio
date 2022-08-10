@@ -3,6 +3,21 @@ import { Box, Collapse, Flex, Heading, Link, ListItem, Text, UnorderedList } fro
 export const ExperienceItem = ({ item, selectedTags }) => {
   const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
 
+  const Parens = () => {
+    if (item.href)
+      return (
+        <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
+          (
+          <Link href={item.href} target={"_blank"}>
+            {item.url}
+          </Link>
+          )
+        </Text>
+      );
+    else if (item.url || item.parens) {
+    }
+  };
+
   return (
     <Collapse in={isSelected}>
       <Box px={1} py={1}>
@@ -31,7 +46,7 @@ export const ExperienceItem = ({ item, selectedTags }) => {
           </Text>
         </Flex>
         <UnorderedList pl={1}>
-          {item.info.map((i) => (
+          {item.info?.map((i) => (
             <ListItem key={i} lineHeight={1.3}>
               <Text fontSize={12} fontWeight={300}>
                 {i}

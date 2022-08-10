@@ -92,7 +92,7 @@ export default function Resume({ resumeData }) {
             <ResumeTop isEditing={isEditing} />
             <ResumeHeading as={"h2"}>Education</ResumeHeading>
             {resumeData.education.map((item, index) => (
-              <EducationItem
+              <ExperienceItem
                 selectedTags={selectedTags}
                 item={item}
                 key={"education-" + index}

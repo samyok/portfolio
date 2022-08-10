@@ -3,10 +3,10 @@ defaultTags:
   - cs
 
 education:
-  - name: University of Minnesota, Twin Cities
-    date: Minneapolis, MN (May 2025)
+  - location: University of Minnesota, Twin Cities
+    date: "Expected Graduation: May 2024"
     info:
-      - "Double B.S. in Computer Science & Mathematics"
+      - Double B.S. in Computer Science & Mathematics
   - name: Brookings High School
     date: August 2017 - May 2021
     info:
@@ -18,16 +18,17 @@ education:
 
 work:
   - location: Fiveable
-    title: Software Engineer I
+    title: Software Engineer
     url: fiveable.me
     href: https://hi.fiveable.me
     date: Sep 2021 - Aug 2022
     tags: [ cs ]
     info:
-      - Led design and implementation of low-level WebRTC voice and video calling functionality hosted on Google Kubernetes Engine. Started as a weekend hackathon PoC, got company buy-in, and then became a core feature.
-      - Optimized performance on high-traffic areas of the app, reducing load speeds by up to 20x through a combination of cutting down on database queries, network requests, and excessive re-rendering.
-      - Developed other new features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
+      - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
+      - Optimized high-traffic pages, reducing load times 20x by minimizing database queries, network requests, and excessive re-rendering.
+      - Refactored backend to REST-ful API and automated tests with Jest and Puppeteer, improving performance and stability.
       - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
+      - Developed user-facing features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
   - location: Art of Problem Solving
     title: Teaching Assistant (contractor)
     url: aops.com
@@ -43,8 +44,9 @@ work:
     date: Nov 2019 - May 2021
     tags: [ cs ]
     info:
-      - Designed, programmed, and published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district.
-      - Led constant communication with school administration and IT to deliver relevant and timely in‐app alerts and updates. User satisfaction rose to 4.9 stars on both app stores with over 50 reviews.
+      - Published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district.
+      - Collaborated with school administration and IT to deliver relevant and timely in-app alerts and updates.
+      - User satisfaction rose to an average of 4.9 stars across both app stores with over 50 reviews.
   - location: Scioly.org
     title: Developer
     url: scioly.org
@@ -52,14 +54,16 @@ work:
     date: Sep 2019 - Aug 2022
     tags: [ cs ]
     info:
-      - Maintained critical projects, especially after a phpBB version bump. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
-      - Developed custom PHP image gallery and file storage server to replace old, inefficient, and unreliable system to be used by the more than 68,000 registered users.
+      # cringe \/
+      - Maintained servers for critical projects to ensure site reliability. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
+      - Developed custom PHP image gallery and file storage server to be used by more than 68,000 registered users.
+#      - Implemented an image optimization service to reduce image file sizes by up to 80%.
   - location: Freelance Web Developer
     date: May 2018 - Nov 2019
     tags: [ cs ]
     info:
-      - Developed and sold bots and websites that used search engine features to successfully gather relevant information requested by clients quickly and accurately.
-      - Managed a global network of servers to sync website state to over 7,500 users globally in under 200ms.
+      - Sold websites and bots that scraped websites to successfully gather information requested by clients quickly and accurately.
+      - Managed a global network of servers to sync website state to over 7,500 concurrent users globally in under 200ms.
   - location: Brookings Math Circle
     title: Co-Founder/Instructor
     url: brookingsmath.org
@@ -79,9 +83,9 @@ projects:
     date: Python (OpenCV, RTMP), Next.js, MongoDB, Docker
     tags: [ cs ]
     info:
-      - Detected and blurred faces (other than reporters) from a real-time stream using OpenFace and OpenCV.
-      - Utilized Docker Compose and Github Actions to automatically deploy to Digital Ocean on push.
-      - Designed and implemented the frontend to connect to a RTMP proxy server with integrated YouTube streaming (or URI for forwarding to other services).
+      - Used OpenCV and OpenFace to detect, identify, and selectively blur many (>5) faces in real time.
+      - Automatically deployed to DigitalOcean droplets using Docker Compose and GitHub Actions.
+      - Implemented the frontend to connect to a RTMP proxy server with integrated YouTube streaming (URI forwarding).
   - location: Lecture.ninja
     title: 2nd (Remote Learning) @ TAMUHack 2022
     url: github
@@ -89,8 +93,8 @@ projects:
     date: Python (OpenCV), Next.js, Docker
     tags: [ cs ]
     info:
-      - Parsed user-uploaded lecture videos to create an interactive transcript, interlaced with slides from the video.
-      - Python microservice leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription.
+      - Parsed user-uploaded lecture videos to create an interactive transcript interlaced with parsed slides from the video.
+      - Leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription
       - Designed frontend to upload video files to Google Cloud Storage and then fetch data from a MongoDB instance.
   - location: "Dakota Debate Institute"
     title: Summer 2021-2022
@@ -99,8 +103,9 @@ projects:
     date: Next.js, Chakra, Express, MongoDB
     tags: [ ddi ]
     info:
-      - Created and directed a 501c3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
-      - Developed the website and a classroom management system for communication. Managed the day-to-day operations of the camp.
+      - Founded and directed a 501c3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
+      - Developed the website and classroom management system for communication between parents, student, and staff.
+#      - Managed a $10k/month Google AdWords campaign to increase revenue by over 20%.
 
 awards:
   - name: US Congressional App Challenge Winner (Bobcat Notify)

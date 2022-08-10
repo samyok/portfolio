@@ -52,11 +52,12 @@ const ResumeEditor = (props) => {
   useEffect(() => {
     document.onkeydown = function (evt) {
       evt = evt || window.event;
-      if ((evt.ctrlKey || evt.metaKey) && evt.keyCode === 80) {
+      if ((evt.ctrlKey || evt.metaKey) && evt.keyCode === 80 && isFirefox) {
         evt.preventDefault();
         alert(
           "Printing this resume is not supported on Firefox. Please press the download buttons to open a PDF version!"
         );
+        onPrint();
       }
     };
   }, []);

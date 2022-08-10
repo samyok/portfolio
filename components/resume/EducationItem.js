@@ -32,7 +32,7 @@ export const EducationItem = ({ item, selectedTags, isEditing }) => {
           </Link>
         </Flex>
         <UnorderedList pl={1}>
-          {item.info.map((i) => (
+          {item.info?.map((i) => (
             <ListItem key={i} fontWeight={300} fontSize={12}>
               {i}
             </ListItem>
