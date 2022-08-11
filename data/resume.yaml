@@ -24,7 +24,7 @@ work:
     tags: [ cs ]
     info:
       - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
-      - Optimized high-traffic pages, speeding up application load times by more than 20x by minimizing database queries, network requests, and excessive re-rendering.
+      - Optimized application load times by more than 20x on high-traffic pages by minimizing database queries, network requests, and excessive re-rendering.
       - Refactored backend to REST-ful API and automated tests with Jest and Puppeteer, improving performance and stability.
       - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
       - Developed user-facing features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
@@ -43,9 +43,10 @@ work:
     date: Nov 2019 - May 2021
     tags: [ cs ]
     info:
-      - Published iOS and Android app for Brookings High School students for fast and reliable emergency alerts. Gained 2000+ downloads (BHS has approx. 800 students). The Brookings School District offered to purchase the app for every school in the district.
-      - Collaborated with school administration and IT to deliver relevant and timely in-app alerts and updates.
-      - User satisfaction rose to an average of 4.9 stars across both app stores with over 50 reviews.
+      - Published Android and iOS apps for Brookings High School students, staff, and parents for fast and reliable emergency alerts.
+      - Gained 2000+ downloads, more than 2.5x the number of students. The school district offered to purchase the app for every school.
+      - Collaborated with school administration and IT to deliver timely and relevant push notifications and in-app updates.
+      - Maintained an average of 4.9 stars across both app stores with over 50 reviews.
   - location: Scioly.org
     title: Developer
     url: scioly.org
@@ -54,7 +55,7 @@ work:
     tags: [ cs ]
     info:
       # cringe \/
-      - Maintained servers for critical projects to ensure site reliability. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
+      - Ensured site uptime by maintaining servers for critical projects. Searched for and fixed JavaScript and CSS bugs on the most popular parts of the website.
       - Developed custom PHP image gallery and file storage server to be used by more than 68,000 registered users.
 #      - Implemented an image optimization service to reduce image file sizes by up to 80%.
   - location: Freelance Web Developer
@@ -82,19 +83,19 @@ projects:
     date: Python (OpenCV, RTMP), Next.js, MongoDB, Docker
     tags: [ cs ]
     info:
-      - Used OpenCV and OpenFace to detect, identify, and selectively blur many (>5) faces in real time.
+      - Used OpenCV and OpenFace to detect, identify, and selectively blur all unrecognized faces in real time.
       - Automatically deployed to DigitalOcean droplets using Docker Compose and GitHub Actions.
-      - Implemented the frontend to connect to a RTMP proxy server with integrated YouTube streaming (URI forwarding).
+      - Implemented the frontend to connect to a RTMP proxy server with integrated streaming to Youtube (or any other RTMP endpoint).
   - location: Lecture.ninja
     title: 2nd (Remote Learning) @ TAMUHack 2022
     url: github
     href: https://github.com/MiniHacks/LectureNinja
-    date: Python (OpenCV), Next.js, Docker
+    date: Python (OpenCV, FastAPI), Next.js, Docker
     tags: [ cs ]
     info:
       - Parsed user-uploaded lecture videos to create an interactive transcript interlaced with parsed slides from the video.
-      - Leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription
-      - Designed frontend to upload video files to Google Cloud Storage and then fetch data from a MongoDB instance.
+      - Leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription via a FastAPI microservice.
+      - Built frontend to upload video files to Google Cloud Storage and then fetch relevant data from a MongoDB instance.
   - location: "Dakota Debate Institute"
     title: Summer 2021-2022
     url: "dakotadebate.org"
@@ -102,7 +103,7 @@ projects:
     date: Next.js, Chakra, Express, MongoDB
     tags: [ ddi ]
     info:
-      - Founded and directed a 501c3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
+      - Founded and directed a 501(c)3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
       - Developed the website and classroom management system for communication between parents, student, and staff.
 #      - Managed a $10k/month Google AdWords campaign to increase revenue by over 20%.
 
@@ -133,21 +134,21 @@ languages:
     tags: [ cs ]
   - name: Python
     tags: [ cs ]
-  - name: PHP
-    tags: [ cs ]
   - name: C++
-    tags: [ cs ]
-  - name: NodeJS
     tags: [ cs ]
   - name: React, React Native
     tags: [ cs ]
+  - name: Java
+    tags: [ cs ]
   - name: Redux
+    tags: [ cs ]
+  - name: PHP
+    tags: [ cs ]
+  - name: NodeJS
     tags: [ cs ]
   - name: LaTeX
     tags: [ math ]
   - name: HTML/CSS
-    tags: [ cs ]
-  - name: Java
     tags: [ cs ]
 
 
