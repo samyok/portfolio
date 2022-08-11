@@ -5,8 +5,7 @@ defaultTags:
 education:
   - location: University of Minnesota, Twin Cities
     date: "Expected Graduation: May 2024"
-    info:
-      - Double B.S. in Computer Science & Mathematics
+    url: Double B.S. in Computer Science & Mathematics
   - name: Brookings High School
     date: August 2017 - May 2021
     info:
@@ -25,7 +24,7 @@ work:
     tags: [ cs ]
     info:
       - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
-      - Optimized high-traffic pages, reducing load times 20x by minimizing database queries, network requests, and excessive re-rendering.
+      - Optimized high-traffic pages, speeding up application load times by more than 20x by minimizing database queries, network requests, and excessive re-rendering.
       - Refactored backend to REST-ful API and automated tests with Jest and Puppeteer, improving performance and stability.
       - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
       - Developed user-facing features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
@@ -62,8 +61,8 @@ work:
     date: May 2018 - Nov 2019
     tags: [ cs ]
     info:
-      - Sold websites and bots that scraped websites to successfully gather information requested by clients quickly and accurately.
-      - Managed a global network of servers to sync website state to over 7,500 concurrent users globally in under 200ms.
+      - Built and deployed a global network of servers to publish messages in under 200ms to over 7,500 concurrent users globally.
+      - Developed complex web scraping websites and bots to successfully gather information requested by clients quickly and accurately.
   - location: Brookings Math Circle
     title: Co-Founder/Instructor
     url: brookingsmath.org

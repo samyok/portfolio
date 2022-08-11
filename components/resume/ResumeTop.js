@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faPaperPlane, faPhone } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,6 +22,10 @@ const data = {
   github: ["/samyok", "github.com/samyok"],
   linkedin: ["/in/samyok", "linkedin.com/in/samyok"],
   url: ["yok.dev", "www.yok.dev", "//yok.dev"],
+};
+
+const autoPrintIndices = {
+  phone: 1,
 };
 
 export const ResumeTop = ({ isEditing }) => {
@@ -52,19 +56,15 @@ export const ResumeTop = ({ isEditing }) => {
     };
   };
 
-  useEffect(() => {
-    if (router.query.hasOwnProperty("print") && getValue("phone").includes("#")) {
-      cycleData("phone")();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.query]);
-
   const getValue = (prop) => {
+    if (router.query.hasOwnProperty("print") && autoPrintIndices.hasOwnProperty(prop)) {
+      return data[prop][autoPrintIndices[prop]];
+    }
     return data[prop][dataIndices[prop]];
   };
 
   return (
-    <Box pt={4} px={2} textAlign={"center"}>
+    <Box pt={6} px={2} textAlign={"center"}>
       <Heading size={"xl"} mb={1}>
         Samyok Nepal
       </Heading>

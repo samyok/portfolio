@@ -8,7 +8,6 @@ import { ResumeHeading } from "../components/resume/ResumeHeading";
 import fs from "fs";
 import { load } from "js-yaml";
 import { join } from "path";
-import { EducationItem } from "../components/resume/EducationItem";
 import { ExperienceItem } from "../components/resume/ExperienceItem";
 import { ResumeTop } from "../components/resume/ResumeTop";
 import { useState } from "react";
