@@ -44,8 +44,8 @@ const ResumeEditor = (props) => {
 
   const canPrint = !isFirefox;
 
-  const onPrint = () => {
-    if (canPrint) setTimeout(() => window.print(), 0);
+  const onPrint = (forceOpen) => {
+    if (canPrint && !forceOpen) setTimeout(() => window.print(), 0);
     else window.open(RESUME_PDF_LINK, "_blank");
   };
 
@@ -146,7 +146,7 @@ const ResumeEditor = (props) => {
       <Flex justifyContent={"flex-start"} mb={isEditing ? 0 : [0, 0, -20]}>
         {!isEditing && (
           <HStack>
-            <Button size={"sm"} colorScheme={"blue"} variant={"outline"} onClick={onPrint}>
+            <Button size={"sm"} colorScheme={"blue"} variant={"outline"} onClick={() => onPrint(true)}>
               Download PDF
             </Button>
             <Button size={"sm"} colorScheme={"blue"} variant={"ghost"} onClick={onOpen}>

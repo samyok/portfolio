@@ -25,7 +25,7 @@ work:
     info:
       - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
       - Reduced application load times by 20x on high-traffic pages by optimizing database queries, network requests, and re-renders.
-      - Refactored backend to REST-ful API and automated tests with Jest and Puppeteer, improving performance and stability.
+      - Refactored backend to a REST-ful API and automated tests with Jest and Puppeteer, improving performance and stability.
       - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
       - Designed and built user-facing features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
   - location: Art of Problem Solving
