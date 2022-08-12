@@ -46,7 +46,7 @@ work:
       - Published Android and iOS apps for Brookings High School students, staff, and parents for fast and reliable emergency alerts.
       - Gained 2000+ downloads, more than 2.5x the number of students. The school district offered to purchase the app for every school.
       - Collaborated with school administration and IT to deliver timely and relevant push notifications and in-app updates.
-      - Maintained an average of 4.9 stars across both app stores with over 50 reviews.
+      - Maintained an average rating of 4.9 stars across both app stores with over 50 reviews.
   - location: Scioly.org
     title: Developer
     url: scioly.org
@@ -63,7 +63,7 @@ work:
     tags: [ cs ]
     info:
       - Built and deployed a global network of servers to publish messages in under 200ms to over 7,500 concurrent users globally.
-      - Developed complex web scraping websites and bots to successfully gather information requested by clients quickly and accurately.
+      - Developed complex web scraping bots and websites to successfully gather information requested by clients quickly and accurately.
   - location: Brookings Math Circle
     title: Co-Founder/Instructor
     url: brookingsmath.org
@@ -80,7 +80,7 @@ projects:
     title: 3rd @ Hack for Humanity 2022
     url: github
     href: https://github.com/MiniHacks/anonygoose
-    date: Python (OpenCV, RTMP), Next.js, MongoDB, Docker
+    date: Python (OpenCV), FFmpeg, Next.js, MongoDB, Docker
     tags: [ cs ]
     info:
       - Used OpenCV and OpenFace to detect, identify, and selectively blur all unrecognized faces in real time.
@@ -104,8 +104,8 @@ projects:
     tags: [ ddi ]
     info:
       - Founded and directed a 501(c)3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
-      - Developed the website and classroom management system for communication between parents, student, and staff.
-#      - Managed a $10k/month Google AdWords campaign to increase revenue by over 20%.
+      - Developed the website and classroom management system for our free live-streamed classes.
+      - Managed a $10k/month Google AdWords campaign which was responsible for roughly 50% of web traffic.
 
 awards:
   - name: US Congressional App Challenge Winner (Bobcat Notify)
