@@ -165,6 +165,8 @@ interests:
 technologies:
   - name: MongoDB, MySQL, Firebase/Firestore
     tags: [ cs ]
+  - name: Figma
+    tags: [ cs ]
   - name: Google Cloud Platform
     tags: [ cs ]
   - name: Kubernetes
