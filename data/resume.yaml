@@ -150,7 +150,7 @@ languages:
     tags: [ math ]
   - name: HTML/CSS
     tags: [ cs ]
-  - name: SASS/SCSS/LESS
+  - name: SASS
     tags: [ cs ]
 
 
