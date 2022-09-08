@@ -1,26 +1,26 @@
 const projectSections = [
-  {
-    title: "Current Role",
-    data: [
-      {
-        tags: ["nextjs", "typescript", "mongodb", "socket.io", "material-ui"],
-        bgImage: "/img/fiveable.png",
-        description: `I started at Fiveable as a part time Junior Software Engineer at Hours, but was then promoted to a full time Software Engineer I role after a couple months. The codebase is a MongoDB, SocketIO, Express, and NextJS stack, with Material UI as a design framework. I work alongside designers, product managers, and other engineers to turn ticketed ideas into reality.`,
-        title: "Fiveable",
-        subtext: "Software Engineer I, Sep 2020 - Present",
-        buttons: [{ href: "https://fiveable.me", type: "link", text: "Fiveable Homepage" }],
-      },
-    ],
-  },
+  // {
+  //   title: "Current Role",
+  //   data: [
+  //     {
+  //       tags: ["nextjs", "typescript", "mongodb", "socket.io", "material-ui"],
+  //       bgImage: "/img/fiveable.png",
+  //       description: `I started at Fiveable as a part time Junior Software Engineer at Hours, but was then promoted to a full time Software Engineer I role after a couple months. The codebase is a MongoDB, SocketIO, Express, and NextJS stack, with Material UI as a design framework. I work alongside designers, product managers, and other engineers to turn ticketed ideas into reality.`,
+  //       title: "Fiveable",
+  //       subtext: "Software Engineer I, Sep 2020 - Present",
+  //       buttons: [{ href: "https://fiveable.me", type: "link", text: "Fiveable Homepage" }],
+  //     },
+  //   ],
+  // },
   {
     title: "Current Projects",
     data: [
       {
         tags: ["nextjs", "typescript", "mongodb", "chakra-ui", "sass"],
         bgImage: "https://cdn.samyok.us/img/DDI.png",
-        description: `I was the sole develeper for most of the camp, having coded the custom landing page, classroom, and tournament/judging platform for 2021. I also managed advertising and analytics using Umami and set up Zoho Mail. 
+        description: `I was the sole developer for most of the camp, having coded the custom landing page, classroom, and tournament/judging platform for 2021. I also managed advertising and analytics using Umami and set up Zoho Mail. 
                 
-                I'm excited to be the camp director for the (hopefully) in-person DDI 2022!`,
+                I was the the camp director for the week long, in-person DDI 2022 with over 45 students and 8 staff!`,
         title: "Dakota Debate Institute",
         subtext: "Jul 2021 - Present",
         buttons: [
