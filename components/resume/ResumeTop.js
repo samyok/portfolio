@@ -17,7 +17,7 @@ const TextLink = (props) => (
 
 // if type is array, first one is default
 const data = {
-  email: ["sam@yok.dev", "nepal017@umn.edu"],
+  email: ["nepal017@umn.edu", "sam@yok.dev"],
   phone: ["(###) ###-####", "(605) 592-6144"],
   github: ["/samyok", "github.com/samyok"],
   linkedin: ["/in/samyok", "linkedin.com/in/samyok"],

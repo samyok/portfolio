@@ -4,8 +4,8 @@ defaultTags:
 
 education:
   - location: University of Minnesota, Twin Cities
-    date: "Expected Graduation: May 2024"
-    url: Double B.S. in Computer Science & Mathematics
+    date: "Graduating May 2024"
+    url: "Double B.S. in Computer Science & Mathematics, GPA: 4.0"
   - name: Brookings High School
     date: August 2017 - May 2021
     info:
@@ -20,7 +20,7 @@ work:
     title: Software Engineer
     url: fiveable.me
     href: https://hi.fiveable.me
-    date: Sep 2021 - Aug 2022
+    date: "(Gap Year) Sep 2021 - Aug 2022"
     tags: [ cs ]
     info:
       - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
