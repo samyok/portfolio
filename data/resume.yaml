@@ -54,10 +54,9 @@ work:
     date: Sep 2019 - Aug 2022
     tags: [ cs ]
     info:
-      # cringe \/
-      - Ensured site uptime by maintaining servers for critical projects.
+#      - Ensured site uptime by maintaining servers for critical projects.
       - Developed custom PHP image gallery and file storage server to be used by more than 68,000 registered users.
-#      - Implemented an image optimization service to reduce image file sizes by up to 80%.
+      - Implemented an image optimization service to reduce image file sizes by up to 80% and serve at the edge.
   - location: Freelance Web Developer
     date: May 2018 - Nov 2019
     tags: [ cs ]
@@ -108,7 +107,7 @@ projects:
       - Managed a $10k/month Google AdWords campaign which was responsible for roughly 50% of web traffic.
 
 awards:
-  - name: US Congressional App Challenge Winner (Bobcat Notify)
+  - name: US Congressional App Challenge Winner
     tags: [ cs ]
   - name: AMC 10/12 Honor Roll (2018, 2019, 2020, 2021)
     tags: [ math ]

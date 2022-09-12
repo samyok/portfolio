@@ -11,7 +11,6 @@ import { join } from "path";
 import { ExperienceItem } from "../components/resume/ExperienceItem";
 import { ResumeTop } from "../components/resume/ResumeTop";
 import { useState } from "react";
-import { joinStrings } from "../utils";
 import dynamic from "next/dynamic";
 
 const ResumeEditor = dynamic(import("../components/resume/ResumeEditor"), { ssr: false });
@@ -35,11 +34,12 @@ export default function Resume({ resumeData }) {
   const MiscSection = [
     { name: "Awards", items: itemsToText(resumeData.awards) },
     { name: "Interests", items: itemsToText(resumeData.interests) },
-    { name: "Languages/Libraries", items: itemsToText(resumeData.languages) },
+    { name: "Skills", items: itemsToText(resumeData.languages) },
     { name: "Technologies", items: itemsToText(resumeData.technologies) },
   ].filter((s) => s.items?.length > 0);
 
-  const MiscTitle = joinStrings(MiscSection.map((s) => s.name));
+  // const MiscTitle = joinStrings(MiscSection.map((s) => s.name));
+  const MiscTitle = "Skills & Technologies";
 
   return (
     <chakra.div bg={"#F0F0F0"} minHeight={"100vh"}>
@@ -89,7 +89,7 @@ export default function Resume({ resumeData }) {
               onClose={onClose}
             />
             <ResumeTop isEditing={isEditing} />
-            <ResumeHeading as={"h2"}>Education</ResumeHeading>
+            <ResumeHeading as={"h2"}>Education &amp; Awards</ResumeHeading>
             {resumeData.education.map((item, index) => (
               <ExperienceItem
                 selectedTags={selectedTags}
@@ -98,7 +98,24 @@ export default function Resume({ resumeData }) {
                 isEditing={isEditing}
               />
             ))}
-            <ResumeHeading as={"h2"}>Experience</ResumeHeading>
+            {[MiscSection[0]].map((s) => (
+              <Text fontSize={12} pt={0.5} px={1} fontWeight={300} key={s.items}>
+                <Text as={"span"} fontWeight={400}>
+                  {s.name}:
+                </Text>{" "}
+                {s.items}
+              </Text>
+            ))}
+            <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
+            {MiscSection.filter((a, i) => i > 0).map((s) => (
+              <Text fontSize={12} pt={0.5} px={1} fontWeight={300} key={s.items}>
+                <Text as={"span"} fontWeight={400}>
+                  {s.name}:
+                </Text>{" "}
+                {s.items}
+              </Text>
+            ))}
+            <ResumeHeading as={"h2"}>Work Experience</ResumeHeading>
             {resumeData.work.map((item, index) => (
               <ExperienceItem
                 selectedTags={selectedTags}
@@ -107,7 +124,7 @@ export default function Resume({ resumeData }) {
                 isEditing={isEditing}
               />
             ))}
-            <ResumeHeading as={"h2"}>Projects</ResumeHeading>
+            <ResumeHeading as={"h2"}>Technical Projects</ResumeHeading>
             {resumeData.projects.map((item, index) => (
               <ExperienceItem
                 selectedTags={selectedTags}
@@ -115,15 +132,6 @@ export default function Resume({ resumeData }) {
                 key={"work-" + index}
                 isEditing={isEditing}
               />
-            ))}
-            <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
-            {MiscSection.map((s) => (
-              <Text fontSize={12} pt={0.5} fontWeight={300} key={s.items}>
-                <Text as={"span"} fontWeight={400}>
-                  {s.name}:
-                </Text>{" "}
-                {s.items}
-              </Text>
             ))}
           </Box>
         </Flex>
