@@ -1,6 +1,7 @@
 defaultTags:
   - ddi
   - cs
+  - aops
 
 education:
   - location: University of Minnesota, Twin Cities
@@ -18,9 +19,9 @@ education:
 work:
   - location: Fiveable
     title: Software Engineer
-    url: fiveable.me
+    url: Full Time/Gap Year, fiveable.me
     href: https://hi.fiveable.me
-    date: "(Gap Year) Sep 2021 - Aug 2022"
+    date: "Sep 2021 - Aug 2022"
     tags: [ cs ]
     info:
       - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
@@ -29,16 +30,19 @@ work:
       - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
       - Designed and built user-facing features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
   - location: Art of Problem Solving
-    title: Teaching Assistant (contractor)
-    url: aops.com
+    title: Teaching Assistant, Grader
+    url: Contractor, aops.com
     href: https://artofproblemsolving.com
     date: Aug 2021 - Present
-    tags: [ math ]
+    tags: [ math, aops ]
     info:
-      - Analyzed Python and math homework with set guidelines, and wrote feedback to guide students to the solution
+      - Assist twice a week in teaching classes of 20-50 students online, answering questions, guiding students, and helping them debug their code in classes.
+      - Provide detailed logical and stylistic feedback to students' advanced math (Intermediate Geometry, WOOT, etc) and Python problems.
+#      - Analyzed Python and math homework with set , and wrote feedback to guide students to the solution
+#      - Assist instructor in teaching online math and Python lectures, with approx. 40 students per class.
   - location: Bobcat Notify
     title: Founder
-    url: notify.samyok.us
+    url: Part Time, notify.samyok.us
     href: https://notify.samyok.us
     date: Nov 2019 - May 2021
     tags: [ cs ]
@@ -49,7 +53,7 @@ work:
       - Maintained an average rating of 4.9 stars across both app stores with over 50 reviews.
   - location: Scioly.org
     title: Developer
-    url: scioly.org
+    url: Part Time, scioly.org
     href: https://scioly.org
     date: Sep 2019 - Aug 2022
     tags: [ cs ]
@@ -58,8 +62,8 @@ work:
       - Developed custom PHP image gallery and file storage server to be used by more than 68,000 registered users.
       - Implemented an image optimization service to reduce image file sizes by up to 80% and serve at the edge.
   - location: Freelance Web Developer
-    date: May 2018 - Nov 2019
-    tags: [ cs ]
+    date: Contractor, May 2018 - Nov 2019
+    tags: [ freelance ]
     info:
       - Built and deployed a global network of servers to publish messages in under 200ms to over 7,500 concurrent users globally.
       - Developed complex web scraping bots and websites to successfully gather information requested by clients quickly and accurately.
