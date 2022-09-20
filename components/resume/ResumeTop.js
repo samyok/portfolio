@@ -7,7 +7,14 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useRouter } from "next/router";
 
 const TextLink = (props) => (
-  <Text fontSize={12} fontWeight={300} mx={2} onClick={(e) => props.onEdit?.(e)}>
+  <Text
+    fontSize={12}
+    fontWeight={300}
+    mx={2}
+    onClick={(e) => props.onEdit?.(e)}
+    display={"flex"}
+    justifyContent={"center"}
+    alignItems={"center"}>
     {props.icon && <FontAwesomeIcon icon={props.icon} style={{ height: 12 }} />}
     <Link href={props.href} marginLeft={props.icon ? 2 : 0}>
       {props.children}
