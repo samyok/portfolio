@@ -7,8 +7,17 @@ import NextLink from "next/link";
 import Image from "next/image";
 
 const SelfPortrait = () => {
+  const router = useRouter();
   return (
-    <Box borderRadius={"50%"} overflow={"hidden"} mx={3} height={24} width={24}>
+    <Box
+      as={"a"}
+      borderRadius={"50%"}
+      overflow={"hidden"}
+      mx={3}
+      height={24}
+      width={24}
+      cursor={"pointer"}
+      onClick={() => router.push("/")}>
       <Image
         bg={"transparent"}
         width={96}
@@ -28,7 +37,7 @@ const SelfPortrait = () => {
 
 const Pages = () => {
   const LINKS = [
-    { name: "Projects", href: "/" },
+    { name: "Projects", href: "/#projects" },
     { name: "Resume", href: "/resume" },
     { name: "Contact", href: "#contact" },
   ];

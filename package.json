@@ -9,9 +9,9 @@
     "start": "yarn next start",
     "lint": "yarn next lint"
   },
-  "engines" : {
-    "yarn" : ">=1.22.0",
-    "node" : ">=16.0.0"
+  "engines": {
+    "yarn": ">=1.22.0",
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
@@ -28,7 +28,7 @@
     "js-yaml": "^4.1.0",
     "next": "^12.3.1",
     "pdfjs-dist": "^2.9.359",
-    "playwright-aws-lambda": "^0.7.0",
+    "playwright-aws-lambda": "^0.9.0",
     "playwright-core": "^1.14.0",
     "react": "^17.0.2",
     "react-device-detect": "^2.2.2",
