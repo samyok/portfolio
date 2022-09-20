@@ -60,13 +60,18 @@ const SocialLinks = () => {
     // { name: "sam@yok.dev", icon: faPaperPlane, href: "mailto:sam@yok.dev" },
   ];
   return (
-    <HStack spacing={4} alignItems={"center"}>
+    <HStack spacing={6} alignItems={"center"}>
       {LINKS.map(({ name, icon, href }) => (
         <Link key={href} href={href} isExternal>
-          <Text fontSize={14} fontWeight={400}>
+          <Text
+            fontSize={14}
+            fontWeight={400}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}>
             {icon && (
-              <Box width={4} pr={4} display={"inline-block"}>
-                <FontAwesomeIcon icon={icon} />
+              <Box width={4} pr={4} display={"inline-block"} mr={1}>
+                <FontAwesomeIcon icon={icon} style={{ width: 16, height: 16 }} />
               </Box>
             )}
             {name}
