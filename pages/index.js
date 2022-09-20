@@ -11,7 +11,7 @@ export function imgSrc(url, width = 3840) {
   if (env === "development") {
     return url;
   } else if (env === "production") {
-    return `https://yok.dev/_next/image?url=${url}&w=${width}&q=1`;
+    return `https://cdn.yok.dev/_next/image?url=${url}&w=${width}&q=1`;
   }
 }
 
