@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
           scrollBehavior: "smooth",
         }}>
         <Head>
-          <link rel="preload" href={imgSrc("/img/sunglasses.jpeg", 32)} />
+          <link rel="preload" href={imgSrc("/img/sunglasses.jpeg")} as={"image"} />
           <link
             href={
               "https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap"
