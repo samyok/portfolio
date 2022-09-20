@@ -1,5 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { constants } from "../config";
+import { imgSrc } from "./index";
 
 export default class MyDocument extends Document {
   render() {
@@ -10,10 +10,13 @@ export default class MyDocument extends Document {
           scrollBehavior: "smooth",
         }}>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
-          <link rel="preload" as="style" crossOrigin={"true"} href={constants.fontURI} />
-          <link href={constants.fontURI} rel="stylesheet" />
+          <link rel="preload" href={imgSrc("/img/sunglasses.jpeg", 32)} />
+          <link
+            href={
+              "https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap"
+            }
+            rel="stylesheet"
+          />
           <meta name="theme-color" content="#F0F0F0" />
 
           <script

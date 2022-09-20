@@ -1,19 +1,17 @@
 import Head from "next/head";
 import MyHeading from "../components/MyHeading";
-import { chakra, Flex } from "@chakra-ui/react";
+import { Box, chakra, Flex } from "@chakra-ui/react";
 import projects from "../data/projects";
 import { AnimatedText } from "../components/animatedText";
 import styles from "../styles/animatedBlink.module.css";
 import { Project } from "../components/project";
-import { Footer } from "../components/footer";
-import Navigation from "../components/Navigation";
 
-export function imgSrc(url) {
+export function imgSrc(url, width = 3840) {
   const env = process.env.NODE_ENV;
   if (env === "development") {
     return url;
   } else if (env === "production") {
-    return `https://bcdn.samyok.us/_next/image?url=${url}&w=3840&q=1`;
+    return `https://yok.dev/_next/image?url=${url}&w=${width}&q=1`;
   }
 }
 
@@ -22,7 +20,7 @@ export default function Home() {
     // console.log({newIndex});
   };
   return (
-    <chakra.div bg={"#F0F0F0"} minHeight={"100vh"}>
+    <Box>
       <Head>
         <title>Samyok Nepal</title>
         <meta
@@ -50,7 +48,6 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navigation />
         <Flex
           justifyContent={"center"}
           alignItems={"center"}
@@ -80,7 +77,6 @@ export default function Home() {
           <Project projSection={proj} key={JSON.stringify(proj)} />
         ))}
       </main>
-      <Footer />
-    </chakra.div>
+    </Box>
   );
 }

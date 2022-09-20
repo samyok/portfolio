@@ -1,5 +1,4 @@
 import * as playwright from "playwright-aws-lambda";
-import { constants } from "../../config";
 
 module.exports = async (req, res) => {
   const browser = await playwright.launchChromium({ headless: true });

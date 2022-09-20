@@ -1,21 +1,31 @@
-import { Avatar, Box, Flex, Heading, Hide, HStack, Link, Text } from "@chakra-ui/react";
-import { AiOutlineUser } from "react-icons/ai";
+import { Box, chakra, Flex, Heading, Hide, HStack, Link, Text } from "@chakra-ui/react";
 import { imgSrc } from "../pages/index";
 import { useRouter } from "next/router";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NextLink from "next/link";
+import { useState } from "react";
 
-const SelfPortrait = () => (
-  <Avatar
-    mx={3}
-    bg={"transparent"}
-    icon={<AiOutlineUser size={"2em"} />}
-    size="xl"
-    name="Samyok Nepal"
-    src={imgSrc("/img/sunglasses.jpeg")}
-  />
-);
+const SelfPortrait = () => {
+  const initial = imgSrc("/img/sunglasses.jpeg", 32);
+  const [src, setSrc] = useState(initial);
+  const onLoad = () => {
+    if (src !== initial) return;
+    setSrc(imgSrc("/img/sunglasses.jpeg", 3840));
+  };
+  return (
+    <chakra.img
+      mx={3}
+      bg={"transparent"}
+      width="24"
+      height={24}
+      borderRadius={"50%"}
+      name="Samyok Nepal"
+      src={src}
+      onLoad={onLoad}
+    />
+  );
+};
 
 const Pages = () => {
   const LINKS = [
@@ -26,7 +36,7 @@ const Pages = () => {
 
   const router = useRouter();
   const isActive = (href) => {
-    return router.pathname === href;
+    return router?.pathname === href;
   };
 
   return (

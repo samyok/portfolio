@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { Box, chakra, Flex, Text, useDisclosure } from "@chakra-ui/react";
-import { Footer } from "../components/footer";
-import Navigation from "../components/Navigation";
+import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { ResumeHeading } from "../components/resume/ResumeHeading";
@@ -11,9 +9,7 @@ import { join } from "path";
 import { ExperienceItem } from "../components/resume/ExperienceItem";
 import { ResumeTop } from "../components/resume/ResumeTop";
 import { useState } from "react";
-import dynamic from "next/dynamic";
-
-const ResumeEditor = dynamic(import("../components/resume/ResumeEditor"), { ssr: false });
+import ResumeEditor from "../components/resume/ResumeEditor";
 
 export default function Resume({ resumeData }) {
   const { isOpen: isEditing, onOpen, onClose } = useDisclosure({ defaultIsOpen: false });
@@ -42,7 +38,7 @@ export default function Resume({ resumeData }) {
   const MiscTitle = "Skills & Technologies";
 
   return (
-    <chakra.div bg={"#F0F0F0"} minHeight={"100vh"}>
+    <Box>
       <Head>
         <title>Samyok Nepal</title>
         <meta
@@ -69,7 +65,6 @@ export default function Resume({ resumeData }) {
       </Head>
 
       <main>
-        <Navigation />
         <style>{`
         @media print {
           html, body {
@@ -77,10 +72,13 @@ export default function Resume({ resumeData }) {
             max-height: 100vh;
             overflow: hidden;
           }
+          .resume-page {
+            margin-top: 0;
+          }
         }
         `}</style>
         <Flex justifyContent={"center"}>
-          <Box px={6} pb={20} w={1000} maxW={"100%"}>
+          <Box px={6} pb={20} w={1000} maxW={"100%"} mt={3} className={"resume-page"}>
             <ResumeEditor
               data={resumeData}
               tags={[selectedTags, setSelectedTags]}
@@ -136,8 +134,7 @@ export default function Resume({ resumeData }) {
           </Box>
         </Flex>
       </main>
-      <Footer />
-    </chakra.div>
+    </Box>
   );
 }
 

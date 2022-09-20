@@ -2,16 +2,11 @@ import Head from "next/head";
 import { imgSrc } from "../pages/index";
 import MyHeading from "../components/MyHeading";
 import { Box, chakra, Flex, VStack } from "@chakra-ui/react";
-import { Footer } from "../components/footer";
-import Navigation from "../components/Navigation";
 import news from "../data/news";
 
 export default function Home() {
-  const wordChanged = (newIndex) => {
-    // console.log({newIndex});
-  };
   return (
-    <chakra.div bg={"#F0F0F0"} minHeight={"100vh"}>
+    <Box>
       <Head>
         <title>Samyok Nepal</title>
         <meta
@@ -38,7 +33,6 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navigation />
         <Box px={[2, 5, 10]} pt={[200, 150]} minH={"100vh"} pb={20}>
           <MyHeading as={"h1"}>In the News</MyHeading>
           <chakra.p py={5}>
@@ -85,7 +79,6 @@ export default function Home() {
           </VStack>
         </Box>
       </main>
-      <Footer />
-    </chakra.div>
+    </Box>
   );
 }
