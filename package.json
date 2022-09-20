@@ -10,7 +10,7 @@
     "lint": "yarn next lint"
   },
   "engines" : {
-    "yarn" : ">=1.22.19",
+    "yarn" : ">=1.22.0",
     "node" : ">=16.0.0"
   },
   "dependencies": {
