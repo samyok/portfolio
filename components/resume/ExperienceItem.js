@@ -30,7 +30,7 @@ export const ExperienceItem = ({ item, selectedTags }) => {
             fontFamily={"Inter"}
             alignItems={"center"}>
             {item.location}
-            {item.title && `, ${item.title} `}
+            {item.title && `, ${item.title}`}{" "}
             {item.url && (
               <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"}>
                 (
