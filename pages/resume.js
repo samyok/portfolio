@@ -115,7 +115,7 @@ export default function Resume({ resumeData }) {
                 {s.items}
               </Text>
             ))}
-            <ResumeHeading as={"h2"}>Work Experience</ResumeHeading>
+            <ResumeHeading as={"h2"}>Experience</ResumeHeading>
             {resumeData.work.map((item, index) => (
               <ExperienceItem
                 selectedTags={selectedTags}
