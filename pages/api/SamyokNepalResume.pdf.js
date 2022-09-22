@@ -1,11 +1,10 @@
 import * as playwright from "playwright-aws-lambda";
-import { fonts } from "../../data/fonts";
 
 module.exports = async (req, res) => {
-  for (const font of fonts) {
-    await playwright.loadFont(font);
-    console.log("loaded font", font);
-  }
+  // for (const font of fonts) {
+  //   await playwright.loadFont(font);
+  //   console.log("loaded font", font);
+  // }
 
   console.log("fonts loaded. launching browser");
   const browser = await playwright.launchChromium({ headless: true });
