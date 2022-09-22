@@ -1,20 +1,29 @@
 import { Box, Collapse, Flex, Heading, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import snarkdown from "snarkdown";
 
 export const ExperienceItem = ({ item, selectedTags }) => {
   const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
 
   const Parens = () => {
-    if (item.href)
+    if (!item.url && !item.parens) return null;
+
+    const parenText = `${snarkdown(item.url ?? item.parens)}`;
+    if (item.href) {
       return (
         <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
           (
           <Link href={item.href} target={"_blank"}>
-            {item.url}
+            {parenText}
           </Link>
           )
         </Text>
       );
-    else if (item.url || item.parens) {
+    } else {
+      return (
+        <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
+          ({parenText})
+        </Text>
+      );
     }
   };
 
@@ -30,16 +39,7 @@ export const ExperienceItem = ({ item, selectedTags }) => {
             fontFamily={"Inter"}
             alignItems={"center"}>
             {item.location}
-            {item.title && `, ${item.title}`}{" "}
-            {item.url && (
-              <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"}>
-                (
-                <Link href={item.href} target={"_blank"}>
-                  {item.url}
-                </Link>
-                )
-              </Text>
-            )}
+            {item.title && `, ${item.title}`} <Parens />
           </Heading>
           <Text fontWeight={400} fontSize={14}>
             {item.date}

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, ListItem, Text, UnorderedList, useDisclosure } from "@chakra-ui/react";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { ResumeHeading } from "../components/resume/ResumeHeading";
@@ -96,23 +96,29 @@ export default function Resume({ resumeData }) {
                 isEditing={isEditing}
               />
             ))}
-            {[MiscSection[0]].map((s) => (
-              <Text fontSize={12} pt={0.5} px={1} fontWeight={300} key={s.items}>
-                <Text as={"span"} fontWeight={400}>
-                  {s.name}:
-                </Text>{" "}
-                {s.items}
-              </Text>
-            ))}
+            {/*{[MiscSection[0]].map((s) => (*/}
+            {/*  <Text fontSize={12} pt={0.5} px={1} fontWeight={300} key={s.items}>*/}
+            {/*    <Text as={"span"} fontWeight={400}>*/}
+            {/*      {s.name}:*/}
+            {/*    </Text>{" "}*/}
+            {/*    {s.items}*/}
+            {/*  </Text>*/}
+            {/*))}*/}
             <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
-            {MiscSection.filter((a, i) => i > 0).map((s) => (
-              <Text fontSize={12} pt={0.5} px={1} fontWeight={300} key={s.items}>
-                <Text as={"span"} fontWeight={400}>
-                  {s.name}:
-                </Text>{" "}
-                {s.items}
-              </Text>
-            ))}
+            <Box px={3}>
+              <UnorderedList>
+                {MiscSection.filter((a, i) => i > 0).map((s) => (
+                  <ListItem key={s.items} my={0}>
+                    <Text fontSize={12} p={0} fontWeight={300}>
+                      <Text as={"span"} fontWeight={400}>
+                        {s.name}:
+                      </Text>{" "}
+                      {s.items}
+                    </Text>
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </Box>
             <ResumeHeading as={"h2"}>Experience</ResumeHeading>
             {resumeData.work.map((item, index) => (
               <ExperienceItem
