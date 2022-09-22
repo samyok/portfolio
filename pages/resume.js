@@ -108,7 +108,7 @@ export default function Resume({ resumeData }) {
             <Box px={3}>
               <UnorderedList>
                 {MiscSection.filter((a, i) => i > 0).map((s) => (
-                  <ListItem key={s.items} my={0}>
+                  <ListItem key={s.items} lineHeight={1.3} my={0}>
                     <Text fontSize={12} p={0} fontWeight={300}>
                       <Text as={"span"} fontWeight={400}>
                         {s.name}:

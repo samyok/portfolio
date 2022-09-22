@@ -19,12 +19,18 @@ module.exports = async (req, res) => {
     },
   });
   const page = await context.newPage();
+  const loaded = page.waitForNavigation({ waitUntil: "load" });
   console.log("context created. navigating to page");
-  await page.goto("https://yok.dev/resume?print");
+  if (process.env.VERCEL_URL) {
+    await page.goto("https://" + process.env.VERCEL_URL + "/resume?print");
+  } else {
+    await page.goto("http://localhost:3000/resume?print");
+  }
   console.log("page loaded. waiting for 1000 ms");
-  await sleep(1000);
+  await sleep(500);
+  await loaded;
   console.log("taking pdf");
-  const pdf = await page.pdf();
+  const pdf = await page.pdf({});
   res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate");
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("Content-Disposition", "inline; filename=SamyokNepalResume.pdf");
