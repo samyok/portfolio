@@ -62,7 +62,8 @@ work:
       - Developed custom PHP image gallery and file storage server to be used by more than 68,000 registered users.
       - Implemented an image optimization service to reduce image file sizes by up to 80% and serve at the edge.
   - location: Freelance Web Developer
-    date: Contractor, May 2018 - Nov 2019
+    date: May 2018 - Nov 2019
+    url: Contractor
     tags: [ freelance ]
     info:
       - Built and deployed a global network of servers to publish messages in under 200ms to over 7,500 concurrent users globally.
