@@ -1,4 +1,5 @@
 import * as playwright from "playwright-aws-lambda";
+import { fonts } from "../../data/fonts";
 
 module.exports = async (req, res) => {
   console.log("starting to load fonts!");
