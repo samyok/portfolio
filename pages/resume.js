@@ -87,7 +87,7 @@ export default function Resume({ resumeData }) {
               onClose={onClose}
             />
             <ResumeTop isEditing={isEditing} />
-            <ResumeHeading as={"h2"}>Education &amp; Awards</ResumeHeading>
+            <ResumeHeading as={"h2"}>Education</ResumeHeading>
             {resumeData.education.map((item, index) => (
               <ExperienceItem
                 selectedTags={selectedTags}
@@ -96,31 +96,19 @@ export default function Resume({ resumeData }) {
                 isEditing={isEditing}
               />
             ))}
-            {/*{[MiscSection[0]].map((s) => (*/}
-            {/*  <Text fontSize={12} pt={0.5} px={1} fontWeight={300} key={s.items}>*/}
-            {/*    <Text as={"span"} fontWeight={400}>*/}
-            {/*      {s.name}:*/}
-            {/*    </Text>{" "}*/}
-            {/*    {s.items}*/}
-            {/*  </Text>*/}
-            {/*))}*/}
-            <ResumeHeading as={"h2"}>{MiscTitle}</ResumeHeading>
+            <ResumeHeading as={"h2"}>Skills</ResumeHeading>
             <Box px={2} pb={1}>
-              {/*<UnorderedList>*/}
               {MiscSection.filter((a, i) => i > 0).map((s) => (
-                // <ListItem key={s.items} my={-1}>
-                <Text fontSize={12} p={0} key={s.items} fontWeight={300}>
+                <Text fontSize={12} p={0} key={s.items} fontWeight={200}>
                   <Text as={"span"} p={0} fontWeight={400}>
                     {s.name}:
                   </Text>{" "}
                   {s.items}
                 </Text>
-                // </ListItem>
               ))}
-              {/*</UnorderedList>*/}
             </Box>
-            <ResumeHeading as={"h2"}>Experience</ResumeHeading>
-            {resumeData.work.map((item, index) => (
+            <ResumeHeading as={"h2"}>Gap Year Experience</ResumeHeading>
+            {resumeData.gapYear.map((item, index) => (
               <ExperienceItem
                 selectedTags={selectedTags}
                 item={item}
@@ -128,6 +116,17 @@ export default function Resume({ resumeData }) {
                 isEditing={isEditing}
               />
             ))}
+
+            <ResumeHeading as={"h2"}>High School Experience</ResumeHeading>
+            {resumeData.highSchool.map((item, index) => (
+              <ExperienceItem
+                selectedTags={selectedTags}
+                item={item}
+                key={"work-" + index}
+                isEditing={isEditing}
+              />
+            ))}
+
             <ResumeHeading as={"h2"}>Technical Projects</ResumeHeading>
             {resumeData.projects.map((item, index) => (
               <ExperienceItem

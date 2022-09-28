@@ -8,8 +8,8 @@ education:
     date: "Aug 2022 - May 2024"
     url: "Double B.S. in Computer Science & Mathematics"
     info:
-      - "GPA: 4.0"
-      - "Awards: US Congressional App Challenge Winner, USACO Gold Division"
+      - "GPA: 4.0, dual enrolled for three years in high school and then **took a gap year** before college since I'm graduating early."
+      - "Competitive Programming (USACO Gold Division) with **C++**, US Congressional App Challenge Winner"
   - name: Brookings High School
     date: August 2017 - May 2021
     info:
@@ -19,19 +19,19 @@ education:
     tags: [ high school ]
 
 
-work:
+gapYear:
   - location: Fiveable
-    title: Software Engineer
+    title: Fullstack Software Engineer
     url: Full Time/Gap Year, fiveable.me
     href: https://hi.fiveable.me
     date: "Sep 2021 - Aug 2022"
     tags: [ cs ]
     info:
-      - Architected and implemented low-level WebRTC voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
+      - Architected and implemented low-level **WebRTC** voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
       - Reduced application load times by 20x on high-traffic pages by optimizing database queries, network requests, and re-renders.
-      - Refactored backend to a REST-ful API and automated tests with Jest and Puppeteer, improving performance and stability.
-      - Deployed and managed servers on Google Compute Engine for internal tools used company-wide.
-      - Designed and built user-facing features using Typescript, Next.js, React, Redux, Material UI, and MongoDB.
+      - Refactored backend to a REST-ful API and automated tests with **Jest and Puppeteer**, improving performance and stability.
+      - Deployed and managed servers with **Terraform** on Google Compute Engine for internal tools used company-wide.
+      - Designed and built user-facing features using **Typescript, Next.js, React, Redux, Material UI, and MongoDB**.
   - location: Art of Problem Solving
     title: Teaching Assistant/Grader
     url: Contractor, aops.com
@@ -40,9 +40,11 @@ work:
     tags: [ math, aops ]
     info:
       - Assist twice a week in teaching online classes of 20-50 students answering questions, guiding students, and helping debug.
-      - Provide detailed logical and stylistic feedback to students' advanced math and Python solutions. Have graded introductory (Pre-Algebra, Geometry, Counting and Probability, etc.) to advanced (Calculus, WOOT, etc.) homework.
+      - Provide detailed logical and stylistic feedback to students' advanced math and **Python** solutions. Have graded introductory (Pre-Algebra, Geometry, Counting and Probability, etc.) to advanced (Calculus, WOOT, etc.) homework.
 #      - Analyzed Python and math homework with set , and wrote feedback to guide students to the solution
 #      - Assist instructor in teaching online math and Python lectures, with approx. 40 students per class.
+
+highSchool:
   - location: Bobcat Notify
     title: Founder
     url: Part Time, notify.samyok.us
@@ -50,8 +52,8 @@ work:
     date: Nov 2019 - May 2021
     tags: [ cs ]
     info:
-      - Published Android and iOS apps for Brookings High School students, staff, and parents for fast and reliable emergency alerts.
-      - Gained 2000+ downloads, more than 2.5x the number of students. The school district offered to purchase the app for every school.
+      - Published **Android and iOS apps** for Brookings High School students, staff, and parents for fast and reliable emergency alerts.
+      - Gained 2000+ downloads, more than **2.5x the number of students**. The school district offered to purchase the app for every school.
       - Collaborated with school administration and IT to deliver timely and relevant push notifications and in-app updates.
       - Maintained an average rating of 4.9 stars across both app stores with over 50 reviews.
   - location: Scioly.org
@@ -62,7 +64,7 @@ work:
     tags: [ cs ]
     info:
 #      - Ensured site uptime by maintaining servers for critical projects.
-      - Developed custom PHP image gallery and file storage server to be used by more than 68,000 registered users.
+      - Developed custom **PHP** image gallery and file storage server to be used by more than **68,000** registered users.
       - Implemented an image optimization service to reduce image file sizes by up to 80% and serve at the edge.
   - location: Freelance Web Developer
     date: May 2018 - Nov 2019
@@ -90,7 +92,7 @@ projects:
     date: Python (OpenCV), FFmpeg, Next.js, MongoDB, Docker
     tags: [ cs ]
     info:
-      - Used OpenCV and OpenFace to detect, identify, and selectively blur all unrecognized faces in real time.
+      - Used **OpenCV** and **OpenFace** to detect, identify, and selectively blur all unrecognized faces in real time.
       - Automatically deployed to DigitalOcean droplets using Docker Compose and GitHub Actions.
       - Implemented the frontend to connect to a RTMP proxy server with integrated streaming to Youtube (or any other RTMP endpoint).
   - location: Lecture.ninja
@@ -101,7 +103,7 @@ projects:
     tags: [ cs ]
     info:
       - Parsed user-uploaded lecture videos to create an interactive transcript interlaced with parsed slides from the video.
-      - Leveraged OpenCV to extract lecture slides and Google Cloud Speech APIs for transcription via a FastAPI microservice.
+      - Leveraged **OpenCV** to extract lecture slides and Google Cloud Speech APIs for transcription via a FastAPI microservice.
       - Built frontend to upload video files to Google Cloud Storage and then fetch relevant data from a MongoDB instance.
   - location: "Dakota Debate Institute"
     title: Summer 2021-2022
@@ -135,13 +137,13 @@ awards:
     tags: [ misc ]
 
 languages:
-  - name: JavaScript
-    tags: [ cs ]
   - name: Typescript
+    tags: [ cs ]
+  - name: C++
     tags: [ cs ]
   - name: Python
     tags: [ cs ]
-  - name: C++
+  - name: JavaScript
     tags: [ cs ]
   - name: React, React Native
     tags: [ cs ]

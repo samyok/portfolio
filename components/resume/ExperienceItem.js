@@ -1,5 +1,7 @@
 import { Box, Collapse, Flex, Heading, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react";
-import snarkdown from "snarkdown";
+
+import ReactMarkdown from 'react-markdown'
+import { MiniMarkdown } from "../MiniMarkdown";
 
 export const ExperienceItem = ({ item, selectedTags }) => {
   const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
@@ -7,7 +9,7 @@ export const ExperienceItem = ({ item, selectedTags }) => {
   const Parens = () => {
     if (!item.url && !item.parens) return null;
 
-    const parenText = `${snarkdown(item.url ?? item.parens)}`;
+    const parenText = item.url ?? item.parens;
     if (item.href) {
       return (
         <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
@@ -48,8 +50,8 @@ export const ExperienceItem = ({ item, selectedTags }) => {
         <UnorderedList pl={1}>
           {item.info?.map((i) => (
             <ListItem key={i} lineHeight={1.3}>
-              <Text fontSize={12} fontWeight={300}>
-                {i}
+              <Text fontSize={12} fontWeight={200}>
+                <MiniMarkdown>{i}</MiniMarkdown>
               </Text>
             </ListItem>
           ))}
