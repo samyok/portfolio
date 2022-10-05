@@ -134,6 +134,7 @@ export default function Resume({ resumeData }) {
                 item={item}
                 key={"work-" + index}
                 isEditing={isEditing}
+                locationFirst
               />
             ))}
           </Box>

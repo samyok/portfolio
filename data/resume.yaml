@@ -5,11 +5,12 @@ defaultTags:
 
 education:
   - location: University of Minnesota, Twin Cities
-    date: "Aug 2022 - May 2024"
+    date: ""
     url: "Double B.S. in Computer Science & Mathematics"
     info:
-      - "GPA: 4.0, dual enrolled for three years in high school and then **took a gap year** before college since I'm graduating early."
+      - "**GPA: 4.0**, dual enrolled in high school and then **took a gap year** before college."
       - "Competitive Programming (USACO Gold Division) with **C++**, US Congressional App Challenge Winner"
+      - 1st place Education @ HackMIT (top 10 overall), 1st place CuseHacks, 1st place Sonoma Hacks
   - name: Brookings High School
     date: August 2017 - May 2021
     info:
@@ -21,7 +22,7 @@ education:
 
 gapYear:
   - location: Fiveable
-    title: Fullstack Software Engineer
+    title: Software Engineer
     url: Full Time/Gap Year, fiveable.me
     href: https://hi.fiveable.me
     date: "Sep 2021 - Aug 2022"
@@ -114,7 +115,7 @@ projects:
     info:
       - Founded and directed a 501(c)3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
       - Developed the website and classroom management system for our free live-streamed classes.
-      - Managed a $10k/month Google AdWords campaign which was responsible for roughly 50% of web traffic.
+#      - Managed a $10k/month Google AdWords campaign which was responsible for roughly 50% of web traffic.
 
 awards:
   - name: US Congressional App Challenge Winner

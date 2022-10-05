@@ -1,9 +1,9 @@
 import { Box, Collapse, Flex, Heading, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown";
 import { MiniMarkdown } from "../MiniMarkdown";
 
-export const ExperienceItem = ({ item, selectedTags }) => {
+export const ExperienceItem = ({ item, selectedTags, locationFirst }) => {
   const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
 
   const Parens = () => {
@@ -29,6 +29,10 @@ export const ExperienceItem = ({ item, selectedTags }) => {
     }
   };
 
+  let tagline = item.location;
+  if (locationFirst && item.title) tagline += ", " + item.title;
+  else if (item.title) tagline = item.title + ", " + tagline;
+
   return (
     <Collapse in={isSelected}>
       <Box px={1} py={1}>
@@ -40,8 +44,8 @@ export const ExperienceItem = ({ item, selectedTags }) => {
             fontSize={14}
             fontFamily={"Inter"}
             alignItems={"center"}>
-            {item.location}
-            {item.title && `, ${item.title}`} <Parens />
+            {tagline}
+            <Parens />
           </Heading>
           <Text fontWeight={400} fontSize={14}>
             {item.date}
