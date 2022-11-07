@@ -94,7 +94,7 @@ projects:
     tags: [ cs ]
     info:
       - Used **OpenCV** and **OpenFace** to detect, identify, and selectively blur all unrecognized faces in real time.
-      - Automatically deployed to DigitalOcean droplets using Docker Compose and GitHub Actions.
+      - Automated deployments to DigitalOcean droplets using Docker Compose and GitHub Actions.
       - Implemented the frontend to connect to a RTMP proxy server with integrated streaming to Youtube (or any other RTMP endpoint).
   - location: Lecture.ninja
     title: 2nd (Remote Learning) @ TAMUHack 2022
