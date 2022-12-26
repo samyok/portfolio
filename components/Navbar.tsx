@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Collapse,
+  Divider,
   Flex,
   Heading,
   HStack,
@@ -47,6 +48,23 @@ const LINKS = [
 type NavbarProps = {
   currentPage: string;
 };
+const Underline = (): JSX.Element => {
+  const underlineColor = useColorModeValue("pinkUnderline", "pinkUnderlineDark");
+
+  return (
+    <MotionBox
+      layoutId={"underline"}
+      position={"absolute"}
+      bottom={"2px"}
+      left={"-3px"}
+      width={"calc(100% + 6px)"}
+      height={2}
+      bg={underlineColor}
+      zIndex={-1}
+      borderRadius={4}
+    />
+  );
+};
 export const DesktopNavbar = ({ currentPage }: NavbarProps): JSX.Element => {
   const [currentUnderline, setCurrentUnderline] = useState(currentPage);
 
@@ -55,7 +73,6 @@ export const DesktopNavbar = ({ currentPage }: NavbarProps): JSX.Element => {
   }, [currentPage]);
   const { toggleColorMode, colorMode } = useColorMode();
 
-  const underlineColor = useColorModeValue("pinkUnderline", "pinkUnderlineDark");
   return (
     <Box w={750} maxW={"95vw"} margin={"auto"} py={4}>
       <AnimateSharedLayout>
@@ -75,19 +92,7 @@ export const DesktopNavbar = ({ currentPage }: NavbarProps): JSX.Element => {
               return (
                 <Box pos={"relative"} onMouseMove={() => setCurrentUnderline(link.href)} key={link.label}>
                   {component}
-                  {currentUnderline === link.href && (
-                    <MotionBox
-                      layoutId={"underline"}
-                      position={"absolute"}
-                      bottom={"2px"}
-                      left={"-3px"}
-                      width={"calc(100% + 6px)"}
-                      height={2}
-                      bg={underlineColor}
-                      zIndex={-1}
-                      borderRadius={4}
-                    />
-                  )}
+                  {currentUnderline === link.href && <Underline />}
                 </Box>
               );
             })}
@@ -109,10 +114,19 @@ export const MobileNavbar = ({ currentPage }: NavbarProps): JSX.Element => {
   const { isOpen, onToggle } = useDisclosure();
   const { toggleColorMode, colorMode } = useColorMode();
 
+  const [currentUnderline, setCurrentUnderline] = useState(currentPage);
+
+  useEffect(() => {
+    setCurrentUnderline(currentPage);
+  }, [currentPage]);
+
   const menuColor = useColorModeValue("background", "backgroundDark");
+  const underlineColor = useColorModeValue("pinkUnderline", "pinkUnderlineDark");
+  console.log(currentUnderline);
+
   return (
-    <Box height={16} px={2} py={1}>
-      <Flex justify={"space-between"} align={"center"}>
+    <Box height={16} py={1} zIndex={1} background={menuColor} position={"sticky"} top={0}>
+      <Flex justify={"space-between"} align={"center"} px={2}>
         <IconButton
           variant={"solid"}
           aria-label={"toggle theme"}
@@ -131,27 +145,27 @@ export const MobileNavbar = ({ currentPage }: NavbarProps): JSX.Element => {
           icon={colorMode === "dark" ? <FaSun /> : <FaMoon />}
         />
       </Flex>
-      <Box position={"fixed"} top={16} left={0} right={0}>
-        <Collapse in={isOpen} animateOpacity>
-          <VStack spacing={2} py={4} backgroundColor={menuColor}>
-            {LINKS.filter((link) => !link.desktopOnly).map((link) => {
-              const component = <NavLink href={link.href}>{link.label}</NavLink>;
-              return (
-                <Box pos={"relative"} key={link.label}>
-                  {component}
-                </Box>
-              );
-            })}
-          </VStack>
-        </Collapse>
-      </Box>
+      <Collapse in={isOpen} animateOpacity>
+        <VStack spacing={2} py={4} backgroundColor={menuColor}>
+          {LINKS.filter((link) => !link.desktopOnly).map((link) => {
+            const component = <NavLink href={link.href}>{link.label}</NavLink>;
+            return (
+              <Box pos={"relative"} key={link.label} zIndex={1}>
+                {component}
+                {currentUnderline === link.href && <Underline />}
+              </Box>
+            );
+          })}
+          <Divider />
+        </VStack>
+      </Collapse>
     </Box>
   );
 };
 
 export default function Navbar(props: NavbarProps): JSX.Element {
   return (
-    <Box>
+    <Box position={["sticky", "unset"]} top={0} zIndex={100}>
       <Box display={["block", "none"]}>
         <MobileNavbar {...props} />
       </Box>

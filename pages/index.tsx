@@ -62,7 +62,7 @@ export default function Home({ markdown }: HomeProps): JSX.Element {
       </Head>
 
       <Box overflow={["hidden", "visible"]}>
-        <Box pos={"relative"} px={5} mt={[0, 0, 100]}>
+        <Box pos={"relative"} px={5} mt={[0, 0, 24]}>
           <Box
             pos={"absolute"}
             top={-0.4 * IMAGE_SIZE}
@@ -91,10 +91,10 @@ export default function Home({ markdown }: HomeProps): JSX.Element {
               <LinkButtons />
             </Box>
           </Box>
-          <Box display={["flex", "none"]} justifyContent={"center"} pb={6} alignItems={"center"} mt={-2}>
-            <LinkButtons />
-          </Box>
-          <HighlightedHeader mb={8}>Hi, I’m Samyok!</HighlightedHeader>
+          <HighlightedHeader mb={[12, 8]} mt={[9, 12, 0]}>
+            Hi, I’m Samyok!
+          </HighlightedHeader>
+
           <Text fontSize={"2xl"} mb={6}>
             Feel free to view my{" "}
             <Link variant={"highlighted"} href={"/projects"}>
