@@ -1,16 +1,21 @@
 import { Box, ChakraProvider } from "@chakra-ui/react";
-import Navigation from "../components/Navigation";
-import { Footer } from "../components/footer";
+import { useRouter } from "next/router";
 import theme from "../theme";
+import Navbar from "../components/Navbar";
+import GridBackground from "../components/GridBackground";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   return (
     <ChakraProvider theme={theme}>
-      <Box bg={"#F0F0F0"} minHeight={"100vh"}>
-        <Navigation />
+      <Navbar currentPage={router.asPath} />
+      <GridBackground />
+      <Box maxW={750} margin={"auto"}>
         <Component {...pageProps} />
-        <Footer />
       </Box>
+
+      {/* <Footer /> */}
     </ChakraProvider>
   );
 }

@@ -18,24 +18,26 @@ const Highlighter = ({ color, opacity, ...props }) => (
   </svg>
 );
 
-const HighlightedHeader = ({ children }) => {
+const HighlightedHeader = ({ children, ...props }) => {
   const highlighterColor = useToken("colors", "pinkPure");
   const highlighterOpacity = useColorModeValue("0.10", "0.2");
   return (
-    <Box pos={"relative"}>
-      <Highlighter
-        color={highlighterColor}
-        opacity={highlighterOpacity}
-        style={{
-          position: "absolute",
-          width: 600,
-          top: "50%",
-          left: -50,
-          zIndex: -1,
-          transform: "translateY(-50%)",
-        }}
-      />
-      <Heading fontSize={[40, 72]}>Hi, I’m Samyok!</Heading>
+    <Box {...props}>
+      <Box pos={"relative"}>
+        <Highlighter
+          color={highlighterColor}
+          opacity={highlighterOpacity}
+          style={{
+            position: "absolute",
+            width: 600,
+            top: "50%",
+            left: -50,
+            zIndex: -1,
+            transform: "translateY(-50%)",
+          }}
+        />
+        <Heading fontSize={[45, 72]}>{children}</Heading>
+      </Box>
     </Box>
   );
 };
