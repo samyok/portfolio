@@ -29,6 +29,7 @@ const people = async (req, res) => {
   });
 
   svg += `</svg>`;
+  res.setHeader("Cache-Control", "max-age=2592000, s-maxage=86400, stale-while-revalidate");
   res.setHeader("Content-Type", "image/svg+xml");
   res.send(svg);
 };
