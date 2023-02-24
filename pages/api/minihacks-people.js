@@ -1,3 +1,7 @@
+const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL
+  ? "https://" + process.env.NEXT_PUBLIC_VERCEL_URL
+  : "http://localhost:3000";
+
 const people = async (req, res) => {
   let data = await fetch("https://api.github.com/orgs/minihacks/members", {
     headers: {
@@ -18,7 +22,8 @@ const people = async (req, res) => {
   data.forEach(({ avatar_url: url, login: username }, index) => {
     const x = (index % ROW_LENGTH) * SIZE;
     const y = Math.floor(index / ROW_LENGTH) * SIZE;
-    svg += `<image href="${url}" x="${x}" y="${y}" width="${SIZE * 0.95}" height="${SIZE * 0.95}" />`;
+    const imageUrl = `${BASE_URL}/_next/image?url=${url}&w=256&q=100`.replaceAll("&", "&amp;");
+    svg += `<image href="${imageUrl}" x="${x}" y="${y}" width="${SIZE * 0.95}" height="${SIZE * 0.95}" />`;
     // add a gray rectangle to the background
     svg += `<rect x="${x}" y="${y + SIZE * 0.8}" width="${SIZE * 0.95}" height="${
       SIZE * 0.15

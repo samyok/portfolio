@@ -11,6 +11,7 @@ module.exports = {
       "brookingsregister.com",
       "www.yankton.net",
       "cloudfront-us-east-1.images.arcpublishing.com",
+      "avatars.githubusercontent.com",
     ],
     minimumCacheTTL: 60 * 60 * 24 * 30, // cache for a month
   },
