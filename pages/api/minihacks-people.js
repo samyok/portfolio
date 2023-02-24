@@ -1,9 +1,11 @@
+import fetch from "node-fetch";
+
 const people = async (req, res) => {
   let data = await fetch("https://api.github.com/orgs/minihacks/members", {
     headers: {
       Authorization: `token ${process.env.GITHUB_MINIHACK_TOKEN}`,
-      Accept: "application/vnd.github+json",
-    },
+      Accept: "application/vnd.github+json"
+    }
   }).then((response) => response.json());
 
   data = data.sort((a, b) => (a.id < b.id ? -1 : 1));
