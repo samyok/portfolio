@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 
 const people = async (req, res) => {
+  const num = req.query.num || 5;
   let data = await fetch("https://api.github.com/orgs/minihacks/members", {
     headers: {
       Authorization: `token ${process.env.GITHUB_MINIHACK_TOKEN}`,
@@ -13,7 +14,7 @@ const people = async (req, res) => {
   // res.json(data);
   // return;
   const SIZE = 100;
-  const ROW_LENGTH = 9;
+  const ROW_LENGTH = num;
   let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 ${
     SIZE * ROW_LENGTH
   } ${SIZE * Math.ceil(data.length / ROW_LENGTH)}">`;
