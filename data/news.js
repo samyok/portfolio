@@ -5,7 +5,7 @@ const news = [
     publisher: "The Press Democrat",
     date:"March 4, 2023",
     img: null,
-    url:"https://www.pressdemocrat.com/article/news/meet-the-santa-rosa-high-school-student-behind-sonoma-countys-first-youth/#:~:text=One%20of%20the%20judges%2C%20Samyok%20Nepal%2C%2019%2C%20a%20student%20at%20University%20of%20Minnesota%2C%20returned%20after%20winning%20first%20place%20at%20Sonoma%20Hacks%20with%20his%20sister%20in%202021."
+    url:"https://www.pressdemocrat.com/article/news/meet-the-santa-rosa-high-school-student-behind-sonoma-countys-first-youth/"
   },
   {
     title: "Ready, set, code!",
