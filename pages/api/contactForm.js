@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
   let fields = Object.keys(req.body).map((key) => ({
     name: key.toUpperCase(),
-    value: req.body[key],
+    value: req.body[key] || "-",
   }));
   await user.send({
     embed: {
