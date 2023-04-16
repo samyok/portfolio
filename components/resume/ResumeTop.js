@@ -24,15 +24,15 @@ const TextLink = (props) => (
 
 // if type is array, first one is default
 const data = {
-  email: ["nepal017@umn.edu", "sam@yok.dev"],
-  phone: ["(###) ###-####", "(605) 592-6144"],
-  github: ["/samyok", "github.com/samyok"],
-  linkedin: ["/in/samyok", "linkedin.com/in/samyok"],
-  url: ["yok.dev", "www.yok.dev", "//yok.dev"],
+  email: ["hi@iamstuti.com"],
+  phone: ["(###) ###-####", "(925) 663-9800"],
+  github: ["/iamstutishah", "github.com/iamstutishah"],
+  linkedin: ["/in/iamstuti", "linkedin.com/in/iamstuti"],
+  url: ["iamstuti.com", "www.iamstuti.com", "//iamstuti.com"]
 };
 
 const autoPrintIndices = {
-  phone: 1,
+  phone: 1
 };
 
 export const ResumeTop = ({ isEditing }) => {
@@ -43,7 +43,7 @@ export const ResumeTop = ({ isEditing }) => {
     phone: 0,
     github: 0,
     linkedin: 0,
-    url: 0,
+    url: 0
   });
 
   const cycleData = (prop) => {
@@ -71,9 +71,9 @@ export const ResumeTop = ({ isEditing }) => {
   };
 
   return (
-    <Box pt={6} px={2} textAlign={"center"}>
+    <Box pt={8} px={2} textAlign={"center"}>
       <Heading size={"xl"} mb={1}>
-        Samyok Nepal
+        Stuti Shah
       </Heading>
       <Flex justifyContent={"center"}>
         <TextLink href={`mailto:${getValue("email")}`} onEdit={cycleData("email")} icon={faPaperPlane}>

@@ -29,9 +29,9 @@ export default function Resume({ resumeData }) {
 
   const MiscSection = [
     { name: "Awards", items: itemsToText(resumeData.awards) },
-    { name: "Interests", items: itemsToText(resumeData.interests) },
-    { name: "Skills", items: itemsToText(resumeData.languages) },
-    { name: "Technologies", items: itemsToText(resumeData.technologies) },
+    { name: "Programming Languages", items: itemsToText(resumeData.interests) },
+    { name: "Languages", items: itemsToText(resumeData.languages) },
+    { name: "Technologies", items: itemsToText(resumeData.technologies) }
   ].filter((s) => s.items?.length > 0);
 
   // const MiscTitle = joinStrings(MiscSection.map((s) => s.name));
@@ -107,26 +107,6 @@ export default function Resume({ resumeData }) {
                 </Text>
               ))}
             </Box>
-            <ResumeHeading as={"h2"}>Gap Year Experience</ResumeHeading>
-            {resumeData.gapYear.map((item, index) => (
-              <ExperienceItem
-                selectedTags={selectedTags}
-                item={item}
-                key={"work-" + index}
-                isEditing={isEditing}
-              />
-            ))}
-
-            <ResumeHeading as={"h2"}>High School Experience</ResumeHeading>
-            {resumeData.highSchool.map((item, index) => (
-              <ExperienceItem
-                selectedTags={selectedTags}
-                item={item}
-                key={"work-" + index}
-                isEditing={isEditing}
-              />
-            ))}
-
             <ResumeHeading as={"h2"}>Technical Projects</ResumeHeading>
             {resumeData.projects.map((item, index) => (
               <ExperienceItem
@@ -135,6 +115,24 @@ export default function Resume({ resumeData }) {
                 key={"work-" + index}
                 isEditing={isEditing}
                 locationFirst
+              />
+            ))}
+            <ResumeHeading as={"h2"}>Experience</ResumeHeading>
+            {resumeData.work.map((item, index) => (
+              <ExperienceItem
+                selectedTags={selectedTags}
+                item={item}
+                key={"work-" + index}
+                isEditing={isEditing}
+              />
+            ))}
+            <ResumeHeading as={"h2"}>Leadership</ResumeHeading>
+            {resumeData.leadership.map((item, index) => (
+              <ExperienceItem
+                selectedTags={selectedTags}
+                item={item}
+                key={"leader-" + index}
+                isEditing={isEditing}
               />
             ))}
           </Box>
@@ -148,6 +146,6 @@ export const getStaticProps = () => {
   const yaml = fs.readFileSync(join(process.cwd(), "./data/resume.yaml"), "utf8");
   const resumeData = load(yaml);
   return {
-    props: { resumeData },
+    props: { resumeData }
   };
 };

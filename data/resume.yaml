@@ -5,117 +5,79 @@ defaultTags:
 
 education:
   - location: University of Minnesota, Twin Cities
-    date: ""
-    url: "Double B.S. in Computer Science & Mathematics"
+    date: "Sep 2022 - May 2024"
+    url: "Bachelor of Science in Computer Science; Statistics Minor"
     info:
-      - "**GPA: 4.0**, dual enrolled in high school and then **took a gap year** before college."
-      - "Competitive Programming (USACO Gold Division) with **C++**, US Congressional App Challenge Winner"
-      - 1st place Education @ HackMIT (top 10 overall), 1st place Hack UIowa, 1st place CuseHacks, 1st place Sonoma Hacks
-  - name: Brookings High School
-    date: August 2017 - May 2021
+      - "**GPA: 3.91**/4.0"
+      - "Relevant courses: Algorithms and Data Structures, Python Programming, Computational Linear Algebra"
+  - location: De Anza College
+    date: Jun 2020 - Jul 2022
     info:
-      - "GPA: 4.043 - Honors Scholar"
-      - "SAT: 1570/1600 (800 math, 770 reading-writing)"
-      - "Activities: National Honor Society President, Science Olympiad Captain, Science Bowl Captain, State QuizBowl Captain, Varsity Debater + National Qualifier"
-    tags: [ high school ]
+      - "GPA: 4.0/4.0 (Dual Enrollment)"
+      - "Relevant courses: Discrete Mathematics, Intro to x86 Processing Language, Intro to Business Administration"
 
+work:
+  - location: Eyenuk Inc.
+    title: Research Intern
+    url: eyenuk.com
+    href: https://eyenuk.com
+    date: Jun 2021 - Sep 2021
+    tags: [cs]
+    info:
+      - Assisted leading scientists in improving AI algorithms for Diabetic Retinopathy detection.
+      - Accurately annotated 20+ retinal images to differentiate between common diagnostic patterns.
+      - Investigated the link between retinal and brain pathology by analyzing biomarkers.
 
-gapYear:
-  - location: Fiveable
-    title: Software Engineer
-    url: Full Time/Gap Year, fiveable.me
-    href: https://hi.fiveable.me
-    date: "Sep 2021 - Aug 2022"
-    tags: [ cs ]
+leadership:
+  - title: Vice President of Operations
+    location: Mission INNO Biotech
+    url: innoinc.org
+    date: Mar 2020 - May 2022
     info:
-      - Architected and implemented low-level **WebRTC** voice and video calling functionality. Started as a proof-of-concept and then scaled to general availability on Google Kubernetes Engine.
-      - Reduced application load times by 20x on high-traffic pages by optimizing database queries, network requests, and re-renders.
-      - Refactored backend to a REST-ful API and automated tests with **Jest and Puppeteer**, improving performance and stability.
-      - Deployed and managed servers with **Terraform** on Google Compute Engine for internal tools used company-wide.
-      - Designed and built user-facing features using **Typescript, Next.js, React, Redux, Material UI, and MongoDB**.
-  - location: Art of Problem Solving
-    title: Teaching Assistant/Grader
-    url: Contractor, aops.com
-    href: https://artofproblemsolving.com
-    date: Aug 2021 - Present
-    tags: [ math, aops ]
+      - Bootstrapped a chapter with 35+ members.
+      - Led efforts to maximize outreach on social media with consistent posts.
+      - Conducted weekly meetings about the intersection between biology, computer science, and engineering.
+      - Mentored members with their annual biotech projects for the INNO Innovation Development Conference.
+  - title: Class Lead and Curriculum Chair
+    location: YAPA Kids
+    url: yapakids.org
+    date: Mar 2021 - Sep 2021
     info:
-      - Assist twice a week in teaching online classes of 20-50 students answering questions, guiding students, and helping debug.
-      - Provide detailed logical and stylistic feedback to students' advanced math and **Python** solutions. Have graded introductory (Pre-Algebra, Geometry, Counting and Probability, etc.) to advanced (Calculus, WOOT, etc.) homework.
-#      - Analyzed Python and math homework with set , and wrote feedback to guide students to the solution
-#      - Assist instructor in teaching online math and Python lectures, with approx. 40 students per class.
-
-highSchool:
-  - location: Bobcat Notify
-    title: Founder
-    url: Part Time, notify.samyok.us
-    href: https://notify.samyok.us
-    date: Nov 2019 - May 2021
-    tags: [ cs ]
-    info:
-      - Published **Android and iOS apps** for Brookings High School students, staff, and parents for fast and reliable emergency alerts.
-      - Gained 2000+ downloads, more than **2.5x the number of students**. The school district offered to purchase the app for every school.
-      - Collaborated with school administration and IT to deliver timely and relevant push notifications and in-app updates.
-      - Maintained an average rating of 4.9 stars across both app stores with over 50 reviews.
-  - location: Scioly.org
-    title: Developer
-    url: Part Time, scioly.org
-    href: https://scioly.org
-    date: Sep 2019 - Aug 2022
-    tags: [ cs ]
-    info:
-#      - Ensured site uptime by maintaining servers for critical projects.
-      - Developed custom **PHP** image gallery and file storage server to be used by more than **68,000** registered users.
-      - Implemented an image optimization service to reduce image file sizes by up to 80% and serve at the edge.
-  - location: Freelance Web Developer
-    date: May 2018 - Nov 2019
-    url: Contractor
-    tags: [ freelance ]
-    info:
-      - Built and deployed a global network of servers to publish messages in under 200ms to over 7,500 concurrent users globally.
-      - Developed complex web scraping bots and websites to successfully gather information requested by clients quickly and accurately.
-  - location: Brookings Math Circle
-    title: Co-Founder/Instructor
-    url: brookingsmath.org
-    href: https://brookingsmath.org
-    date: 2016 - 2021
-    tags: [ math ]
-    info:
-      - Volunteer taught three‐hour classes every week during the summer, with lessons ranging from single variable algebra to AIME‐level geometry. Achieved goal of 20+ attendees per class for the last three years.
-      - Created curriculum by writing handouts, homework, and mock contests, resulting in over 100 pages of instructional materials over 5 years.
-      - Ensured students’ success with a smooth transition into competitive math, contributing to the local MATHCOUNTS team growing by 60% to more than 30 members.
+      - Directed other teachers and created curriculum for several grade levels by making engaging slides and practice quizzes.
+      - Taught 50+ students (K-8) weekly, with lessons in science, photography, and art.
 
 projects:
-  - location: Anony.news
-    title: 3rd @ Hack for Humanity 2022
+  - location: HackNYU ‘23
+    title: 1st in Education & Top 3 Overall
+    date: Feb 2023
     url: github
-    href: https://github.com/MiniHacks/anonygoose
-    date: Python (OpenCV), FFmpeg, Next.js, MongoDB, Docker
-    tags: [ cs ]
+    href: https://github.com/minihacks/aly
+    tags: [cs]
     info:
-      - Used **OpenCV** and **OpenFace** to detect, identify, and selectively blur all unrecognized faces in real time.
-      - Automated deployments to DigitalOcean droplets using Docker Compose and GitHub Actions.
-      - Implemented the frontend to connect to a RTMP proxy server with integrated streaming to Youtube (or any other RTMP endpoint).
-  - location: Lecture.ninja
-    title: 2nd (Remote Learning) @ TAMUHack 2022
+      - Developed Aly, an app, website, and chrome extension that holds users accountable for their tasks and sends embarrassing texts to friends/parents if they aren't on track.
+      - Utilized **React Native**, **JavaScript**, **Firebase**, **Apple Maps**, and machine learning to create an app that syncs activity across different platforms, scans webpages to track user focus, and features a user-friendly interface to add tasks.
+      - Successfully navigated challenges such as time constraints, team fatigue, and inexperience with app development, resulting in a polished and functional product.
+  - location: HackUIowa ’22
+    title: 1st Overall & 1st in Accessibility
+    url: annote.live
+    href: https://annote.live
+    date: Oct 2022
+    tags: [cs]
+    info:
+      - Built a live transcription and summarization tool for notetaking using an AI model on a team of four.
+      - Developed frontend using **NextJS with TypeScript** and the **Chakra UI** component library.
+      - Led development of user authentication flow using next-auth for the login and profile pages.
+      - Designed the dashboard and landing page with Figma, helped with the implementation of the landing page.
+  - location: MinneHack 2023
+    title: LawSum
     url: github
-    href: https://github.com/MiniHacks/LectureNinja
-    date: Python (OpenCV, FastAPI), Next.js, Docker
-    tags: [ cs ]
+    href: https://github.com/minihacks/lawsum
+    date: Jan 2023
+    tags: [cs]
     info:
-      - Parsed user-uploaded lecture videos to create an interactive transcript interlaced with parsed slides from the video.
-      - Leveraged **OpenCV** to extract lecture slides and Google Cloud Speech APIs for transcription via a FastAPI microservice.
-      - Built frontend to upload video files to Google Cloud Storage and then fetch relevant data from a MongoDB instance.
-  - location: "Dakota Debate Institute"
-    title: Summer 2021-2022
-    url: "dakotadebate.org"
-    href: "https://dakotadebate.org"
-    date: Next.js, Chakra, Express, MongoDB
-    tags: [ ddi ]
-    info:
-      - Founded and directed a 501(c)3 nonprofit to run a week-long, overnight debate summer camp with over 45 students and 10 staff.
-      - Developed the website and classroom management system for our free live-streamed classes.
-#      - Managed a $10k/month Google AdWords campaign which was responsible for roughly 50% of web traffic.
+      - Built a web application that summarizes legal documents using the DaVinci 003 model and provides relevant laws.
+      - Developed frontend with **NextJS with TypeScript** and the **Chakra UI** component library.
+      - Integrated RESTful APIs to connect the frontend to the **Flask** webserver to clean and chunk through the PDFs.
 
 awards:
   - name: US Congressional App Challenge Winner
@@ -138,55 +100,25 @@ awards:
     tags: [ misc ]
 
 languages:
-  - name: Typescript
-    tags: [ cs ]
-  - name: C++
-    tags: [ cs ]
-  - name: Python
-    tags: [ cs ]
-  - name: JavaScript
-    tags: [ cs ]
-  - name: React, React Native
-    tags: [ cs ]
-  - name: Java
-    tags: [ cs ]
-  - name: Redux
-    tags: [ cs ]
-  - name: PHP
-    tags: [ cs ]
-  - name: NodeJS
-    tags: [ cs ]
-  - name: LaTeX
-    tags: [ math ]
-  - name: HTML/CSS
-    tags: [ cs ]
-  - name: SASS
-    tags: [ cs ]
+  - name: English (Native)
+  - name: Gujarati (Native)
 
 
 interests:
-  - name: Director of nonprofit debate camp (Dakota Debate Institute)
-    tags: [ misc ]
-  - name: Political Theory
-    tags: [ misc ]
-  - name: Hiking
-    tags: [ misc ]
-  - name: Kayaking
-    tags: [ misc ]
-
+  - name: Python
+  - name: Java
+  - name: TypeScript
+  - name: JavaScript
+  - name: HTML/CSS
+  - name: C++
+# Programming Languages: Python, Java, TypeScript, JavaScript, HTML/CSS, C++
+# Technologies: Git/Github, Figma, Chakra UI, MySQL
 technologies:
-  - name: MongoDB, MySQL, Firebase/Firestore
-    tags: [ cs ]
-  - name: Figma
-    tags: [ cs ]
-  - name: Google Cloud Platform
-    tags: [ cs ]
-  - name: Kubernetes
-    tags: [ cs ]
-  - name: Docker
-    tags: [ cs ]
-  - name: Git/Github
-    tags: [ cs ]
-  - name: Vim
-    tags: [ cs ]
+  - name: "Git/Github"
+  - name: "Figma"
+  - name: "Chakra UI"
+  - name: "MySQL"
+  - name: Firebase
+
+
 

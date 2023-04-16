@@ -3,6 +3,7 @@ import { Box, Collapse, Flex, Heading, Link, ListItem, Text, UnorderedList } fro
 import ReactMarkdown from "react-markdown";
 import { MiniMarkdown } from "../MiniMarkdown";
 
+const FONTWEIGHT = 400;
 export const ExperienceItem = ({ item, selectedTags, locationFirst }) => {
   const isSelected = !item.tags || selectedTags.some((tag) => item.tags.includes(tag));
 
@@ -12,7 +13,7 @@ export const ExperienceItem = ({ item, selectedTags, locationFirst }) => {
     const parenText = item.url ?? item.parens;
     if (item.href) {
       return (
-        <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
+        <Text fontSize={12} fontWeight={FONTWEIGHT} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
           (
           <Link href={item.href} target={"_blank"}>
             {parenText}
@@ -22,7 +23,7 @@ export const ExperienceItem = ({ item, selectedTags, locationFirst }) => {
       );
     } else {
       return (
-        <Text fontSize={12} fontWeight={300} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
+        <Text fontSize={12} fontWeight={FONTWEIGHT} p={0} m={0} as={"span"} display={"inline-block"} pl={1}>
           ({parenText})
         </Text>
       );
@@ -54,7 +55,7 @@ export const ExperienceItem = ({ item, selectedTags, locationFirst }) => {
         <UnorderedList pl={1}>
           {item.info?.map((i) => (
             <ListItem key={i} lineHeight={1.3}>
-              <Text fontSize={12} fontWeight={200}>
+              <Text fontSize={12} fontWeight={300}>
                 <MiniMarkdown>{i}</MiniMarkdown>
               </Text>
             </ListItem>
