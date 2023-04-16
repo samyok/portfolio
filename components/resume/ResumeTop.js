@@ -84,13 +84,13 @@ export const ResumeTop = ({ isEditing }) => {
         </TextLink>
       </Flex>
       <Flex justifyContent={"center"} mt={0.5}>
-        <TextLink href={"https://yok.dev"} onEdit={cycleData("url")} icon={faGlobe}>
+        <TextLink href={"https://iamstuti.com"} onEdit={cycleData("url")} icon={faGlobe}>
           {getValue("url")}
         </TextLink>
-        <TextLink href={"https://github.com/samyok"} onEdit={cycleData("github")} icon={faGithub}>
+        <TextLink href={"https://github.com/iamstutishah"} onEdit={cycleData("github")} icon={faGithub}>
           {getValue("github")}
         </TextLink>
-        <TextLink href={"https://linkedin.com/in/samyok"} onEdit={cycleData("linkedin")} icon={faLinkedin}>
+        <TextLink href={"https://linkedin.com/in/iamstuti"} onEdit={cycleData("linkedin")} icon={faLinkedin}>
           {getValue("linkedin")}
         </TextLink>
       </Flex>
