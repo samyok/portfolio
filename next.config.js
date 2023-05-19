@@ -16,4 +16,12 @@ module.exports = {
     minimumCacheTTL: 60 * 60 * 24 * 30, // cache for a month
   },
   assetPrefix: isProd ? "https://cdn.yok.dev" : undefined,
+  rewrites: async () => {
+    return [
+      {
+        source: "/stats/:match*",
+        destination: "https://dash.yok.dev/:match*",
+      },
+    ];
+  },
 };

@@ -15,6 +15,7 @@ import { AiFillLinkedin, AiOutlineGithub, AiOutlineSend } from "react-icons/ai";
 import MyHeading from "./MyHeading";
 import { useState } from "react";
 import { HiMail } from "react-icons/hi";
+import trackEvent from "../lib/trackEvent";
 
 export function Footer(params) {
   const toast = useToast();
@@ -71,7 +72,7 @@ export function Footer(params) {
               isDisabled={loading}
               leftIcon={<AiOutlineSend size={"1.5em"} />}
               onClick={() => {
-                window?.umami?.trackEvent("Contact Form.submit", "contact_form");
+                trackEvent("Contact Form.submit", "contact_form");
                 setLoading(true);
                 fetch("/api/contactForm", {
                   headers: {

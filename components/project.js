@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, chakra, Flex, SlideFade, Tag, TagCloseButton, TagLabel, useDisclosure } from "@chakra-ui/react";
 import MyHeading from "./MyHeading";
 import { Card } from "./card";
+import trackEvent from "../lib/trackEvent";
 
 export function Project({ projSection }) {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -43,7 +44,7 @@ export function Project({ projSection }) {
                 bg: "rgba(0,0,0,0.1)",
               }}
               onClick={() => {
-                window?.umami?.trackEvent(`tag.${a}.click`, "tag");
+                trackEvent(`tag.${a}.click`, "tag");
                 setSelectedTags((p) => {
                   let pv = [...p];
                   if (pv.includes(a)) {

@@ -3,6 +3,7 @@ import DevPostIcon from "./DevPost";
 import { Box, Button, chakra, Collapse, Flex, Tag, TagLabel, useDisclosure } from "@chakra-ui/react";
 import MyHeading from "./MyHeading";
 import { imgSrc } from "../pages";
+import trackEvent from "../lib/trackEvent";
 
 export function Card({ project, collapsible, filterTags }) {
   if (!filterTags) filterTags = [];
@@ -39,7 +40,7 @@ export function Card({ project, collapsible, filterTags }) {
         key={JSON.stringify(btn)}
         m={1}
         onClick={() => {
-          window?.umami?.trackEvent(
+          trackEvent(
             `proj.${project.title.replace(/ /g, "_")}.${btn.text || opts.text}.click`,
             "project_button"
           );
@@ -117,7 +118,7 @@ export function Card({ project, collapsible, filterTags }) {
             }}
             onClick={() => {
               if (project.buttons.length) {
-                window?.umami?.trackEvent(
+                trackEvent(
                   `proj.${project.title.replace(/ /g, "_")}.img.click`,
                   "project_button"
                 );

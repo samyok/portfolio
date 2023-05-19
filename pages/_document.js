@@ -22,10 +22,9 @@ export default class MyDocument extends Document {
           <script
             async
             defer
-            data-website-id="f5572f62-a934-4108-aa6c-677f32b8fcb2"
-            data-host-url="https://a.samyok.us"
+            data-website-id="3c103616-67a2-4810-b665-09b26c7303b4"
             data-domains={"yok.dev"}
-            src="/a.js"
+            src="/stats/script.js"
           />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
